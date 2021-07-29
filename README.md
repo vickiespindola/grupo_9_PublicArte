@@ -1,8 +1,9 @@
 # grupo_9_PublicArte
 
 __**Integrantes**__
+
 **Ruth Cabrera:**
-- 
+- 29 años. Estudiante de Programación Web FullStack con Digital House y Fundación Formar.Estudiante de Inglés en Cultural Británico de Salta. Estudiante de Programación Web FullStack con Digital House y Fundación Formar.
 **Victoria Espíndola:**
 - 27 años. Estudiante de Inglés en Instituto Superior Cultural Británico. Estudiante de Programación Web FullStack con Digital House y Fundación Formar.
 
@@ -15,7 +16,7 @@ __**Integrantes**__
 
 ## ¡Les damos la bienvenida!
 
-![logotipo]()
+![](/logo-negro.png)
 
 
 > ***Es un mercado en línea pensado y diseñado tanto para artesanos que quieran mostrar y vender sus creaciones, productos únicos y extraordinarios como, así también, a personas amantes del arte hecho a mano que quieran adquirir,coleccionar y disfrutar de dichos productos desde la comodidad de sus hogares, ayudando e impulsando positivamente a creadores independientes de cualquier lugar de la Argentina***
