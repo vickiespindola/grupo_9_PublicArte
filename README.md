@@ -17,7 +17,7 @@ __**Integrantes**__
 
 ## ¡Les damos la bienvenida!
 
-<img src="/logotipo/logo-negro.png" width="200">
+<img src="/logotipo/logo-negro.png" width="250">
 
 
 > ***Es un mercado en línea pensado y diseñado tanto para artesanos que quieran mostrar y vender sus creaciones, productos únicos y extraordinarios como, así también, a personas amantes del arte hecho a mano que quieran adquirir,coleccionar y disfrutar de dichos productos desde la comodidad de sus hogares, ayudando e impulsando positivamente a creadores independientes de cualquier lugar de la Argentina***
