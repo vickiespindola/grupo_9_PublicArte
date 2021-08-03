@@ -9,7 +9,7 @@ __**Integrantes**__
 - 27 años. Estudiante de Inglés en Instituto Superior Cultural Británico. Estudiante de Programación Web FullStack con Digital House y Fundación Formar.
 
 **Mariano Gutiérrez:**
-- 
+- 26 años.Estudiante de Programación Web FullStack con Digital House y Fundación Formar.Estudiante de la carrera de Higiene y Seguridad En El Trabajo en Conscripto Ricardo Armando Paz N°6016.
 
 **Eliana Tolosa:**
 - 23 años. Estudiante de Programación Web FullStack con Digital House y Fundación Formar. Estudiante autodidacta. Estudiante de la Licenciatura en Informatica en la Universidad Nacional del Oeste.
