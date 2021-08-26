@@ -1,21 +1,29 @@
 # Retro del Sprint 1
-## Hicimos mal:
-- Tratar de hacer las cosas todos juntos.
-- Demorar mucho tiempo en la designación de tareas.
 
-## Hicimos bien:
-- La designación de tareas.
-- La comunicación.
-- Apoyo entre compañeros.
+## Hacer más:
+- Reuniones más frecuentes.
+- Informar en una reunión corta diaria el progreso.
+- Reuniones más cortas (Max. una hora).
+
+## Hacer menos:
+- Demorar mucho tiempo en la designación de tareas.
+- Tratar de hacer las cosas todos juntos.
+- Desviarse mucho del tema.
 
 ## Empezar a hacer:
-- Ponerse al dia con todo el material.
-- Reuniones más cortas (Max. una hora).
-- Reuniones más frecuentes.
-
+- La designación de tareas al inicio del sprint.
+- Ponerse al día con todo el material.
+- Pedir más ayuda a los profes.
 
 ## Dejar de hacer:
-- Dar tantas vueltas en un asunto.
+- Pedir más ayuda a los profes.
+- Procrastinar.
 - Reuniones extensas.
-- Atrazar las comidas.
+- Atrasar las comidas.
+
+## Seguir haciendo:
+- Compartir lo que aprendemos.
+- La buena comunicación.
+- Apoyo entre compañeros.
+- Poner fechas limites en las tarjetas de Trello.
 
