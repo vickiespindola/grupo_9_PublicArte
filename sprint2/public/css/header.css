@@ -118,13 +118,14 @@ header nav .nav-bar{
     }
     header nav .nav-bar input{
         display: inline-flex;
+        width:  90%;
     }
     header nav .nav-bar{
         border-bottom: 1px solid black;
         width: 25%;
     }
     header nav .nav-bar i{
-        padding-left: 25%;
+        width: 10%;
     }
     header nav .user-icon{
         display: none;
