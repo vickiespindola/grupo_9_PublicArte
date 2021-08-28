@@ -1,4 +1,0 @@
-[0827/193309.139:ERROR:registration_protocol_win.cc(102)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
-[0827/193316.388:ERROR:registration_protocol_win.cc(102)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
-[0827/193758.119:ERROR:registration_protocol_win.cc(102)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
-[0828/195556.702:ERROR:crashpad_client_win.cc(808)] not connected
