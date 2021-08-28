@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&family=Rosario:wght@300;400;700&family=Rosarivo&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
 :root{
-    --color-naranja: #ef7437;
+    --naranja: #ef7437;
+    --marron-claro: #ddc6aa;
+    --marron-oscuro: #9e6749;
+    --gris: #2c2c2c;
+    --rosario: 'Rosario',sans-serif;
+    --rosarivo: 'Rosarivo', sans-serif;
+    --inter: 'Inter',sans-serif;
+    --roboto: 'Roboto',sans-serif;
+    --poppins: 'Poppins',sans-serif;
 }
