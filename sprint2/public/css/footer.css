@@ -15,7 +15,7 @@ footer img{
 footer .redes ul{
     display: flex;
     flex-direction: row;
-    margin: 10px 0;
+    margin: 10px 10%;
 }
 
 footer section{
@@ -49,10 +49,43 @@ footer .redes ul li{
     width: 30px;
 }
 
-footer .derechos{
+footer span{
     margin-top: 10px;
+    margin: 0 25%;
 }
 
 footer section div ul{
     width: 50%;
 }
+
+@media (min-width: 426px){
+    footer img{
+        width: 30%;
+        margin: 0 35%;
+    }
+
+    footer section ul li a{
+        font-size: 16px;
+        margin: 13px;
+        padding: 5px;
+        text-align: justify;
+        align-items: center;
+    }
+
+    footer section ul{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+    footer section{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    } 
+}
+
+@media (min-width: 769px){
+
+}
+
