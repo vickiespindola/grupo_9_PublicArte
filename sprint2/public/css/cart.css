@@ -1,0 +1,142 @@
+main{
+    width: 100%;
+}
+
+main .start{
+    background-color: var(--marron-claro);
+    font-family: var(--roboto);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.home article{
+    display: flex;
+    padding: 10px;
+    font-family: var(--rosarivo);
+    background-color: #E5E9F2;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
+}
+.home .item{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    flex-grow: 1;
+   
+}
+.home article img{
+    width: 100%;
+    padding: 10px;
+}
+ 
+.home article h4{
+    margin: 0 auto;
+    padding: 0 10px 10px 10px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.home .item2{
+    display: flex;
+    flex-direction: row;
+}
+
+.home p{
+    margin: 0 auto;
+    padding: 10px 20px;
+    align-self: center;
+    font-size: 14px;
+  
+}
+
+.home .item3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.home i{
+   align-self: center;
+}
+
+.home .price{
+    text-align: left;
+    padding: 10px;
+    color: var(--naranja);
+}
+
+.home article a{
+    color: var(--naranja);
+}
+
+.home .buttons{
+    display:flex;
+    justify-content: space-around;
+    background-color: #E5E9F2;
+    margin-bottom: 10px;
+    
+}
+
+.home button{    
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px 10px;
+    background-color:var(--naranja);
+    border:var(--naranja);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.home .continuar-comprando:hover{
+    border: 1px solid black;
+}
+
+.home .costo-de-envio:hover{
+   border: 1px solid black
+}
+
+@media(min-width: 426px){
+    main .first-tittle{
+        text-align: left;
+        margin: 0 20px;
+    }
+
+    .home .item{
+        display: flex;
+        flex-direction: row;
+       
+    }
+
+    .home article img{
+        width: 70%;
+        padding: 10px 10px 10px 0;
+    }
+
+    .home article h4{
+        margin: auto 0;
+        padding: 10px 10px 10px 0;
+        align-self: center;
+        font-size: 14px;
+    }
+
+    .home p{
+        margin: 0 auto;
+        padding: 10px 10px 10px 20px;
+        text-align: center;
+        font-size: 14px;
+      
+    }
+    .home .item3{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .home .item3 .price{
+        align-self: center;
+    }
+}

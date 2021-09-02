@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
-    ">
     <title>Carrito de compras</title>
 </head>
 
@@ -39,32 +38,90 @@
         </nav>
     </header>
     <main>
-       
-        <section>
-           <span>Productos en su Carrito:</span>
-        <article>
-            <img src="" alt="">
-            <p>Producto</p>
-            <p>Descripción del Producto</p>
-            
-            <i class="fas fa-trash-alt"></i>
-            <span>Precio</span>
-        </article>
+        <div class="start">
+            <h3 class="first-tittle">Productos en su Carrito:</h3>
+        </div>
+        <section class="home">
+            <article class="container">
+                <div class="item">
+                    <img class="product-img" src="/img/florero-rosa.png" alt="florero-rosa">
+                    <h4 class="tittle-img">Nombre del Producto</h4>
+                </div>
+                <div class="item2">
+                    <!-- espacio para cantidad -->
+                    <p class="product-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla temporibus architecto</p>
+                </div>
+                <div class="item3">
+                    <i class="fas fa-trash-alt"></i>
+                    <span class="price">$999,99</span>
+                </div>
+                
+            </article>
 
-        <article>
-            <img src="" alt="">
-            <p>Producto</p>
-            <span>Precio</span>
-        </article>
+            <br>
 
-        <button>Continuar comprando</button>
-        <button>Costo de Envío</button>
+            <article class="container2">
+                <div class="item">
+                    <img class="product-img" src="/img/portaretrato-flor.png" alt="portaretrato-flor">
+                    <h4>Nombre del Producto</h4>
+                </div>
+                <div class="item2">
+                    <!-- espacio para cantidad -->
+                    <p class="product-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla temporibus architecto</p>
+                </div>
+                <div class="item3">
+                    <i class="fas fa-trash-alt"></i>
+                    <span class="price">$999,99</span>
+                </div>
+            </article>
+
+            <br>
+
+             <article class="item4">
+                 <a href="">Calcular Envío<i class="fas fa-arrow-right"></i></a>
+                 <P><strong>TOTAL CON ENVÍO</strong></p>
+                 <span class="price"><strong>$999,99</strong></span>
+             </article>
+
+             <br>
+                
+            <div class="buttons"> 
+                <button class="continuar-comprando">Continuar comprando</button>
+                <button class="costo-de-envio">Costo de Envío</button>
+            </div>
 
 
-       </section>   
+        </section>
 
     </main>
     <footer>
+        <img src="/img/publicarte2.png" alt="">
+
+        <section>        
+            <div>
+            <ul>
+                <li><a href="/register">Crear cuenta</a></li>
+                <li><a href="/login">Iniciar sesión</a></li>
+                <li><a href="">Información</a></li>
+            </ul>
+        </div>       
+        <div>
+            <ul>
+                <li><a href="">Preguntas Frecuentes</a></li>
+                <li><a href="">Términos y condiciones</a></li>
+            </ul>
+        </div>
+        </section>
+        <div class="redes">
+            <h4>Seguinos en redes:</h4>
+            <ul>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+            </ul>
+        </div>
+        <span class="derechos">©️2021 PublicArte</span>
+    </footer>
 
     </footer>
 

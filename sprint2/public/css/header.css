@@ -72,7 +72,7 @@ header nav .nav-bar{
     border-bottom: 2px solid black;
 }
 
-@media (min-width: 361px) {
+@media (min-width: 426px) {
     header{
         display: flex;
         flex-direction: row;
