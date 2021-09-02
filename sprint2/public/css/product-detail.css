@@ -1,0 +1,301 @@
+.product-detail main section .detail {
+    padding: 10px 0 50px;
+}
+
+.product-detail main section aside{
+    margin-top: 30px;
+}
+
+.product-detail main section aside .img-product {
+    width: 90%;
+    height: 400px;
+    margin: 0 5%;
+}
+
+.product-detail main section aside div{
+    width: 90%;
+    margin: 0 5%;
+}
+
+.product-detail main section aside div img{
+    width: 24%;
+    opacity: 0.5;
+}
+
+.product-detail main section aside div img:hover{
+    opacity: 1;
+}
+
+.product-detail main section .detail h2 {
+    font-family: var(--rosario);
+    margin: 20px 10%;
+}
+
+.product-detail main section .detail .price {
+    width: 90%;
+    margin: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-detail main section .detail .price p {
+    color: var(--naranja);
+    font-size: 26px;
+    font-family: var(--poppins);
+    margin: 5px 2% 5px 5%;
+    width: 30%;
+}
+
+.product-detail main section .detail .price span i {
+    background-color: #F1F2F3;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 0 30px;
+    font-size: 16px;
+}
+
+.product-detail main section .detail span {
+    color: black;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-detail main section .detail .add-cart {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.product-detail main section .detail .descrip-button {
+    width: 90%;
+    background-color: white;
+    border: none;
+    font-family: var(--inter);
+    font-size: 16px;
+    margin: 5px 5% 10px;
+}
+
+.product-detail main section .detail .descrip-button i{
+    margin-left: 60%;
+}
+
+.product-detail main section .detail .description{
+    font-family: var(--rosario);
+    margin: 10px 10% 20px;
+    display: none;
+}
+
+.product-detail main section .add-cart {
+    background-color: var(--naranja);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: var(--roboto);
+    margin: 10px 0;
+}
+
+.product-detail main section .detail a {
+    color: var(--naranja);
+    font-family: var(--inter);
+    font-size: 18px;
+    padding: 15px 5% 15px 10%;
+    position: absolute;
+}
+
+.product-detail main .carousel {
+    background-color: var(--marron-claro);
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-detail main .carousel article {
+    margin: 10px auto;
+    padding: 0 10px 20px;
+    height: 80%;
+}
+
+.product-detail main .carousel article h2{
+    font-family: var(--poppins);
+}
+
+.product-detail main .carousel article p{
+    font-size: 18px;
+    font-family: var(--roboto);
+    font-weight: 600;
+}
+
+.product-detail main .carousel article:hover {
+    color: var(--naranja);
+    padding: 0 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.product-detail main .carousel h2{
+    margin: 20px 10% 10px;
+    width: 100%;
+    font-family: var(--rosario);
+}
+
+.product-detail main .carousel article img {
+    margin: 10px 0;
+    width: 150px;
+    height: 250px;
+}
+
+.product-detail main .carousel .fa-chevron-left{
+    display: none;
+}
+
+.product-detail .slider3, .product-detail .slider4{
+    display: none;
+}
+
+.product-detail .carousel .fa-chevron-right{
+    font-size: 20px;
+    margin: 40% 0;
+}
+
+.product-detail main .contact{
+    padding: 10px 0;
+}
+
+.product-detail main .contact h1{
+    color: var(--marron-oscuro);
+    width: 90%;
+    padding: 10px;
+    margin: 20px 5%;
+    text-align: center;
+    font-size: 27px;
+    border-bottom: 1px solid black;
+}
+
+.product-detail main .contact article{
+    width: 90%;
+    margin: 30px 5% 60px;
+    text-align: center;
+}
+
+.product-detail main .contact article h2{
+    font-family: var(--rosario);
+}
+
+.product-detail main .contact article p{
+    font-family: var(--inter);
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+
+.product-detail main .contact article a{
+    color: var(--naranja);
+}
+
+@media (min-width: 426px) {
+    .product-detail main section.product{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .product-detail main section .detail{
+        width: 50%;
+        margin: 10% 0;
+    }
+    .product-detail main section aside{
+        width: 40%;
+    }
+    .product-detail main section aside div{
+        width: 100%;
+    }
+    .product-detail main section aside .img-product{
+        width: 100%;
+    }
+    .product-detail main section .detail .description{
+        display: block;
+    }
+    .product-detail main section .detail .descrip-button{
+        display: none;
+    }
+    .product-detail main section .detail a{
+        margin-left: -5%;
+    }
+    .product-detail main .carousel{
+        height: 550px;
+    }
+    .product-detail main .carousel .slider3{
+        display: block;
+    }
+    .product-detail main .carousel article img{
+        width: 200px;
+        height: 300px;
+    }
+    .product-detail .carousel .fa-chevron-right{
+        margin: 25% 0;
+    }
+    .product-detail main .contact{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+    .product-detail main .contact h2{
+        width: 100%;
+    }
+    .product-detail main .contact article{
+        width: 30%;
+        margin: 20px 10px 20px 15px;
+    }
+}
+
+@media (min-width: 769px) {
+    .product-detail main section .img-product{
+        width: 100%;
+    }
+    .product-detail main section aside{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 40%;
+    }
+    .product-detail main section aside div{
+        flex-direction: column;
+        margin-left: 5%;
+        width: 20%;
+    }
+    .product-detail main section aside div img{
+        width: 75px;
+        height: 21%;
+    }
+    .product-detail main section .detail{
+        width: 50%;
+        margin: 0 0 5%;
+    }
+    .product-detail main section .detail div{
+        margin: 50px 0;
+    }
+    .product-detail main .carousel{
+        height: 550px;
+    }
+    .product-detail main .carousel article img{
+        width: 220px;
+        height: 320px;
+    }
+    .product-detail main .carousel article{
+        font-size: 20px;
+    }
+    .product-detail main .carousel .slider4{
+        display: block;
+    }
+    .product-detail .carousel .fa-chevron-right{
+        margin: 15% 0;
+        font-size: 40px;
+    }
+    .product-detail main .contact{
+        margin: 30px 0;
+    }
+    .product-detail main .contact article{
+        margin: 30px auto;
+        width: 20%;
+        text-align: justify;
+    }
+}
