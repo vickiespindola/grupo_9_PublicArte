@@ -1,20 +1,87 @@
-.home main .carrusel{
+.home main .carrusel {
+
+    position: relative;
+
     background-color: aqua;
 }
 
+.home main .carrusel img {
+    width: 100%;
 
-.home main .contacto{
-    background-color: (--marron-claro);
+}
+
+.home main .carrusel div.contenido {
+    position: absolute;
+    top: 50px;
+    width: 80%;
+    background-color: white;
+    padding: 15px 10px;
+    text-align: center;
+    right: 25px;
+}
+
+.home main .carrusel div.contenido button {
+    background-color: var(--naranja);
+    font-size: 16px;
+    font-family: var(--roboto);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    margin: 5px;
+}
+
+.home main .carrusel div.contenido h3 {
+    font-family: var(--poppins);
+    font-size: 30px;
+}
+
+.home main .carrusel div.contenido p {
+    margin: 10px 0;
+    font-family: var(--rosarivo);
+    font-size: 20px;
+}
+
+
+.home main .botones ul {
+    background-color: var(--gris);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: initial;
+
+}
+
+.home main .botones ul a {
+    font-family: var(--rosarivo);
+    font-size: 10px;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.home main .productosDestacados article {
+    font-family: var(--rosario);
+    font-size: 15px;
+
+
+}
+.home main .contenidoAmistad{
+    margin: 10px;
+    width: 5px;
+    font-family: var(--roboto);
+    font-size: 16px;
+}
+
+.home main .contact {
+    background-color: var(--marron-claro);
+
 }
 
 
 
 
+@media (min-width: 426px) {}
 
-@media (min-width: 426px){
-
-
-}
-@media (min-width: 762px){
-    
-}
+@media (min-width: 769px) {}
