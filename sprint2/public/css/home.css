@@ -1,0 +1,20 @@
+.home main .carrusel{
+    background-color: aqua;
+}
+
+
+.home main .contacto{
+    background-color: (--marron-claro);
+}
+
+
+
+
+
+@media (min-width: 426px){
+
+
+}
+@media (min-width: 762px){
+    
+}
