@@ -2,7 +2,7 @@
   "name": "grupo_9_publicarte",
   "version": "1.0.0",
   "description": "__**Integrantes**__",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
