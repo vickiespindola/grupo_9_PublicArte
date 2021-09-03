@@ -10,7 +10,9 @@
     <title>Carrito de compras</title>
 </head>
 
-<body class="cart">
+<body>
+   
+   <!-- Header -->
     <header>
         <img class="logo" src="/img/publicarte3.png" alt="logo-publicarte">
         <nav>
@@ -37,11 +39,14 @@
             </div>
         </nav>
     </header>
+   
+    <!-- Main -->
+   
     <main>
         <div class="start">
             <h3 class="first-tittle">Productos en su Carrito:</h3>
         </div>
-        <section class="home">
+        <section class="cart">
             <article class="container">
                 <div class="item">
                     <img class="product-img" src="/img/florero-rosa.png" alt="florero-rosa">
@@ -58,9 +63,7 @@
                 
             </article>
 
-            <br>
-
-            <article class="container2">
+            <article class="container">
                 <div class="item">
                     <img class="product-img" src="/img/portaretrato-flor.png" alt="portaretrato-flor">
                     <h4>Nombre del Producto</h4>
@@ -75,25 +78,49 @@
                 </div>
             </article>
 
-            <br>
-
-             <article class="item4">
-                 <a href="">Calcular Envío<i class="fas fa-arrow-right"></i></a>
-                 <P><strong>TOTAL CON ENVÍO</strong></p>
+            <article class="total-product">
+                 <a href=""><strong>Calcular Envío<i class="fas fa-arrow-right"></i></strong></a>
+                 <span><strong>TOTAL CON ENVÍO</strong></span>
                  <span class="price"><strong>$999,99</strong></span>
              </article>
-
-             <br>
                 
             <div class="buttons"> 
-                <button class="continuar-comprando">Continuar comprando</button>
-                <button class="costo-de-envio">Costo de Envío</button>
+                <button class="seguir-comprando">SEGUIR COMPRANDO</button>
+                <button class="finalizar-compra">FINALIZAR COMPRA</button>
             </div>
+        </section>
+        <!-- Carousel -->
+        <section class="carousel">
 
-
+            <h2>Otros productos similares:</h2>
+            <i class="fas fa-chevron-left"></i>
+            <article class="slider1">
+                <img src="/img/florero-blanco.png" alt="">
+                <h4>Florero "Diamante"</h4>
+                <p>$9,99</p>
+            </article>
+            <article class="slider2">
+                <img src="/img/jarron.png" alt="">
+                <h4>Florero "Machiatto"</h4>
+                <p>$9,99</p>
+            </article>
+            <article class="slider3">
+                <img src="/img/portaretrato-rosa.png" alt="">
+                <h4>Portaretrato "Pinky pie"</h4>
+                <p>$9.99</p>
+            </article>
+            <article class="slider4">
+                <img src="/img/portaretrato-flor.png" alt="">
+                <h4>Portaretrato "Amor mío"</h4>
+                <p>$9,99</p>
+            </article>
+            <i class="fas fa-chevron-right"></i>
         </section>
 
     </main>
+
+    <!-- Footer -->
+    
     <footer>
         <img src="/img/publicarte2.png" alt="">
 
