@@ -2,11 +2,12 @@
 main{
     width: 100%;
     background-color: #E5E9F2;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
 
 main .start{
     background-color: var(--marron-claro);
-    font-family: var(--roboto);
+    font-family: var(--rosarivo);
     text-align: center;
     padding: 10px 0;
     width: 100%;
@@ -15,10 +16,11 @@ main .start{
 main .cart article{
     display: flex;
     padding: 5px;
-    font-family: var(--rosarivo);
+    font-family: var(--rosario);
     background-color: white;
     width: 100%;
     margin: 10px 0;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
    
    
 }
@@ -30,7 +32,8 @@ main .cart .item{
 
 main .cart article .product-img{
     width: 80%;
-    padding: 10px 0 0 10px;
+    padding: 2px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
  
 main .cart article h4{
@@ -50,7 +53,7 @@ main .cart p{
     padding: 10px 20px;
     align-self: center;
     font-size: 14px;
-  
+    font-family: var(--poppins);
 }
 
 main .cart .item3{
@@ -59,11 +62,11 @@ main .cart .item3{
     justify-content: space-around;
 }
 
-main .cart i{
+main .cart .item3 i{
    align-self: center;
 }
 
-main .cart .price{
+main .cart .item3 .price{
     text-align: left;
     padding: 10px;
     color: var(--naranja);
@@ -75,17 +78,30 @@ main .cart .total-product{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
 main .cart .total-product a{
     color: var(--naranja);
     font-size: 12px;
+    padding: 5px;
+
 }
+
 main .cart .container a:hover{
     color:var(--marron-claro);
 }
+
 main .cart .total-product span{
-    font-size: 14px;
+    font-size: 12px;
+   
 }
+main .cart .total-product .price{
+    color: var(--naranja);
+    padding: 10px;
+    font-family: var(--rosarivo);
+    font-size: 16px;
+}
+
 main .cart div.buttons{
     display:flex;
     flex-direction: row;
@@ -93,6 +109,7 @@ main .cart div.buttons{
     background-color: white;
     margin: 10px 0;
     width: 100%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
     
 }
 
@@ -109,11 +126,13 @@ main .cart button{
 
 main .cart .seguir-comprando:hover{
     border: 2px solid var(--marron-oscuro);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
    
 }
 
 main .cart .finalizar-compra:hover{
-   border: 2px solid var(--marron-oscuro)
+   border: 2px solid var(--marron-oscuro);
+   box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 /* MOBILE-CAROUSEL */
 main .carousel{
@@ -156,6 +175,7 @@ main .carousel article img{
     margin: 10px 0;
     width: 150px;
     height: 250px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
 
 main .carousel .fa-chevron-left{
@@ -177,6 +197,7 @@ main .carousel .fa-chevron-right{
     main .first-tittle{
         text-align: left;
         margin: 0 20px;
+        font-family: var(--rosarivo);
     }
     main .cart .container{
         width: 97%;
@@ -186,7 +207,7 @@ main .carousel .fa-chevron-right{
     main .cart .item{
         display: flex;
         flex-direction: row;
-       
+       align-items: center;
     }
     
     main .cart article{
@@ -200,18 +221,18 @@ main .carousel .fa-chevron-right{
 
     main .cart article .product-img{
         width: 70%;
-        padding: 10px 10px 10px 0;
+        height: 85%;
+        padding: 5px;
     }
 
     main .cart article h4{
-        margin: auto 0;
-        padding: 10px 10px 10px 0;
-        align-self: center;
+        padding: 10px;
+        /* align-self: center; */
         font-size: 14px;
     }
 
     main .cart p{
-        margin: 0 auto;
+        margin: 10px;
         padding: 10px 10px 10px 20px;
         text-align: center;
         font-size: 14px;
@@ -226,17 +247,32 @@ main .carousel .fa-chevron-right{
     main .cart .item3 .price{
         align-self: center;
         padding: 2px;
+        font-size: 18px;
+        font-family: var(--rosarivo);
     }
     
+    main .cart .item3 i{
+        padding: 5px;
+        margin: 5px;
+    }
     main .cart .total-product{
         width: 97%;
         padding: 10px;
+        
+    }
+    main .cart .total-product span{
+    font-size: 18px;
+    font-family: var(--rosario);
     }
 
     main .cart .total-product a{
         font-size: 14px;
     }
-
+     
+    main .cart .total-product .price{
+        font-size: 18px;
+        font-family: var(--rosarivo);
+    }
     main .cart div.buttons{
         display:flex;
         flex-direction: row;
@@ -276,7 +312,7 @@ main .carousel .fa-chevron-right{
 
     main .start{
         background-color: var(--marron-claro);
-        font-family: var(--roboto);
+        font-family: var(--rosarivo);
         text-align: center;
         padding: 10px 0;
         width: 100%;
@@ -297,24 +333,27 @@ main .carousel .fa-chevron-right{
         font-family: var(--rosarivo);
         background-color: white;
         width: 95%;
-        margin: 30px 50px;
+        margin: 10px 50px 10px 50px;
        
        
     }
     main .cart .item{
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         width: 30%;
         
        
     }
     main .cart article .product-img{
-        width: 70%;
+        width: 90%;
+        height: 90%;
         padding: 10px;
+    
     }
      
     main .cart article h4{
-        padding: 0 10px 10px 10px;
+        padding: 10px;
+        margin: 0 10px;
         align-items: center;
         font-size: 14px;
     }
@@ -325,7 +364,7 @@ main .carousel .fa-chevron-right{
     }
     
     main .cart p{
-        padding: 10px 20px;
+        padding: 10px 10px;
         align-self: center;
         font-size: 14px;
       
@@ -337,32 +376,39 @@ main .carousel .fa-chevron-right{
         justify-content: space-between;
     }
     
-    main .cart i{
+    main .cart .item3 i{
        align-self: center;
+       padding: 5px;
+       margin: 5px;
     }
     
-    main .cart .price{
+    main .cart .item3 .price{
         text-align: left;
         padding: 10px;
         color: var(--naranja);
+        font-size: 18px;
+        font-family: var(--rosarivo);
     }
     
     main .cart .total-product{
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
         width: 92%; 
-        padding: 30px 5px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100)
        
     }
     
     main .cart .total-product span, a{
         padding: 0 20px;
-        font-size: 16px;
+        font-size: 18px;
     }
     main .cart .total-product a{
         color: var(--naranja);
+        font-size: 18px;
+        font-family: var(--rosario);
     }
     main .cart .total-product a:hover{
         color:var(--marron-claro);
@@ -374,8 +420,8 @@ main .carousel .fa-chevron-right{
         background-color: white;
         margin: 10px 10px 20px 50px;
         width: 92%;
-        padding: 5px 5px;
-        } 
+        padding: 10px 40px;
+       } 
     
 
     main .cart button{    
@@ -411,4 +457,7 @@ main .carousel .fa-chevron-right{
         margin: 15% 0;
         font-size: 40px;
     }
+
+   
 }
+
