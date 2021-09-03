@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio sesión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-    
+
+<body class="formulario">
+    <header>
+        <img class="logo" src="/img/publicarte3.png" alt="logo-publicarte">
+        <nav>
+            <div class="burger-menu">
+                <i class="fas fa-bars menu"></i>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="">Artesanos</a></li>
+                <li><a href="">Productos</a></li>
+            </ul>
+            <div class="nav-bar">
+                <form action=""><input type="search" placeholder="Buscar"><i class="fas fa-search"></i></i></form>
+            </div>
+            <div class="user-icon">
+                <a href="/login"><i class="far fa-user"></i></a>
+            </div>
+            <div class="cart-icon">
+                <a href="/cart"><i class="fas fa-cart-plus"></i></a>
+            </div>
+            <div class="header-button">
+                <a href="/login"><button class="login">Ingresa</button></a>
+                <a href="/register"><button class="register">Registrate</button></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>¡Accede a tu cuenta!</h1>
+        <form action="/login">
+            <div><label for="Email">Email</label>
+                <input type="Email" name="Email" id="Email" placeholder="Ingrese su email...">
+            </div>
+            <div> <label for="Contrasenia">Contraseña</label>
+                <input type="Contrasenia" name="Contraseña" id="Contraseña" placeholder="Ingrese su contraseña...">
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <section>
+            <h6>Ó iniciar sesión con:</h6>
+            <button><i class="fab fa-google"> Google</i></button>
+            <button><i class="fab fa-facebook"> Facebook</i></button>
+        </section>
+
+    </main>
 </body>
+
 </html>
