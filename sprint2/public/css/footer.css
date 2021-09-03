@@ -1,6 +1,8 @@
 footer{
     background-color: var(--gris);
     width: 100%;
+    text-align: center;
+    padding: 10px 0;
 }
 
 footer a, footer span, footer h4{
@@ -9,15 +11,13 @@ footer a, footer span, footer h4{
 
 footer img{
     width: 60%;
-    margin: 20px 20%;
+    padding-top: 15px;
 }
-
-
 
 footer section{
     display: flex;
     flex-direction: row;
-    margin: 0 5%;
+    padding: 0px 5%;
     justify-content: space-between;
 }
 
@@ -28,26 +28,27 @@ footer section ul{
 
 footer section ul li{
     padding: 5px 0;
+    text-align: left;
 }
 
 footer .redes{
-    margin: 5px 24% 20px;
-    width: 80%;
-    
+    padding: 5px 24% 20px;
+    width: 100%;
 }
 
 footer .redes h4{
-    margin: 0 10%;
+    text-align: center;
 }
 
 footer .redes ul{
     display: flex;
     flex-direction: row;
-    margin: 10px 15%;
+    padding: 10px 15%;
 }
 
 footer .redes ul li{
     width: 30px;
+    padding: 0 15px;
 }
 
 footer .redes ul li a i{
@@ -57,8 +58,7 @@ footer .redes ul li a i{
 }
 
 footer span{
-    margin: 0px 30%;
-    padding: 10px 5px;
+    text-align: left;
 }
 
 @media (min-width: 426px){
@@ -73,7 +73,7 @@ footer span{
         flex-direction: row;
         border-bottom: 1px solid white;
         justify-content: center;
-        } 
+    } 
     footer section ul{
         display: flex;
         flex-direction: row;
@@ -81,13 +81,12 @@ footer span{
     }
     footer section ul li a{
         font-size: 16px;
-        margin: 13px;
-        padding: 5px;
-        text-align: justify;
+        padding: 5px 10px;
+        text-align: left;
         align-items: center;
     }
     footer .redes{
-        width: 50%;
+        width: 100%;
     }
     footer .redes h4{
         display: none;
@@ -96,14 +95,14 @@ footer span{
         justify-content: space-evenly;
     }
     footer span {
-        margin: 0 40%;
+        padding: 0 40%;
     }
 }
 
 @media (min-width: 769px){
+
     footer img{
         width: 20%;
-        margin: 10px 40%;
     }
     footer section ul{
         display: flex;
@@ -114,9 +113,6 @@ footer span{
         justify-content: center;
     }
     footer .redes ul li{
-        margin: 10px 10px;
-    }
-    footer span {
-        margin: 0 42%;
+        padding: 10px 10px;
     }
 }
