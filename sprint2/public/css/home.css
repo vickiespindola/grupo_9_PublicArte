@@ -67,11 +67,22 @@
 
 
 }
-.home main .contenidoAmistad{
+
+.home main .contenidoAmistad {
     margin: 10px;
     width: 5px;
     font-family: var(--roboto);
     font-size: 16px;
+    position: absolute;
+    width: 10px;
+    height: 64px;
+    left: 92px;
+    top: 1957px;
+
+
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 64px;
 }
 
 .home main .contact {
