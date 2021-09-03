@@ -1,0 +1,84 @@
+.formulario main{
+    background-image: url(/img/mandala1.jpg);
+    background-size: 350%;
+    background-repeat: no-repeat;
+    background-position: 60%;
+    background-attachment: inherit;
+    height: 100%;
+}
+
+.formulario main h2{
+    color: black;
+    text-align: center;
+    font-family: var(--poppins);
+    padding: 20px 0;
+}
+
+.formulario main form div{
+    margin: 20px 10%;
+}
+
+.formulario main form div label{
+    color: white;
+    font-size: 18px;
+    font-family: var(--poppins);
+}
+
+.formulario main form div input{
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.formulario main form button{
+    width: 80%;
+    padding: 10px;
+    margin: 0 10%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: var(--gris);
+    font-family: var(--poppins);
+}
+.formulario main section h4{
+    margin: 20px 30%;
+    width: 40%;
+}
+.formulario main section div{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 10%;
+}
+.formulario main section div button{
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-family: var(--poppins);
+}
+
+@media (min-width: 426px) {
+    .formulario main form{
+        width: 80%;
+        margin: 0 10%;
+    }
+    .formulario main form div label{
+        width: 100%;
+        font-size: 20px;
+    }
+    .formulario main form div input{
+        font-size: 20px;
+    }
+    .formulario main button{
+        width: 50%;
+        font-size: 20px;
+    }
+    .formulario main section h4{
+        font-size: 20px;
+        margin: 20px 40%;
+    }
+}
