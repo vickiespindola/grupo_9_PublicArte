@@ -1,11 +1,11 @@
 /* MOBILE-CART */
-main{
+.cart main{
     width: 100%;
     background-color: #E5E9F2;
     box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
 
-main .start{
+.cart main div.start{
     background-color: var(--marron-claro);
     font-family: var(--rosarivo);
     text-align: center;
@@ -13,7 +13,7 @@ main .start{
     width: 100%;
 }
 
-main .cart article{
+.cart main section article.container{
     display: flex;
     padding: 5px;
     font-family: var(--rosario);
@@ -24,31 +24,32 @@ main .cart article{
    
    
 }
-main .cart .item{
+.cart main section article.container div.item{
     flex-direction: column;
     align-items: flex-start;
     width: 50%;
 }
 
-main .cart article .product-img{
+.cart main section article.container div.item img{
     width: 80%;
     padding: 2px;
+    margin: 10px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
  
-main .cart article h4{
+.cart main section article.container div.item h4{
     margin: 0 auto;
     padding: 0 10px 10px 10px;
     align-items: center;
     font-size: 14px;
 }
 
-main .cart .item2{
+.cart main section article.container div.item2{
     display: flex;
     flex-direction: row;
 }
 
-main .cart p{
+.cart main section article.container div.item2 p{
     margin: 0 auto;
     padding: 10px 20px;
     align-self: center;
@@ -56,53 +57,56 @@ main .cart p{
     font-family: var(--poppins);
 }
 
-main .cart .item3{
+.cart main section article.container div.item3{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-main .cart .item3 i{
+.cart main section article.container div.item3 i{
    align-self: center;
 }
 
-main .cart .item3 .price{
+.cart main section article.container div.item3 span.price{
     text-align: left;
     padding: 10px;
     color: var(--naranja);
     font-size: 14px ;
 }
 
-main .cart .total-product{
+.cart main section article.total-product{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-color: white;
     box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
-main .cart .total-product a{
+.cart main section article.total-product a{
     color: var(--naranja);
-    font-size: 12px;
+    font-size: 14px;
     padding: 5px;
+    font-family: var(--rosario);
 
 }
 
-main .cart .container a:hover{
+.cart main section article.total-product a:hover{
     color:var(--marron-claro);
 }
 
-main .cart .total-product span{
-    font-size: 12px;
+.cart main section article.total-product span{
+    font-size: 14px;
+    font-family: var(--rosario);
    
 }
-main .cart .total-product .price{
+.cart main section article.total-product span.price{
     color: var(--naranja);
     padding: 10px;
     font-family: var(--rosarivo);
     font-size: 16px;
 }
 
-main .cart div.buttons{
+.cart main section div.buttons{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -113,7 +117,7 @@ main .cart div.buttons{
     
 }
 
-main .cart button{    
+.cart main section div.buttons button{    
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
@@ -124,156 +128,154 @@ main .cart button{
     margin-bottom: 10px;
 }
 
-main .cart .seguir-comprando:hover{
+.cart main section div.buttons button.seguir-comprando:hover{
     border: 2px solid var(--marron-oscuro);
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
    
 }
 
-main .cart .finalizar-compra:hover{
+.cart main section div.buttons button.finalizar-compra:hover{
    border: 2px solid var(--marron-oscuro);
    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 /* MOBILE-CAROUSEL */
-main .carousel{
+.cart main section.carousel{
     background-color: var(--marron-claro);
     padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
 }
 
-main .carousel article{
+.cart main section.carousel article{
     margin: 10px auto;
     padding: 0 10px 20px;
     height: 80%;
 }
 
-main .carousel article h2{
+.cart main section.carousel article h2{
     font-family: var(--poppins);
 }
 
-main .carousel article p{
+.cart main section.carousel article p{
     font-size: 18px;
     font-family: var(--roboto);
     font-weight: 600;
 }
 
-main .carousel article:hover{
+.cart main section.carousel article:hover{
     color: var(--naranja);
     padding: 0 10px 20px;
     background-color: white;
     border-radius: 10px;
 }
 
-main .carousel h2{
+.cart main section.carousel h2{
     margin: 20px 10% 10px;
     width: 100%;
     font-family: var(--rosario);
 }
 
-main .carousel article img{
+.cart main section.carousel article img{
     margin: 10px 0;
     width: 150px;
     height: 250px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
 
-main .carousel .fa-chevron-left{
+.cart main section.carousel .fa-chevron-left{
     display: none;
 }
 
-main .slider3,
-main .slider4{
+.cart main section article.slider3,
+.cart main section article.slider4{
     display: none;
 }
 
-main .carousel .fa-chevron-right{
+.cart main section.carousel .fa-chevron-right{
     font-size: 20px;
     margin: 40% 0;
 }
 
 /* TABLET-CART */
-@media(min-width: 426px){
-    main .first-tittle{
+@media (min-width: 426px){
+.cart main div.start h3{
         text-align: left;
         margin: 0 20px;
         font-family: var(--rosarivo);
     }
-    main .cart .container{
+
+.cart main section article.container{
+        display: flex;
+        padding: 15px;
+        font-family: var(--rosarivo);
+        background-color: white;
         width: 97%;
-        padding: 10px 5px;
+        margin: 10px 10px;
     }
-    
-    main .cart .item{
+
+.cart main section article.container div.item{
         display: flex;
         flex-direction: row;
        align-items: center;
     }
     
-    main .cart article{
-        display: flex;
-        padding: 30px;
-        font-family: var(--rosarivo);
-        background-color: white;
-        width: 100%;
-        margin: 10px 10px;
-    }
-
-    main .cart article .product-img{
+.cart main section article.container div.item img{
         width: 70%;
         height: 85%;
         padding: 5px;
     }
 
-    main .cart article h4{
+.cart main section article.container div.item h4{
         padding: 10px;
-        /* align-self: center; */
         font-size: 14px;
     }
 
-    main .cart p{
+.cart main section article.container div.item2 p{
         margin: 10px;
         padding: 10px 10px 10px 20px;
         text-align: center;
         font-size: 14px;
       
     }
-    main .cart .item3{
+.cart main section article.container div.item3{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    main .cart .item3 .price{
+.cart main section article.container div.item3 i{
+        padding: 5px;
+        margin: 5px;
+    }
+
+.cart main section article.container div.item3 span.price{
         align-self: center;
         padding: 2px;
         font-size: 18px;
         font-family: var(--rosarivo);
     }
     
-    main .cart .item3 i{
-        padding: 5px;
-        margin: 5px;
-    }
-    main .cart .total-product{
+.cart main section article.total-product{
         width: 97%;
         padding: 10px;
-        
+        margin-left: 10px;
     }
-    main .cart .total-product span{
+    
+.cart main section article.total-product a{
+        font-size: 14px;
+    }
+
+.cart main section article.total-product span{
     font-size: 18px;
     font-family: var(--rosario);
     }
 
-    main .cart .total-product a{
-        font-size: 14px;
-    }
-     
-    main .cart .total-product .price{
+.cart main section article.total-product span.price{
         font-size: 18px;
         font-family: var(--rosarivo);
     }
-    main .cart div.buttons{
+
+.cart main section div.buttons{
         display:flex;
         flex-direction: row;
         justify-content: flex-end;
@@ -282,108 +284,108 @@ main .carousel .fa-chevron-right{
         width: 97%;
     }
   
-    main .cart button{    
+.cart main section div.buttons button{    
         margin: 10px 35px;
-        }
+    }
+
 /* TABLET-CAROUSEL */
-    main .carousel{
+.cart main section.carousel{
         height: 550px;
     }
 
-    main .carousel .slider3{
+.cart main section.carousel .slider3{
         display: block;
     }
 
-    main .carousel article img{
+.cart main section.carousel article img{
         width: 200px;
         height: 300px;
     }
 
-    main .carousel .fa-chevron-right{
+.cart main section.carousel .fa-chevron-right{
         margin: 25% 0;
     }
 }
+
+
 /* DESKTOP-CART */
-@media (min-width: 769px){
-    main{
+@media(min-width: 769px){
+.cart main{
         width: 100%;
         background-color: #E5E9F2;
     }
 
-    main .start{
+.cart main div.start{
         background-color: var(--marron-claro);
         font-family: var(--rosarivo);
         text-align: center;
         padding: 10px 0;
         width: 100%;
     }
-    main .start .first-tittle{
+.cart main div.start h3{
         text-align: left;
         margin: 0 50px;
     }
     
-    main .cart .container{
-        width: 92%;
-        padding: 10px 5px;
-    } 
-
-    main .cart article{
+.cart main section article.container{
         display: flex;
         padding: 30px;
         font-family: var(--rosarivo);
         background-color: white;
-        width: 95%;
-        margin: 10px 50px 10px 50px;
+        width: 92%;
+        margin: 10px 50px 10px 40px;
        
-       
-    }
-    main .cart .item{
+}
+    
+.cart main section article.container div.item{
         flex-direction: row;
         align-items: center;
         width: 30%;
-        
-       
     }
-    main .cart article .product-img{
+
+.cart main section article.container div.item img{
         width: 90%;
         height: 90%;
         padding: 10px;
     
     }
      
-    main .cart article h4{
+.cart main section article.container div.item h4{
         padding: 10px;
         margin: 0 10px;
         align-items: center;
         font-size: 14px;
     }
     
-    main .cart .item2{
+.cart main section article.container div.item2{
         display: flex;
         flex-direction: row;
     }
     
-    main .cart p{
-        padding: 10px 40px;
-        align-self: center;
+.cart main section article.container div.item2 p{
+        display: flex;
+        flex-direction: row;
+        padding: 10px 40px 10px 50px;
+        margin-left: 40px;
+        align-self:center;
         font-size: 14px;
         width: 90%;
-      
+       
     }
     
-    main .cart .item3{
+.cart main section article.container div.item3{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
     
-    main .cart .item3 i{
+.cart main section article.container div.item3 i{
        align-self: center;
        padding: 5px;
        margin: 5px;
     }
     
-    main .cart .item3 .price{
+.cart main section article.container div.item3 span.price{
         text-align: left;
         padding: 10px;
         color: var(--naranja);
@@ -391,41 +393,46 @@ main .carousel .fa-chevron-right{
         font-family: var(--rosarivo);
     }
     
-    main .cart .total-product{
+.cart main section article.total-product{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
         width: 92%; 
         padding: 20px;
+        margin-left: 40px;
         box-shadow: 0px 0px 10px rgb(100, 100, 100)
        
     }
     
-    main .cart .total-product span, a{
-        padding: 0 20px;
-        font-size: 18px;
-    }
-    main .cart .total-product a{
+.cart main section article.total-product a{
         color: var(--naranja);
         font-size: 18px;
         font-family: var(--rosario);
+        padding: 0 20px;
+        font-size: 18px;
     }
-    main .cart .total-product a:hover{
+
+.cart main section article.total-product a:hover{
         color:var(--marron-claro);
     }
     
-    main .cart div.buttons{
+.cart main section article.total-product span{
+        padding: 0 20px;
+        font-size: 18px;
+    }    
+
+.cart main section div.buttons{
         display: flex;
         justify-content: flex-end;
         background-color: white;
-        margin: 10px 10px 20px 50px;
+        margin: 10px 10px 20px 40px;
         width: 92%;
         padding: 10px 40px;
        } 
     
 
-    main .cart button{    
+.cart main section div.buttons button{    
         border: none;
         border-radius: 5px;
         padding: 10px 15px;
@@ -437,28 +444,27 @@ main .carousel .fa-chevron-right{
     }
     
     /* DESKTOP-CAROUSEL */
-    main .carousel{
+.cart main section.carousel{
         height: 550px;
     }
 
-    main .carousel article img{
+.cart main section.carousel article img{
         width: 220px;
         height: 320px;
     }
 
-    main .carousel article{
+.cart main section.carousel article{
         font-size: 20px;
     }
 
-    main .carousel .slider4{
+.cart main section.carousel .slider4{
         display: block;
     }
 
-    main .carousel .fa-chevron-right{
+.cart main section.carousel .fa-chevron-right{
         margin: 15% 0;
         font-size: 40px;
     }
 
-   
 }
 
