@@ -1,10 +1,11 @@
+
+
 .formulario main{
     background-image: url(/img/mandala1.jpg);
-    background-size: 350%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 60%;
     background-attachment: inherit;
-    height: 100%;
 }
 
 .formulario main h2{
@@ -41,15 +42,19 @@
     background-color: var(--gris);
     font-family: var(--poppins);
 }
+.formulario main section{
+    text-align: center;
+}
 .formulario main section h4{
-    margin: 20px 30%;
-    width: 40%;
+    padding: 20px 0px;
 }
 .formulario main section div{
     display: flex;
     flex-direction: row;
-    width: 80%;
-    margin: 0 10%;
+    justify-content: center;
+}
+.login main section div{
+    padding: 40px 0;
 }
 .formulario main section div button{
     background-color: rgba(255, 255, 255, 0.3);
@@ -74,11 +79,10 @@
         font-size: 20px;
     }
     .formulario main button{
-        width: 50%;
+        width: 30%;
         font-size: 20px;
     }
     .formulario main section h4{
         font-size: 20px;
-        margin: 20px 40%;
     }
 }
