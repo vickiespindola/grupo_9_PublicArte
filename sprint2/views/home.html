@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
     <title>Home</title>
 </head>
 
-<body>
+<body class="home">
     <header>
         <img class="logo" src="/img/publicarte3.png" alt="logo-publicarte">
         <nav>
@@ -39,72 +40,110 @@
 
     </header>
 
-    <main class="home">
-<section class= "carrusel">
+    <main>
+        <section class="carrusel">
             <img src="/img/carrucel1.jpg" alt=" imagen de vasijas">
-            <p>El arte en tus manos</p>
-            <P>Los mejores productos hechos a mano por maestros artesanos.</P>
-<button>Descubre nuestra colección</button>
+            <div class="contenido">
+                <h3>El arte en tus manos</h3>
+                <p>Los mejores productos hechos a mano por maestros artesanos.</p>
+                <button>Descubre nuestra colección</button>
+            </div>
+
         </section>
 
-<section class="botones">
-<ul>
-    <li><a href="">Envios a domicilio</a></li>
-    <li><a href="">Atención personalizada</a></li>
-    <li><a href="">Ofertas especiales</a></li>
-    <li><a href="">Contacto</a></li>
-</ul>
-</section>
+        <section class="botones">
+            <ul>
+                <li><a href=""><i class="fas fa-shipping-fast"></i> Envios a domicilio</a>
+                </li>
+                <li><a href=""><i class="far fa-comments"></i> Atención personalizada</a>
+                </li>
+                <li><a href=""><i class="fas fa-tags"></i></i> Ofertas especiales</a>
+                </li>
+                <li class="botoncontacto"><a href=""><i class="far fa-question-circle"></i> Contacto</a>
+                </li>
+            </ul>
+        </section>
 
-<section class="productosDestacados">
-<h2>Productos Destacados</h2>
-<div>
-    <article>
-        <img src="" alt="">
-        <h4>nombre del producto</h4>
-        <p>precio</p>
-    </article>
-    <article>
-        <img src="" alt="">
-        <h4>nombre del producto</h4>
-        <p>precio</p>
-    </article>
-    <article>
-        <img src="" alt="">
-        <h4>nombre del producto</h4>
-        <p>precio</p>
-    </article>
-    <article>
-        <img src="" alt="">
-        <h4>nombre del producto</h4>
-        <p>precio</p>
-    </article>
-</div>
-</section>
-<div>
-    <a href="">Especial Día de la Amistad</a>
-    <img src="" alt="">
-</div>
+        <section class="productosDestacados">
+            <h2>Productos Destacados</h2>
+            <div class="articulos">
+                <article>
+                    <img src="/img/florero-blanco.png" alt="">
+                    <h4>nombre del producto</h4>
+                    <p>$333,33</p>
+                </article>
+                <article>
+                    <img src="/img/florero-rosa.png" alt="">
+                    <h4>nombre del producto</h4>
+                    <p>$333,33</p>
+                </article>
+                <article>
+                    <img src="/img/jarron.png" alt="">
+                    <h4>nombre del producto</h4>
+                    <p>$333,33</p>
+                </article>
+                <article>
+                    <img src="/img/portaretrato-flor.png" alt="">
+                    <h4>nombre del producto</h4>
+                    <p>$333,33</p>
+                </article>
+                <article class="slider1">
+                    <img src="/img/florero-blanco.png" alt="">
+                    <h4>nombre del producto</h4>
+                    <p>$333,33</p>
+                </article>
+                <article class="slider1">
+                    <img src="/img/florero-rosa.png" alt="">
+                    <h4>nombre del producto</h4>
+                    <p>$333,33</p>
+                </article>
+                <article class="slider2">
+                    <img src="/img/jarron.png" alt="">
+                    <h4>nombre del producto</h4>
+                    <p>$333,33</p>
+                </article>
+                <article class="slider2">
+                    <img src="/img/portaretrato-flor.png" alt="">
+                    <h4>nombre del producto</h4>
+                    <p>$333,33</p>
+                </article>
+            </div>
+       </section >
 
-<Section class="contacto">
-    <h2>Tenemos un lugar para cada necesidad</h2>
-    <div>
-        <h3>Soy productor</h3>
-        <p> ¿Estás a pleno materializando tu sueño en una pieza única?</p>
-<button>Know more</button>
+       <section  class="contenidoAmistad">
+           <div>
+        <a href="">Especial Día de la Amistad</a>
+        <img src="/img/portaretrato-rosa.png" alt="">
     </div>
-    <div>
-        <h3>Soy cliente</h3>
-        <p> ¿Necesitas asesoramiento especial para la compra de un producto?</p>
-<button>Know more</button>
-    </div>
-    <div>
-        <h3>Eventos</h3>
-        <p> ¿Haces eventos a los cuales participan muchos artesano?</p>
-<button>Know more</button>
-    </div>
-</Section>
+</section>
         
+       
+        <section class="contact">
+            <h1>Tenemos un lugar para cada necesidad</h1>
+            <article>
+                <h2>Soy productor</h2>
+                <p>
+                    ¿Estás a pleno materializando tu sueño en una pieza única?
+                </p>
+                <a href="">Ver más <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article>
+                <h2>Soy cliente</h2>
+                <p>
+                    ¿Necesitas asesoramiento para la compra de un producto?
+                </p>
+                <a href="">Ver más <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article>
+                <h2>Eventos</h2>
+                <p>
+                    ¿Haces eventos a los cuales participan muchos artesanos?
+                </p>
+                <a href="">Ver más <i class="fas fa-arrow-right"></i></a>
+            </article>
+        </section>
+
+
     </main>
 
     <footer>

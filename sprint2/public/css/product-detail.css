@@ -1,6 +1,5 @@
 .product-detail main section .detail {
-    padding: 10px 0 50px;
-    
+    padding: 10px 0 50px; 
 }
 
 .product-detail main section aside {
@@ -320,6 +319,5 @@ main .contact article a {
     main .contact article {
         padding: 30px 0;
         width: 20%;
-        
     }
 }
