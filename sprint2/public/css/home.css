@@ -77,7 +77,6 @@
 
 .home main .productosDestacados {
     width: 100%;
-    margin: 0 5px;
 }
 
 .home main .productosDestacados h2 {
@@ -95,7 +94,6 @@
     justify-content: space-around;
     flex-wrap: wrap;
   /* Maldito wrap!!!!!!!!!!!!!!!!!!!!!!! */
-  
 }
 
 .home main .productosDestacados article h4 {
@@ -240,7 +238,6 @@
 
     .home main .productosDestacados {
         width: 100%;
-        margin: 0 5px;
     }
 
     .home main .productosDestacados h2 {
