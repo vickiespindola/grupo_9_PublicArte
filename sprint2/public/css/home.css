@@ -13,7 +13,7 @@
     position: absolute;
     top: 50px;
     width: 80%;
-    background-color: white;
+    background-color: transparent;
     text-align: center;
     right: 35px;
     margin: 3% 3%;
@@ -34,12 +34,16 @@
     font-family: var(--poppins);
     font-size: 27px;
     width: 100%;
+    background-color: hsla(30, 100%, 75%, 0.3);
+
 }
 
 .home main .carrusel div.contenido p {
     margin: 10px;
     font-family: var(--rosarivo);
     font-size: 16px;
+    background-color: hsla(30, 100%, 75%, 0.3);
+    font-weight: bolder;
 
 }
 
@@ -94,8 +98,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-  /* Maldito wrap!!!!!!!!!!!!!!!!!!!!!!! */
-  
+    /* Maldito wrap!!!!!!!!!!!!!!!!!!!!!!! */
+
 }
 
 .home main .productosDestacados article h4 {
@@ -170,29 +174,27 @@
     }
 
     .home main .carrusel div.contenido {
-        position: absolute;
+
         top: 150px;
         width: 80%;
-        background-color: white;
-        text-align: center;
         margin: 3% 6%;
         padding: 10px 15px;
     }
 
     .home main .carrusel div.contenido button {
-        background-color: var(--naranja);
+
         font-size: 16px;
-        font-family: var(--roboto);
-        border: none;
+
+
         padding: 5px 10px;
-        border-radius: 5px;
-        color: white;
+
         margin: 5px;
     }
 
     .home main .carrusel div.contenido h3 {
-        font-family: var(--poppins);
+
         font-size: 27px;
+
         width: 100%;
     }
 
@@ -200,6 +202,7 @@
         margin: 10px;
         font-family: var(--rosarivo);
         font-size: 16px;
+
 
     }
 
@@ -228,14 +231,12 @@
     .home main .botones ul li.botoncontacto a {
         width: 11%;
     }
+
     .home main .botones ul li a {
         font-family: var(--rosarivo);
         font-size: 14px;
-        color: white;
         width: 23%;
         margin: 0;
-        border-left: 1px solid var(--naranja);
-
     }
 
     .home main .productosDestacados {
@@ -278,7 +279,6 @@
     .home main .contenidoAmistad {
 
         padding: 20px 0;
-        background-color: whitesmoke;
         display: flex;
         flex-wrap: wrap;
         margin: 10% 30%;
@@ -321,43 +321,76 @@
 
 @media (min-width: 769px) {
 
+    .home main .carrusel {
+
+        position: relative;
+    }
+
+    .home main .carrusel img {
+        width: 100%;
+    }
     .home main .carrusel div.contenido {
         width: 90%;
         padding: 80px;
         margin: 0 10px;
     }
 
-    home main .carrusel div.contenido button {
-        
-        font-size: 32px;
-        
-        border: none;
+    .home main .carrusel div.contenido h3 {
+
+        font-size: 60px;
+        width: 100%;
+    }
+
+    .home main .carrusel div.contenido p {
+        margin: 0px;
+        font-size: 40px;
+    }
+
+    .home main .carrusel div.contenido button {
+
+        font-size: 20px;
         padding: 15px 20px;
         border-radius: 5px;
     }
-    
-    .home main .carrusel div.contenido h3 {
-       
-        font-size: 40px;
+
+    .home main .botones ul {
         width: 100%;
-    }
-    
-    .home main .carrusel div.contenido p {
-        margin: 10px;
-        
-        font-size: 30px;
-    
+        display: inline-block;
+        padding: 30px 0;
+        margin-left: 10px;
     }
 
 
+    .home main .productosDestacados .slider2 {
+        display: block;
+    }
 
-
-.home main .productosDestacados .slider2{
-    display: block;
-}
     /* para los articulos */
     .home main .productosDestacados div.articulos article {
         width: 21%;
     }
 
+    .home main .contenidoAmistad {
+
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10% 30%;
+        text-align: center;
+        width: 40%;
+    }
+
+    .home main .contenidoAmistad a {
+        font-size: 25px;
+       align-content: center;
+       margin-left: 100px;
+    }
+
+    .home main .contenidoAmistad img {
+       display: flex ;
+        flex-wrap: wrap;
+margin-left: 180px;
+        width: 150px;
+        height: 200px;
+    }
 }
