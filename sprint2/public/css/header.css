@@ -1,3 +1,136 @@
 header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+header .logo{
+    width: 40%;
+    margin: 20px;
+}
+header nav{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header nav ul li a{
+    color: black;
+}
+
+header nav ul{
+    font-family: var(--inter);
+    font-weight: 600;
+    font-size: 14px;
+    display: none;
+}
+
+header nav i{
+    font-size: 25px;
+    color: var(--gris);
+}
+header nav .login{
+    border: none;
+    border-radius: 5px;
+    background-color: var(--marron-claro);
+    color: var(--marron-oscuro);
+    padding: 10px 15px;
+    margin: 0 10px;
+}
+header nav .login:hover{
+    background-color: var(--marron-oscuro) ;
+    color: white;
+}
+header nav .register{
+    border: none;
+    border-radius: 5px;
+    background-color: var(--marron-oscuro);
+    color: white;
+    padding: 10px 15px;
+    margin: 0 10px;
+}
+header nav .register:hover{
+    background-color: var(--marron-claro) ;
+    color: var(--marron-oscuro);
+}
+header nav .header-button{
+    display: none;
+}
+
+header nav input{
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+}
+
+header nav .nav-bar{
+    border-color: none;
+    border-bottom: 2px solid black;
+}
+
+@media (min-width: 426px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        margin: 0 10px;
+    }
+    header .logo{
+        width: 15%;
+        margin: 20px 10px 20px ;
+    }
+    header nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 70%;
+        padding: 0 20px;
+    }
+    header nav ul li{
+        padding: 0 5px;
+    }
+    header nav .burger-menu{
+        display: none;
+    }
+    header nav .nav-bar{
+        border: none;
+    }
+    header nav .nav-bar input{
+        display: none;
+    }
+    header nav i{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 769px){
+    header .logo{
+        margin-left: 40px;
+        width: 10%;
+    }
+
+    header nav ul{
+        width: 40%;
+        margin-top: 10px;
+    }
+    header nav .nav-bar input{
+        display: inline-flex;
+        width:  90%;
+    }
+    header nav .nav-bar{
+        border-bottom: 1px solid black;
+        width: 25%;
+    }
+    header nav .nav-bar i{
+        width: 10%;
+    }
+    header nav .user-icon{
+        display: none;
+    }
+    header nav .header-button{
+        display: flex;
+    }
     
 }
