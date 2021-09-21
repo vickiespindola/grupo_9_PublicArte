@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Registro</title>
+</head>
+
+<body class="formulario">
+    <header>
+        <img class="logo" src="/img/publicarte3.png" alt="logo-publicarte">
+        <nav>
+            <div class="burger-menu">
+                <i class="fas fa-bars menu"></i>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="">Artesanos</a></li>
+                <li><a href="">Productos</a></li>
+            </ul>
+            <div class="nav-bar">
+                <form action=""><input type="search" placeholder="Buscar"><i class="fas fa-search"></i></i></form>
+            </div>
+            <div class="user-icon">
+                <a href="/login"><i class="far fa-user"></i></a>
+            </div>
+            <div class="cart-icon">
+                <a href="/cart"><i class="fas fa-cart-plus"></i></a>
+            </div>
+            <div class="header-button">
+                <a href="/login"><button class="login">Ingresa</button></a>
+                <a href="/register"><button class="register">Registrate</button></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>¡Crea tu cuenta!</h2>
+        <form action="/register">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre...">
+            </div>
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Ingrese apellido...">
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Ingrese e-mail">
+            </div>
+            <div>
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese contraseña...">
+            </div>
+            <button type="submit">Crear cuenta</button>
+        </form>
+        <section>
+            <h4>Ó crea tu cuenta con:</h4>
+            <div>
+                <button><i class="fab fa-google"></i> Google</button>
+                <button><i class="fab fa-facebook"></i> Facebook</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="/img/publicarte2.png" alt="">
+        <section>
+            <ul>
+                <li><a href="/register">Crear cuenta</a></li>
+                <li><a href="/login">Iniciar sesión</a></li>
+                <li><a href="">Información</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Preguntas Frecuentes</a></li>
+                <li><a href="">Términos y condiciones</a></li>
+            </ul>
+        </section>
+        <div class="redes">
+            <h4>Seguinos en redes:</h4>
+            <ul>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+            </ul>
+        </div>
+        <span>©️2021 PublicArte</span>
+    </footer>
+</body>
+
+</html>

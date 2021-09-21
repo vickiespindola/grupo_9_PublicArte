@@ -1,0 +1,539 @@
+/* MOBILE-CART */
+
+.cart main{
+    width: 100%;
+    background-color: #E5E9F2;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+}
+
+.cart main div.start{
+    background-color: var(--marron-claro);
+    font-family: var(--rosarivo);
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.cart main section article.container{
+    display: flex;
+    padding: 5px;
+    font-family: var(--rosario);
+    background-color: white;
+    width: 100%;
+    margin: 15px 0;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+   
+   
+}
+.cart main section article div.items{
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    width: 100%;
+    height: 60%;
+    border: #E5E9F2 solid 1px;
+}
+
+.cart main section article div.items img{
+    border-right: #E5E9F2 solid 1px;
+    height: 70%;
+}
+.cart main section article div.items img.product-img{
+    width: 30%;
+    height: 60%;
+    padding: 2px;
+    margin: 5px 10px 5px 5px;
+    align-self: center;
+   
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+}
+
+.cart main section article div.items div.item1{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    justify-content: space-around;
+    align-self: center;
+    border-left: #E5E9F2 solid 1px;
+    border-right: #E5E9F2 solid 1px;
+}
+
+.cart main section article div.items div.item1 a h4{
+    margin: 0;
+    padding: 8px 5px 0 5px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    font-family: var(--rosario);
+
+ }
+ 
+.cart main section article div.items div.item1 p{
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: var(--rosario);
+}
+
+.cart main section article div.items div.item2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    width: 30%;
+    height: 100%;
+   
+}
+
+
+.cart main section article div.items div.item2 span.quantity{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    color: black;
+    font-size: 18px;
+    margin: 10px 5px;
+    padding: 10px 0;
+}
+
+.cart main section article div.items div.item2 span.quantity i{
+    background-color: #F1F2F3;
+    border-radius: 100%;
+    padding: 2px;
+    margin: 0 15px;
+    font-size: 12px;
+}
+
+.cart main section article div.items div.item2 span.price{
+    align-self: center;
+    padding: 10px 0;
+    color: var(--naranja);
+    /* font-size: 18px ; */
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: var(--poppins);
+    
+}
+.cart main section article div.items div.item2 i{
+   align-self: center;
+   padding: 10px 0;
+   margin: 10px 5px;
+}
+
+
+.cart main section article.total-product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    margin-top: 40px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+}
+.cart main section article.total-product a{
+    color: var(--naranja);
+    font-size: 14px;
+    padding: 5px;
+    font-family: var(--rosario);
+
+}
+
+.cart main section article.total-product a:hover{
+    color:var(--marron-claro);
+}
+
+.cart main section article.total-product span{
+    font-size: 14px;
+    font-family: var(--rosario);
+   
+}
+.cart main section article.total-product span.price{
+    color: var(--naranja);
+    padding: 10px;
+    font-family: var(--poppins);
+    font-size: 20px;
+}
+
+.cart main section div.buttons{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+    margin: 5px 0 20px 0;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+    
+}
+
+.cart main section div.buttons button{    
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px 10px;
+    background-color:var(--naranja);
+    border:var(--naranja);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.cart main section div.buttons button.seguir-comprando:hover{
+    border: 2px solid var(--marron-oscuro);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+   
+}
+
+.cart main section div.buttons button.finalizar-compra:hover{
+   border: 2px solid var(--marron-oscuro);
+   box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+/* MOBILE-CAROUSEL */
+.cart main section.carousel{
+    background-color: var(--marron-claro);
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart main section.carousel article{
+    margin: 10px auto;
+    padding: 0 10px 20px;
+    height: 80%;
+}
+
+.cart main section.carousel article h2{
+    font-family: var(--poppins);
+}
+
+.cart main section.carousel article p{
+    font-size: 18px;
+    font-family: var(--roboto);
+    font-weight: 600;
+}
+
+.cart main section.carousel article:hover{
+    color: var(--naranja);
+    padding: 0 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.cart main section.carousel h2{
+    margin: 20px 10% 10px;
+    width: 100%;
+    font-family: var(--rosario);
+}
+
+.cart main section.carousel article img{
+    margin: 10px 0;
+    width: 150px;
+    height: 250px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+}
+
+.cart main section.carousel .fa-chevron-left{
+    display: none;
+}
+
+.cart main section article.slider3,
+.cart main section article.slider4{
+    display: none;
+}
+
+.cart main section.carousel .fa-chevron-right{
+    font-size: 20px;
+    margin: 40% 0;
+}
+
+/* TABLET-CART */
+@media (min-width: 426px){
+.cart main div.start h3{
+        text-align: left;
+        margin: 0 30px;
+        font-family: var(--rosarivo);
+    }
+
+.cart main section article.container{
+        display: flex;
+        padding: 8px;
+        font-family: var(--rosarivo);
+        background-color: white;
+        width: 90%;
+        margin: 10px 30px;
+    }
+
+.cart main section article div.items{
+        display: flex;
+        flex-direction: row;
+       align-items: center;
+       justify-content: space-around;
+       height: 80%;
+    }
+.cart main section article div.items img{
+        margin-right: 20px;
+        width: 40%;
+        height: 60%;
+    }   
+.cart main section article div.items img.product-img{
+        width: 20%;
+        margin: 10px auto;
+
+    }
+
+.cart main section article div.item1{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.cart main section article div.items div.item1 a h4.tittle-img{
+        padding: 10px;
+        font-size: 18px;
+    }
+
+.cart main section article div.items div.item1 p{
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+      
+    }
+
+    .cart main section article div.items div.item2{
+        width: 30%;
+
+    }   
+
+    .cart main section article div.items div.item2 span.quantity{
+       font-size: 20px;
+        
+    }
+    
+    .cart main section article div.items div.item2 span.quantity i{
+        margin: 0 20px;
+        font-size: 18px;
+    }
+    
+    .cart main section article div.items div.item2 span.price{
+       font-size: 24px;
+    }
+
+    .cart main section article div.items div.item2 i{
+       align-self: center;
+       padding: 10px 0;
+       margin: 10px 5px;
+       font-size: 18px;
+    }
+.cart main section article.total-product{
+        width: 90%;
+        padding: 10px;
+        margin-left: 31px;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        align-self: center;
+    }
+    
+.cart main section article.total-product a{
+        font-size: 16px;
+    }
+
+.cart main section article.total-product span{
+    font-size: 16px;
+    font-family: var(--rosario);
+    }
+
+.cart main section article.total-product span.price{
+        font-size: 22px;
+        font-family: var(--poppins);
+    }
+
+.cart main section div.buttons{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 5px 20px 10px 30px;
+        width: 90%;
+        padding: 10px;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        font-size: 18px;
+    }
+  
+.cart main section div.buttons button{    
+        margin: 10px;
+    }
+
+/* TABLET-CAROUSEL */
+.cart main section.carousel{
+        height: 550px;
+    }
+
+.cart main section.carousel .slider3{
+        display: block;
+    }
+
+.cart main section.carousel article img{
+        width: 200px;
+        height: 300px;
+    }
+
+.cart main section.carousel .fa-chevron-right{
+        margin: 25% 0;
+    }
+}
+
+
+/* DESKTOP-CART */
+@media(min-width: 769px){
+.cart main{
+        width: 100%;
+        background-color: #E5E9F2;
+    }
+
+.cart main div.start{
+        background-color: var(--marron-claro);
+        font-family: var(--rosarivo);
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+.cart main div.start h3{
+        text-align: left;
+        margin: 0 60px;
+        font-size: 20px;
+    }
+    
+.cart main section article.container{
+        display: flex;
+        padding: 8px;
+        font-family: var(--rosarivo);
+        background-color: white;
+        width: 85%;
+        margin: 10px 50px 10px 60px;
+        align-self: center;
+       
+}
+    
+.cart main section article div.items{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   height: 80%;
+}
+.cart main section article div.items img{
+    margin-right: 20px;
+    width: 40%;
+    height: 50%;
+}   
+.cart main section article div.items img.product-img{
+    width: 20%;
+    margin: 10px auto;
+
+}
+
+.cart main section article div.item1{
+display: flex;
+flex-direction: column;
+width: 30%;
+}
+
+.cart main section article div.items div.item1 a h4.tittle-img{
+    padding: 10px;
+    font-size: 24px;
+}
+
+.cart main section article div.items div.item1 p{
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+  
+}
+
+.cart main section article div.items div.item2{
+    width: 30%;
+
+}   
+
+.cart main section article div.items div.item2 span.quantity{
+    
+    font-size: 24px;
+    
+}
+
+.cart main section article div.items div.item2 span.quantity i{
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.cart main section article div.items div.item2 span.price{
+    margin: 20px 0;
+    font-size: 26px;
+
+    
+}
+.cart main section article div.items div.item2 i{
+   align-self: center;
+   padding: 10px 0;
+   margin: 10px 5px;
+   font-size: 20px;
+}
+.cart main section article.total-product{
+    width: 85%;
+    padding: 20px;
+    margin-left: 60px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.cart main section article.total-product a{
+    font-size: 20px;
+}
+
+.cart main section article.total-product span{
+font-size: 22px;
+
+}
+
+.cart main section article.total-product span.price{
+    font-size: 26px;
+ 
+}
+
+.cart main section div.buttons{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: white;
+    margin: 5px 20px 10px 60px;
+    padding: 10px;
+    width: 85%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.cart main section div.buttons button{    
+    margin: 10px 40px;
+    width: 36%;
+    font-size: 20px;
+
+}
+    /* DESKTOP-CAROUSEL */
+.cart main section.carousel{
+        height: 550px;
+    }
+
+.cart main section.carousel article img{
+        width: 220px;
+        height: 320px;
+    }
+
+.cart main section.carousel article{
+        font-size: 20px;
+    }
+
+.cart main section.carousel .slider4{
+        display: block;
+    }
+
+.cart main section.carousel .fa-chevron-right{
+        margin: 15% 0;
+        font-size: 40px;
+    }
+
+}
+
