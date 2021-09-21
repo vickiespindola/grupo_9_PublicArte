@@ -1,6 +1,8 @@
 footer{
     background-color: var(--gris);
-    padding: 30px 20px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
 }
 
 footer a, footer span, footer h4{
@@ -8,35 +10,45 @@ footer a, footer span, footer h4{
 }
 
 footer img{
-    width: 80%;
-    margin: 0 10%;
-}
-
-footer .redes ul{
-    display: flex;
-    flex-direction: row;
-    margin: 10px 0;
+    width: 60%;
+    padding-top: 15px;
 }
 
 footer section{
     display: flex;
     flex-direction: row;
-    margin: 0 5%;
+    padding: 0px 5%;
+    justify-content: space-between;
 }
 
-footer section div{
-    margin: 10px 5px;
+footer section ul{
+    margin: 10px 10px;
     width: 50%;
 }
 
-footer section div ul li{
+footer section ul li{
     padding: 5px 0;
+    text-align: left;
 }
 
 footer .redes{
-    margin: 5px 24% 20px;
-    width: 80%;
-    
+    padding: 5px 24% 20px;
+    width: 100%;
+}
+
+footer .redes h4{
+    text-align: center;
+}
+
+footer .redes ul{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15%;
+}
+
+footer .redes ul li{
+    width: 30px;
+    padding: 0 15px;
 }
 
 footer .redes ul li a i{
@@ -45,14 +57,62 @@ footer .redes ul li a i{
     padding: 5px;
 }
 
-footer .redes ul li{
-    width: 30px;
+footer span{
+    text-align: left;
 }
 
-footer .derechos{
-    margin-top: 10px;
+@media (min-width: 426px){
+    footer img{
+        width: 30%;
+        margin: 20px 35%;
+    }
+    footer section{
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid white;
+        justify-content: center;
+    } 
+    footer section ul{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+    footer section ul li a{
+        font-size: 16px;
+        padding: 5px 10px;
+        text-align: left;
+        align-items: center;
+    }
+    footer .redes{
+        width: 100%;
+    }
+    footer .redes h4{
+        display: none;
+    }
+    footer .redes ul{
+        justify-content: space-evenly;
+    }
+    footer span {
+        padding: 0 40%;
+    }
 }
 
-footer section div ul{
-    width: 50%;
+@media (min-width: 769px){
+
+    footer img{
+        width: 20%;
+    }
+    footer section ul{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+    footer .redes ul{
+        justify-content: center;
+    }
+    footer .redes ul li{
+        padding: 10px 10px;
+    }
 }

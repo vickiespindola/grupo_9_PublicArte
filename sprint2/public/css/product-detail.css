@@ -1,24 +1,23 @@
 .product-detail main section .detail {
-    padding: 10px 0 50px;
+    padding: 10px 0 50px; 
 }
 
 .product-detail main section aside {
-    margin-top: 30px;
+    padding-top: 30px;
+    text-align: center;
 }
 
 .product-detail main section aside .img-product {
-    width: 90%;
-    height: 400px;
-    margin: 0 5%;
+    max-width: 90%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .product-detail main section aside div {
-    width: 90%;
-    margin: 0 5%;
+    width: 100%;
 }
 
 .product-detail main section aside div img {
-    width: 24%;
+    max-width: 23%;
     opacity: 0.5;
 }
 
@@ -26,7 +25,7 @@
     opacity: 1;
 }
 
-.product-detail main section .detail h2 {
+.product-detail main section .detail h1 {
     font-family: var(--rosario);
     margin: 20px 10%;
 }
@@ -144,6 +143,7 @@
     margin: 10px 0;
     width: 150px;
     height: 250px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .product-detail main .carousel .fa-chevron-left {
@@ -167,16 +167,15 @@ main .contact {
 main .contact h1 {
     color: var(--marron-oscuro);
     width: 90%;
-    padding: 10px;
-    margin: 20px 5%;
+    padding: 15px 10px;
+    margin: 0 5%;
     text-align: center;
     font-size: 27px;
     border-bottom: 1px solid black;
 }
 
 main .contact article {
-    width: 90%;
-    margin: 30px 5% 60px;
+    margin: 15px auto;
     text-align: center;
 }
 
@@ -203,19 +202,10 @@ main .contact article a {
 
     .product-detail main section .detail {
         width: 50%;
-        margin: 10% 0;
     }
 
     .product-detail main section aside {
         width: 40%;
-    }
-
-    .product-detail main section aside div {
-        width: 100%;
-    }
-
-    .product-detail main section aside .img-product {
-        width: 100%;
     }
 
     .product-detail main section .detail .description {
@@ -250,7 +240,7 @@ main .contact article a {
     main .contact {
         display: flex;
         flex-wrap: wrap;
-        margin: 10px 0;
+        padding: 10px 0;
     }
 
     main .contact h2 {
@@ -265,29 +255,33 @@ main .contact article a {
 
 @media (min-width: 769px) {
     .product-detail main section .img-product {
-        width: 100%;
+        max-width: 80%;
+        max-height: 80%;
     }
 
     .product-detail main section aside {
         display: flex;
         flex-direction: row-reverse;
-        width: 40%;
+        
     }
 
     .product-detail main section aside div {
+        display: flex;
         flex-direction: column;
-        margin-left: 5%;
-        width: 20%;
+        width: 100%;
+        height: 100%;
     }
 
     .product-detail main section aside div img {
-        width: 75px;
-        height: 21%;
+        max-width: 65%;
     }
 
     .product-detail main section .detail {
         width: 50%;
-        margin: 0 0 5%;
+        margin: 2% 0;
+    }
+    .product-detail main section .detail h1{
+        font-size: 30px;
     }
 
     .product-detail main section .detail div {
@@ -317,12 +311,13 @@ main .contact article a {
     }
 
     main .contact {
-        margin: 30px 0;
+        padding: 30px 0;
+        text-align: justify;
+        justify-content: space-around;
     }
 
     main .contact article {
-        margin: 30px auto;
+        padding: 30px 0;
         width: 20%;
-        text-align: justify;
     }
 }
