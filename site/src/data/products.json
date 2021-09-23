@@ -1,0 +1,61 @@
+[{
+    "id": 1,
+    "title": "Florero 'Rosetta'",
+    "description": "1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "image": "florero-rosa.png",
+    "marca": "Pirulo",
+    "category": "Florero",
+    "color": "Rosa",
+    "price": "$9,91"
+},
+{
+    "id": 2,
+    "title": "Florero 'Diamante'",
+    "description": "2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "image": "florero-blanco.png",
+    "marca": "Pirulo",
+    "category": "Florero",
+    "color": "Blanco",
+    "price": "$9,92"
+},
+{
+    "id": 3,
+    "title": "Jarron 'Machiatto'",
+    "description": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "image": "jarron.png",
+    "marca": "Dia",
+    "category": "jarra",
+    "color": "Beige",
+    "price": "$9,93"
+},
+{
+    "id": 4,
+    "title": "Portaretrato 'Pinky pie'",
+    "description": "4Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "image": "portaretrato-rosa.png",
+    "marca": "Patito",
+    "category": "Marco",
+    "color": "Rosa",
+    "price": "$9,94"
+},
+{
+    "id": 5,
+    "title": "Portaretrato 'Amor mío'",
+    "description": "5Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "image": "portaretrato-flor.png",
+    "marca": "Patito",
+    "category": "Marco",
+    "color": "Rosa",
+    "price": "$9,95"
+},
+{
+    "id": 6,
+    "title": "Portaretrato 'Shine",
+    "description": "6Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "image":"portaretrato.png",
+    "marca":"Patito",
+    "category":"Marco",
+    "color": "Blanco",
+    "price": "$9,96"
+}
+]
