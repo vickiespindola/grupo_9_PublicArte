@@ -1,10 +1,10 @@
-const controller ={
-    login : function(req, res, next) {
-       res.render('login');
-     }, 
-     register:  function(req, res, next) {
-        res.render('register');
-      }
+const controller = {
+   login: function (req, res, next) {
+      res.render('user/login');
+   },
+   register: function (req, res, next) {
+      res.render('user/register');
    }
+}
 
 module.exports = controller;

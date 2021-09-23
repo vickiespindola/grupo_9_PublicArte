@@ -6,7 +6,8 @@
     "marca": "Pirulo",
     "category": "Florero",
     "color": "Rosa",
-    "price": "$9,91"
+    "price": "$9,91",
+    "author": "Cosme Fulanito"
 },
 {
     "id": 2,
@@ -16,7 +17,8 @@
     "marca": "Pirulo",
     "category": "Florero",
     "color": "Blanco",
-    "price": "$9,92"
+    "price": "$9,92",
+    "author": "Cosme Fulanito"
 },
 {
     "id": 3,
@@ -26,7 +28,8 @@
     "marca": "Dia",
     "category": "jarra",
     "color": "Beige",
-    "price": "$9,93"
+    "price": "$9,93",
+    "author": "José Maria"
 },
 {
     "id": 4,
@@ -36,7 +39,8 @@
     "marca": "Patito",
     "category": "Marco",
     "color": "Rosa",
-    "price": "$9,94"
+    "price": "$9,94",
+    "author": "Maria José"
 },
 {
     "id": 5,
@@ -46,7 +50,8 @@
     "marca": "Patito",
     "category": "Marco",
     "color": "Rosa",
-    "price": "$9,95"
+    "price": "$9,95",
+    "author": "Maria José"
 },
 {
     "id": 6,
@@ -56,6 +61,7 @@
     "marca":"Patito",
     "category":"Marco",
     "color": "Blanco",
-    "price": "$9,96"
+    "price": "$9,96",
+    "author": "Maria José"
 }
 ]
