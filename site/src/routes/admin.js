@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const {list,edit,create} = require('../controllers/adminController')
 
-router.get('/', list);
+router.get('/admin', list);
 router.get('/edit', edit);
 router.get('/create', create);
 
