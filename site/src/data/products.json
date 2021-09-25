@@ -1,0 +1,67 @@
+[{
+    "id": 1,
+    "titulo": "Florero 'Rosetta'",
+    "descripcion": "1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "imagen": "florero-rosa.png",
+    "marca": "Pirulo",
+    "categoria": "Deco",
+    "material": "Ceramica",
+    "precio": 91,
+    "autor": "Cosme Fulanito"
+},
+{
+    "id": 2,
+    "titulo": "Florero 'Diamante'",
+    "descripcion": "2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "imagen": "florero-blanco.png",
+    "marca": "Pirulo",
+    "categoria": "Deco",
+    "material": "Ceramica",
+    "precio": 92,
+    "autor": "Cosme Fulanito"
+},
+{
+    "id": 3,
+    "titulo": "Jarron 'Machiatto'",
+    "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "imagen": "jarron.png",
+    "marca": "Dia",
+    "categoria": "Deco",
+    "material": "Arcilla",
+    "precio": 93,
+    "autor": "José Maria"
+},
+{
+    "id": 4,
+    "titulo": "Portaretrato 'Pinky pie'",
+    "descripcion": "4Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "imagen": "portaretrato-rosa.png",
+    "marca": "Patito",
+    "categoria": "Marco",
+    "material": "Deco",
+    "precio": 94,
+    "autor": "Maria José"
+},
+{
+    "id": 5,
+    "titulo": "Portaretrato 'Amor mío'",
+    "descripcion": "5Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "imagen": "portaretrato-flor.png",
+    "marca": "Patito",
+    "categoria": "Deco",
+    "material": "Madera",
+    "precio": 95,
+    "autor": "Maria José"
+},
+{
+    "id": 6,
+    "titulo": "Portaretrato 'Shine",
+    "descripcion": "6Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "imagen":"portaretrato.png",
+    "marca":"Patito",
+    "categoria":"Deco",
+    "material": "Yeso",
+    "precio": 96,
+    "autor": "Maria José"
+}
+]

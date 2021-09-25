@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+    <%- include('../partial/head') %> 
+
+<body class="product-detail">
+<!-- Header -->
+    <%- include('../partial/header') %>
+
+<!-- Main -->     
+    <main>
+        <section class="product">
+            <aside>
+                <img class="img-product" src="/img/florero-rosa.png" alt="">
+                <div>
+                    <img class="img1" src="/img/florero-rosa.png" alt="">
+                    <img class="img2" src="/img/florero-rosa.png" alt="">
+                    <img class="img3" src="/img/florero-rosa.png" alt="">
+                    <img class="img4" src="/img/florero-rosa.png" alt="">
+                </div>
+            </aside>
+            <article class="detail">
+                <h1>Florero "Rosetta"</h1>
+                <div>
+                    <button class="descrip-button">Descripción <i class="fas fa-chevron-right"></i></button>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia
+                        doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus.
+                        Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?</p>
+                    <span class="description">Marca: Patito</span>
+                </div>
+                <div class="price">
+                    <p>$500</p>
+                    <span><i class="fas fa-minus"></i>1<i class="fas fa-plus"></i></span>
+                    <button class="add-cart"><i class="fas fa-cart-plus"></i> + Añadir al carrito</button>
+                </div>
+                <a href="">Calcular envío <i class="fas fa-arrow-right"></i></a>
+            </article>
+        </section>
+
+        <!-- Carousel -->
+        <%- include('../partial/prod-carousel.ejs') %> 
+
+        <!-- Contacto -->
+        <%- include('../partial/contact.ejs') %> 
+
+    </main>
+<!-- Footer -->
+    <%- include('../partial/footer') %>
+    
+</body>
+
+</html>

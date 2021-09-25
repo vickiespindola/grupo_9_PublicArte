@@ -1,0 +1,37 @@
+.create main{
+    background-color: rgb(246, 238, 230);
+    margin: 0;
+}
+
+.create main h1{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.create .form-floating, .admin .mb-3{
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.create main .boton{
+    text-align: center;
+    padding: 15px 0;
+}
+
+.create main .boton button{
+    padding: 5px;
+}
+
+.create main button.btn-primary{
+    background-color: var(--naranja);
+    border: 1px solid var(--naranja);
+}
+
+@media (min-width: 426px){
+    .create .form-floating, .admin .mb-3{
+        width: 50%;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+    <%- include('../partial/head') %> 
+
+<body class="cart">
+<!-- Header -->
+    <%- include('../partial/header') %>
+
+<!-- Main -->
+    <main>
+        <div class="start">
+            <h3 class="first-tittle">Productos en su Carrito:</h3>
+        </div>
+        <section>
+            <article class="container">
+                <div class="items">
+                    <img class="product-img" src="/img/florero-rosa.png" alt="florero-rosa">
+
+                    <div class="item1">
+                        <a href=""><h4 class="tittle-img">Nombre del Producto</h4></a>
+                        <p class="product-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla temporibus architecto</p>
+                    </div>
+
+                    <div class="item2">
+                        <span class="quantity"><i class="fas fa-minus"></i>1<i class="fas fa-plus"></i></span>
+                        <span class="price">$999,99</span>
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="container">
+                <div class="items">
+                    <img class="product-img" src="/img/portaretrato-flor.png" alt="portaretrato-flor">
+
+
+                    <div class="item1">
+                        <a href=""><h4 class="tittle-img">Nombre del Producto</h4></a>
+                        <p class="product-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla temporibus architecto</p>
+                    </div>
+
+                    <div class="item2">
+                        <span class="quantity"><i class="fas fa-minus"></i>1<i class="fas fa-plus"></i></span>
+                        <span class="price">$999,99</span>
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="total-product">
+                <a href=""><strong>Calcular Envío<i class="fas fa-arrow-right"></i></strong></a>
+                <span><strong>TOTAL CON ENVÍO:</strong></span>
+                <span class="price">$999,99</span>
+            </article>
+
+            <div class="buttons">
+                <button class="seguir-comprando">SEGUIR COMPRANDO</button>
+                <button class="finalizar-compra">FINALIZAR COMPRA</button>
+            </div>
+        </section>
+        <!-- Carousel -->
+
+        <%- include('../partial/prod-carousel.ejs') %> 
+
+    </main>
+
+<!-- Footer -->
+    <%- include('../partial/footer') %>
+
+</body>
+
+</html>

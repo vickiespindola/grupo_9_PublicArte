@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('../partial/head') %>
+
+<body class="formulario login">
+    <!-- Header -->
+    <%- include('../partial/header') %>
+
+    <!-- Main -->
+    <main>
+        <h2>¡Accede a tu cuenta!</h2>
+        <form action="/login">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Ingrese su E-mail...">
+            </div>
+            <div>
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Ingrese su contraseña...">
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <section>
+            <h4>Ó iniciar sesión con:</h4>
+            <div>
+                <button><i class="fab fa-google"> Google</i></button>
+                <button><i class="fab fa-facebook"> Facebook</i></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <%- include('../partial/footer') %>
+
+</body>
+
+</html>
