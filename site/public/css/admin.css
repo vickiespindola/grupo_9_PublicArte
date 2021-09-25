@@ -51,13 +51,13 @@
     color: white;
 }
 
-.admin main .dato {
+/* .admin main .dato {
     display: none;
-} 
+}  */
 
-.admin main .dato2 {
+/* .admin main .dato2 {
     display: none;
-}
+} */
 
 @media (min-width: 426px){
     .admin header{
@@ -66,13 +66,16 @@
     .admin header nav .navbar-brand{
         width: 30%;
     }
-    .admin main .dato2{
+/*    .admin main .dato2{
         display: block;
-    }
+    } */
 }
 
 @media (min-width: 769px){
     .admin header nav .navbar-brand{
         width: 15%;
     }
+    /* .admin main .dato{
+        display: block;
+    } */
 }
