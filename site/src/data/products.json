@@ -5,7 +5,6 @@
     "imagen": "florero-rosa.png",
     "marca": "Pirulo",
     "categoria": "Deco",
-    "material": "Ceramica",
     "precio": 91,
     "autor": "Cosme Fulanito"
 },
@@ -16,7 +15,6 @@
     "imagen": "florero-blanco.png",
     "marca": "Pirulo",
     "categoria": "Deco",
-    "material": "Ceramica",
     "precio": 92,
     "autor": "Cosme Fulanito"
 },
@@ -27,7 +25,6 @@
     "imagen": "jarron.png",
     "marca": "Dia",
     "categoria": "Deco",
-    "material": "Arcilla",
     "precio": 93,
     "autor": "José Maria"
 },
@@ -37,8 +34,7 @@
     "descripcion": "4Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "portaretrato-rosa.png",
     "marca": "Patito",
-    "categoria": "Marco",
-    "material": "Deco",
+    "categoria": "Deco",
     "precio": 94,
     "autor": "Maria José"
 },
@@ -49,7 +45,6 @@
     "imagen": "portaretrato-flor.png",
     "marca": "Patito",
     "categoria": "Deco",
-    "material": "Madera",
     "precio": 95,
     "autor": "Maria José"
 },
@@ -60,7 +55,6 @@
     "imagen":"portaretrato.png",
     "marca":"Patito",
     "categoria":"Deco",
-    "material": "Yeso",
     "precio": 96,
     "autor": "Maria José"
 }
