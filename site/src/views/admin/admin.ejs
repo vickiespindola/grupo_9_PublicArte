@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
-<%- include('../partial/head.ejs') %> 
+<%- include('../partial/head.ejs') %>
+
 <body class="admin">
     <!--Header-->
-    <%- include('./partials/header.ejs')  %> 
+    <%- include('./partials/header.ejs')  %>
 
     <!--Main-->
+    <main>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">titulo</th>
+                        <th scope="col" class="dato">descripcion</th>
+                        <th scope="col" class="dato">imagen</th>
+                        <th scope="col">marca</th>
+                        <th scope="col" class="dato2">categoria</th>
+                        <th scope="col" class="dato">material</th>
+                        <th scope="col">precio</th>
+                        <th scope="col" class="dato">autor</th>
+                        <th scope="col">acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% products.forEach(element => { %>
+                    <tr>
+                        <th scope="row"><%= element.id %></th>
+                        <td><%= element.titulo %></td>
+                        <td class="dato"><%= element.descripcion %></td>
+                        <td class="dato"><%= element.imagen %></td>
+                        <td><%= element.marca %></td>
+                        <td class="dato2"><%= element.categoria %></td>
+                        <td class="dato"><%= element.material %></td>
+                        <td><%= element.precio %></td>
+                        <td class="dato"><%= element.autor %></td>
+                        <td> <a href="/edit/<%= element.id %>">
+                                <div>
+                                    <button class="btn btn-success">Editar</button>
+                                </div>
+                            </a>
+                            <form>
+                                <div>
+                                    <button class="btn btn-danger">Eliminar</button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
 
+                    <% }) %>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
     <!-- Footer -->
-    <%- include('../partial/footer.ejs') %> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <%- include('../partial/footer.ejs') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

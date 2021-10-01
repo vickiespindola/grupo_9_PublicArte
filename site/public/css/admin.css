@@ -51,12 +51,23 @@
     color: white;
 }
 
+.admin main .dato {
+    display: none;
+} 
+
+.admin main .dato2 {
+    display: none;
+}
+
 @media (min-width: 426px){
     .admin header{
         margin: 0;
     }
     .admin header nav .navbar-brand{
         width: 30%;
+    }
+    .admin main .dato2{
+        display: block;
     }
 }
 
