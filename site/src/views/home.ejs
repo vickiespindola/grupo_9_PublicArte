@@ -35,46 +35,15 @@
         <section class="productosDestacados">
             <h2>Productos Destacados</h2>
             <div class="articulos">
+                <% products.map(element => { %>
                 <article>
-                    <img src="/img/florero-blanco.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
+                    <a href="/detail/<%= element.id %> ">
+                        <img src="/img/<%= element.imagen %> " alt="">
+                        <h4><%= element.titulo %></h4>
+                        <p>$<%= element.precio %></p>
+                    </a>
                 </article>
-                <article>
-                    <img src="/img/florero-rosa.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article>
-                    <img src="/img/jarron.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article>
-                    <img src="/img/portaretrato-flor.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article class="slider1">
-                    <img src="/img/florero-blanco.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article class="slider1">
-                    <img src="/img/florero-rosa.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article class="slider2">
-                    <img src="/img/jarron.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article class="slider2">
-                    <img src="/img/portaretrato-flor.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
+                <% }) %>
             </div>
         </section>
 
@@ -85,8 +54,8 @@
             </div>
         </section>
 
-        <%- include('./partial/contact.ejs') %> 
-        
+        <%- include('./partial/contact.ejs') %>
+
     </main>
 
     <!-- Footer -->

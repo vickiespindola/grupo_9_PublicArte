@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const {productDetail, cart} = require('../controllers/productsController')
+const {detail, cart} = require('../controllers/productsController')
 
-router.get('/product-detail', productDetail);
+router.get('/detail/:id', detail);
 router.get('/cart', cart);
 
 module.exports = router;

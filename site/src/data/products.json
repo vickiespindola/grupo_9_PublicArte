@@ -6,7 +6,8 @@
     "marca": "Pirulo",
     "categoria": "Deco",
     "precio": 91,
-    "autor": "Cosme Fulanito"
+    "autor": "Cosme Fulanito",
+    "carrito": "not-not-addeded"
 },
 {
     "id": 2,
@@ -16,7 +17,8 @@
     "marca": "Pirulo",
     "categoria": "Deco",
     "precio": 92,
-    "autor": "Cosme Fulanito"
+    "autor": "Cosme Fulanito",
+    "carrito": "not-not-addeded"
 },
 {
     "id": 3,
@@ -26,7 +28,8 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria"
+    "autor": "José Maria",
+    "carrito": "not-added"
 },
 {
     "id": 4,
@@ -36,7 +39,8 @@
     "marca": "Patito",
     "categoria": "Deco",
     "precio": 94,
-    "autor": "Maria José"
+    "autor": "Maria José",
+    "carrito": "not-added"
 },
 {
     "id": 5,
@@ -46,7 +50,8 @@
     "marca": "Patito",
     "categoria": "Deco",
     "precio": 95,
-    "autor": "Maria José"
+    "autor": "Maria José",
+    "carrito": "not-added"
 },
 {
     "id": 6,
@@ -56,6 +61,7 @@
     "marca":"Patito",
     "categoria":"Deco",
     "precio": 96,
-    "autor": "Maria José"
+    "autor": "Maria José",
+    "carrito": "not-added"
 }
 ]
