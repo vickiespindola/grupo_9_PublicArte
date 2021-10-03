@@ -86,8 +86,6 @@
 .home main .productosDestacados h2 {
     margin: 10px;
     text-align: center;
-
-
 }
 
 .home main .productosDestacados div.articulos {
@@ -95,22 +93,40 @@
     width: 90%;
     margin-left: 5%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
   /* Maldito wrap!!!!!!!!!!!!!!!!!!!!!!! */
+}
+
+.home main .productosDestacados article{
+    text-align: center;
+    margin: 5px;
+    padding: 20px 10px;
+}
+
+.home main .productosDestacados article:hover{
+    background-color: var(--marron-claro);
+    width: 90%;
+    border-radius: 5px;
+}
+
+.home main .productosDestacados article img {
+    width: 220px;
+    height: 320px;
+    box-shadow: 0 0 10px rgb(100, 100, 100);
 }
 
 .home main .productosDestacados article h4 {
     font-family: var(--rosario);
     font-size: 15px;
-
+    padding: 10px 0;
+    width: 100%;
+    margin: 0;
 }
 
-.home main .productosDestacados article img {
-
-    width: 220px;
-    height: 320px;
-    box-shadow: 0 0 10px rgb(100, 100, 100);
+.home main .productosDestacados article p{
+    padding: 5px 0 10px;
+    margin: 0;
 }
 
 .home main .productosDestacados .slider1,
@@ -248,6 +264,8 @@
 
     .home main .productosDestacados div.articulos {
         background-color: whitesmoke;
+        padding: 20px;
+        justify-content: space-around;
     }
 
     .home main .productosDestacados div.articulos article {
@@ -364,7 +382,7 @@
 
     /* para los articulos */
     .home main .productosDestacados div.articulos article {
-        width: 21%;
+        width: 26%;
     }
 
     .home main .contenidoAmistad {

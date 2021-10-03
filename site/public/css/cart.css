@@ -186,63 +186,6 @@
    border: 2px solid var(--marron-oscuro);
    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-/* MOBILE-CAROUSEL */
-.cart main section.carousel{
-    background-color: var(--marron-claro);
-    padding: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.cart main section.carousel article{
-    margin: 10px auto;
-    padding: 0 10px 20px;
-    height: 80%;
-}
-
-.cart main section.carousel article h2{
-    font-family: var(--poppins);
-}
-
-.cart main section.carousel article p{
-    font-size: 18px;
-    font-family: var(--roboto);
-    font-weight: 600;
-}
-
-.cart main section.carousel article:hover{
-    color: var(--naranja);
-    padding: 0 10px 20px;
-    background-color: white;
-    border-radius: 10px;
-}
-
-.cart main section.carousel h2{
-    margin: 20px 10% 10px;
-    width: 100%;
-    font-family: var(--rosario);
-}
-
-.cart main section.carousel article img{
-    margin: 10px 0;
-    width: 150px;
-    height: 250px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100)
-}
-
-.cart main section.carousel .fa-chevron-left{
-    display: none;
-}
-
-.cart main section article.slider3,
-.cart main section article.slider4{
-    display: none;
-}
-
-.cart main section.carousel .fa-chevron-right{
-    font-size: 20px;
-    margin: 40% 0;
-}
 
 /* TABLET-CART */
 @media (min-width: 426px){
@@ -359,23 +302,6 @@
         margin: 10px;
     }
 
-/* TABLET-CAROUSEL */
-.cart main section.carousel{
-        height: 550px;
-    }
-
-.cart main section.carousel .slider3{
-        display: block;
-    }
-
-.cart main section.carousel article img{
-        width: 200px;
-        height: 300px;
-    }
-
-.cart main section.carousel .fa-chevron-right{
-        margin: 25% 0;
-    }
 }
 
 
@@ -512,28 +438,7 @@ font-size: 22px;
     font-size: 20px;
 
 }
-    /* DESKTOP-CAROUSEL */
-.cart main section.carousel{
-        height: 550px;
-    }
 
-.cart main section.carousel article img{
-        width: 220px;
-        height: 320px;
-    }
-
-.cart main section.carousel article{
-        font-size: 20px;
-    }
-
-.cart main section.carousel .slider4{
-        display: block;
-    }
-
-.cart main section.carousel .fa-chevron-right{
-        margin: 15% 0;
-        font-size: 40px;
-    }
 
 }
 

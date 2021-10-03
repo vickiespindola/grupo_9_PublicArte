@@ -1,5 +1,5 @@
 .product-detail main section .detail {
-    padding: 10px 0 50px; 
+    padding: 10px 0 50px;
 }
 
 .product-detail main section aside {
@@ -103,51 +103,58 @@
     position: absolute;
 }
 
-.product-detail main .carousel {
+.productos main .carousel {
     background-color: var(--marron-claro);
     padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
 }
 
-.product-detail main .carousel article {
+.productos main .carousel article {
     margin: 10px auto;
     padding: 0 10px 20px;
-    height: 80%;
+    text-align: center;
+    width: 90%;
 }
 
-.product-detail main .carousel article h2 {
+.productos main .carousel article h2 {
     font-family: var(--poppins);
 }
 
-.product-detail main .carousel article p {
-    font-size: 18px;
+.productos main .carousel article p {
+    font-size: 16px;
     font-family: var(--roboto);
     font-weight: 600;
 }
 
-.product-detail main .carousel article:hover {
+.productos main .carousel article:hover {
     color: var(--naranja);
     padding: 0 10px 20px;
     background-color: white;
     border-radius: 10px;
+    width: 60%;
 }
 
-.product-detail main .carousel h2 {
+.productos main .carousel h2 {
     margin: 20px 10% 10px;
     width: 100%;
     font-family: var(--rosario);
 }
 
-.product-detail main .carousel article img {
+.productos main .carousel article img {
     margin: 10px 0;
     width: 150px;
     height: 250px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.product-detail main .carousel .fa-chevron-left {
+.productos main .carousel .fa-chevron-left {
     display: none;
+}
+
+.productos main .carousel h4 {
+    text-align: center;
+    font-size: 14px;
 }
 
 .product-detail .slider3,
@@ -155,7 +162,7 @@
     display: none;
 }
 
-.product-detail .carousel .fa-chevron-right {
+.productos .carousel .fa-chevron-right {
     font-size: 20px;
     margin: 40% 0;
 }
@@ -220,20 +227,28 @@ main .contact article a {
         margin-left: -5%;
     }
 
-    .product-detail main .carousel {
+    .productos main .carousel {
         height: 550px;
     }
 
-    .product-detail main .carousel .slider3 {
+    .productos main .carousel article {
+        width: 30%;
+    }
+
+    .productos main .carousel article:hover {
+        width: 30%;
+    }
+
+    .productos main .carousel .slider3 {
         display: block;
     }
 
-    .product-detail main .carousel article img {
+    .productos main .carousel article img {
         width: 200px;
         height: 300px;
     }
 
-    .product-detail .carousel .fa-chevron-right {
+    .productos .carousel .fa-chevron-right {
         margin: 25% 0;
     }
 
@@ -262,7 +277,7 @@ main .contact article a {
     .product-detail main section aside {
         display: flex;
         flex-direction: row-reverse;
-        
+
     }
 
     .product-detail main section aside div {
@@ -280,7 +295,8 @@ main .contact article a {
         width: 50%;
         margin: 2% 0;
     }
-    .product-detail main section .detail h1{
+
+    .product-detail main section .detail h1 {
         font-size: 30px;
     }
 
@@ -288,24 +304,29 @@ main .contact article a {
         margin: 50px 0;
     }
 
-    .product-detail main .carousel {
+    .productos main .carousel {
         height: 550px;
     }
 
-    .product-detail main .carousel article img {
+    .productos main .carousel article img {
         width: 220px;
         height: 320px;
     }
 
-    .product-detail main .carousel article {
+    .productos main .carousel article {
         font-size: 20px;
+        width: 25%;
     }
 
-    .product-detail main .carousel .slider4 {
+    .productos main .carousel article:hover {
+        width: 25%;
+    }
+
+    .productos main .carousel .slider4 {
         display: block;
     }
 
-    .product-detail .carousel .fa-chevron-right {
+    .productos .carousel .fa-chevron-right {
         margin: 15% 0;
         font-size: 40px;
     }
