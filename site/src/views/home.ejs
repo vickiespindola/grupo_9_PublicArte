@@ -35,15 +35,15 @@
         <section class="productosDestacados">
             <h2>Productos Destacados</h2>
             <div class="articulos">
-                <% products.map(element => { %>
+                <% for(let i=0; i<8 ; i++) { %>
                 <article>
-                    <a href="/detail/<%= element.id %> ">
-                        <img src="/img/<%= element.imagen %> " alt="">
-                        <h4><%= element.titulo %></h4>
-                        <p>$<%= element.precio %></p>
+                    <a href="/detail/<%= productPopular[i].id %> ">
+                        <img src="/img/<%= productPopular[i].imagen %> " alt="">
+                        <h4><%= productPopular[i].titulo %></h4>
+                        <p>$<%= productPopular[i].precio %></p>
                     </a>
                 </article>
-                <% }) %>
+                <% } %>
             </div>
         </section>
 
