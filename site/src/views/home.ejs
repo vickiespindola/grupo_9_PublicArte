@@ -35,46 +35,15 @@
         <section class="productosDestacados">
             <h2>Productos Destacados</h2>
             <div class="articulos">
+                <% for(let i=0; i<8 ; i++) { %>
                 <article>
-                    <img src="/img/florero-blanco.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
+                    <a href="/detail/<%= productPopular[i].id %> ">
+                        <img src="/img/<%= productPopular[i].imagen %> " alt="">
+                        <h4><%= productPopular[i].titulo %></h4>
+                        <p>$<%= productPopular[i].precio %></p>
+                    </a>
                 </article>
-                <article>
-                    <img src="/img/florero-rosa.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article>
-                    <img src="/img/jarron.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article>
-                    <img src="/img/portaretrato-flor.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article class="slider1">
-                    <img src="/img/florero-blanco.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article class="slider1">
-                    <img src="/img/florero-rosa.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article class="slider2">
-                    <img src="/img/jarron.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
-                <article class="slider2">
-                    <img src="/img/portaretrato-flor.png" alt="">
-                    <h4>nombre del producto</h4>
-                    <p>$333,33</p>
-                </article>
+                <% } %>
             </div>
         </section>
 
@@ -85,8 +54,8 @@
             </div>
         </section>
 
-        <%- include('./partial/contact.ejs') %> 
-        
+        <%- include('./partial/contact.ejs') %>
+
     </main>
 
     <!-- Footer -->

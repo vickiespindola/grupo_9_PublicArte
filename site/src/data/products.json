@@ -6,7 +6,9 @@
     "marca": "Pirulo",
     "categoria": "Deco",
     "precio": 91,
-    "autor": "Cosme Fulanito"
+    "autor": "Cosme Fulanito",
+    "carrito": "Added",
+    "keyword": "popular"
 },
 {
     "id": 2,
@@ -16,7 +18,9 @@
     "marca": "Pirulo",
     "categoria": "Deco",
     "precio": 92,
-    "autor": "Cosme Fulanito"
+    "autor": "Cosme Fulanito",
+    "carrito": "notAdded",
+    "keyword": "popular"
 },
 {
     "id": 3,
@@ -26,7 +30,9 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria"
+    "autor": "José Maria",
+    "carrito": "Added",
+    "keyword": "popular"
 },
 {
     "id": 4,
@@ -36,7 +42,9 @@
     "marca": "Patito",
     "categoria": "Deco",
     "precio": 94,
-    "autor": "Maria José"
+    "autor": "Maria José",
+    "carrito": "notAdded",
+    "keyword": "popular"
 },
 {
     "id": 5,
@@ -46,7 +54,9 @@
     "marca": "Patito",
     "categoria": "Deco",
     "precio": 95,
-    "autor": "Maria José"
+    "autor": "Maria José",
+    "carrito": "notAdded",
+    "keyword": "popular"
 },
 {
     "id": 6,
@@ -56,6 +66,32 @@
     "marca":"Patito",
     "categoria":"Deco",
     "precio": 96,
-    "autor": "Maria José"
+    "autor": "Maria José",
+    "carrito": "notAdded",
+    "keyword": "popular"
+},
+{
+    "id": 7,
+    "titulo": "Florero 'Diamante'",
+    "descripcion": "2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "imagen": "florero-blanco.png",
+    "marca": "Pirulo",
+    "categoria": "Deco",
+    "precio": 92,
+    "autor": "Cosme Fulanito",
+    "carrito": "notAdded",
+    "keyword": "popular"
+},
+{
+    "id": 8,
+    "titulo": "Jarron 'Machiatto'",
+    "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
+    "imagen": "jarron.png",
+    "marca": "Dia",
+    "categoria": "Deco",
+    "precio": 93,
+    "autor": "José Maria",
+    "carrito": "notAdded",
+    "keyword": "popular"
 }
 ]

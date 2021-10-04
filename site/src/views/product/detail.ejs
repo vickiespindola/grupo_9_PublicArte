@@ -3,7 +3,7 @@
 <!-- Head -->
     <%- include('../partial/head') %> 
 
-<body class="product-detail">
+<body class="product-detail productos">
 <!-- Header -->
     <%- include('../partial/header') %>
 
@@ -11,27 +11,28 @@
     <main>
         <section class="product">
             <aside>
-                <img class="img-product" src="/img/florero-rosa.png" alt="">
+                <img class="img-product" src="/img/<%- productDetail.imagen %>" alt="">
                 <div>
-                    <img class="img1" src="/img/florero-rosa.png" alt="">
-                    <img class="img2" src="/img/florero-rosa.png" alt="">
-                    <img class="img3" src="/img/florero-rosa.png" alt="">
-                    <img class="img4" src="/img/florero-rosa.png" alt="">
+                    <img class="img1" src="/img/<%- productDetail.imagen %>" alt="">
+                    <img class="img2" src="/img/<%- productDetail.imagen %>" alt="">
+                    <img class="img3" src="/img/<%- productDetail.imagen %>" alt="">
+                    <img class="img4" src="/img/<%- productDetail.imagen %>" alt="">
                 </div>
             </aside>
             <article class="detail">
-                <h1>Florero "Rosetta"</h1>
+                <h1><%- productDetail.titulo %>"</h1>
                 <div>
                     <button class="descrip-button">Descripción <i class="fas fa-chevron-right"></i></button>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia
-                        doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus.
-                        Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?</p>
-                    <span class="description">Marca: Patito</span>
+                    <p class="description"><%- productDetail.descripcion %></p>
+                    <span class="description"><%- productDetail.marca %></span>
                 </div>
                 <div class="price">
                     <p>$500</p>
                     <span><i class="fas fa-minus"></i>1<i class="fas fa-plus"></i></span>
-                    <button class="add-cart"><i class="fas fa-cart-plus"></i> + Añadir al carrito</button>
+                    <button class="add-cart">
+                        <i class="fas fa-cart-plus"></i> + Añadir al carrito
+                        <% productDetail.cart = 'add' %> 
+                    </button>
                 </div>
                 <a href="">Calcular envío <i class="fas fa-arrow-right"></i></a>
             </article>

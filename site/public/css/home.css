@@ -73,7 +73,7 @@
     font-size: 14px;
     color: white;
     display: inline-block;
-    width: 25%;
+    width: 24%;
     margin: 5% 5% 4% 16%;
     border-left: 1px solid var(--naranja);
 
@@ -86,8 +86,6 @@
 .home main .productosDestacados h2 {
     margin: 10px;
     text-align: center;
-
-
 }
 
 .home main .productosDestacados div.articulos {
@@ -95,29 +93,42 @@
     width: 90%;
     margin-left: 5%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-  /* Maldito wrap!!!!!!!!!!!!!!!!!!!!!!! */
+    /* Maldito wrap!!!!!!!!!!!!!!!!!!!!!!! */
 }
 
-.home main .productosDestacados article h4 {
-    font-family: var(--rosario);
-    font-size: 15px;
+.home main .productosDestacados article {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 20px 10px;
+}
 
+.home main .productosDestacados article:hover {
+    background-color: var(--marron-claro);
+    width: 100%;
+    border-radius: 5px;
 }
 
 .home main .productosDestacados article img {
-
     width: 220px;
     height: 320px;
     box-shadow: 0 0 10px rgb(100, 100, 100);
 }
 
-.home main .productosDestacados .slider1,
-.home main .productosDestacados .slider2 {
-    display: none;
+.home main .productosDestacados article h4 {
+    font-family: var(--rosario);
+    font-size: 15px;
+    padding: 10px 0;
+    width: 100%;
+    margin: 0;
 }
 
+.home main .productosDestacados article p {
+    padding: 5px 0 10px;
+    margin: 0;
+}
 
 .home main .contenidoAmistad {
 
@@ -248,10 +259,12 @@
 
     .home main .productosDestacados div.articulos {
         background-color: whitesmoke;
+        padding: 20px;
+        justify-content: space-around;
     }
 
     .home main .productosDestacados div.articulos article {
-        width: 34%;
+        width: 40%;
     }
 
     .home main .productosDestacados article h4 {
@@ -265,13 +278,6 @@
         width: 220px;
         height: 320px;
     }
-
-    .home main .productosDestacados .slider1 {
-        display: block;
-
-    }
-
-
 
     .home main .contenidoAmistad {
 
@@ -307,13 +313,6 @@
         color: var(--marron-oscuro);
     }
 
-
-
-
-
-
-
-
 }
 
 @media (min-width: 769px) {
@@ -326,6 +325,7 @@
     .home main .carrusel img {
         width: 100%;
     }
+
     .home main .carrusel div.contenido {
         width: 90%;
         padding: 80px;
@@ -357,14 +357,14 @@
         margin-left: 10px;
     }
 
-
-    .home main .productosDestacados .slider2 {
-        display: block;
+    /* para los articulos */
+    .home main .productosDestacados div.articulos {
+        width: 100%;
+        margin: 0;
     }
 
-    /* para los articulos */
     .home main .productosDestacados div.articulos article {
-        width: 21%;
+        width: 23%;
     }
 
     .home main .contenidoAmistad {
@@ -379,14 +379,14 @@
 
     .home main .contenidoAmistad a {
         font-size: 25px;
-       align-content: center;
-       margin-left: 100px;
+        align-content: center;
+        margin-left: 100px;
     }
 
     .home main .contenidoAmistad img {
-       display: flex ;
+        display: flex;
         flex-wrap: wrap;
-margin-left: 180px;
+        margin-left: 180px;
         width: 150px;
         height: 200px;
     }
