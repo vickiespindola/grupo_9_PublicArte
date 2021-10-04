@@ -73,7 +73,7 @@
     font-size: 14px;
     color: white;
     display: inline-block;
-    width: 25%;
+    width: 24%;
     margin: 5% 5% 4% 16%;
     border-left: 1px solid var(--naranja);
 
@@ -95,18 +95,19 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-  /* Maldito wrap!!!!!!!!!!!!!!!!!!!!!!! */
+    /* Maldito wrap!!!!!!!!!!!!!!!!!!!!!!! */
 }
 
-.home main .productosDestacados article{
-    text-align: center;
+.home main .productosDestacados article {
+    display: flex;
+    justify-content: center;
     margin: 5px;
     padding: 20px 10px;
 }
 
-.home main .productosDestacados article:hover{
+.home main .productosDestacados article:hover {
     background-color: var(--marron-claro);
-    width: 90%;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -124,16 +125,10 @@
     margin: 0;
 }
 
-.home main .productosDestacados article p{
+.home main .productosDestacados article p {
     padding: 5px 0 10px;
     margin: 0;
 }
-
-.home main .productosDestacados .slider1,
-.home main .productosDestacados .slider2 {
-    display: none;
-}
-
 
 .home main .contenidoAmistad {
 
@@ -269,7 +264,7 @@
     }
 
     .home main .productosDestacados div.articulos article {
-        width: 34%;
+        width: 40%;
     }
 
     .home main .productosDestacados article h4 {
@@ -283,13 +278,6 @@
         width: 220px;
         height: 320px;
     }
-
-    .home main .productosDestacados .slider1 {
-        display: block;
-
-    }
-
-
 
     .home main .contenidoAmistad {
 
@@ -325,13 +313,6 @@
         color: var(--marron-oscuro);
     }
 
-
-
-
-
-
-
-
 }
 
 @media (min-width: 769px) {
@@ -344,6 +325,7 @@
     .home main .carrusel img {
         width: 100%;
     }
+
     .home main .carrusel div.contenido {
         width: 90%;
         padding: 80px;
@@ -375,14 +357,14 @@
         margin-left: 10px;
     }
 
-
-    .home main .productosDestacados .slider2 {
-        display: block;
+    /* para los articulos */
+    .home main .productosDestacados div.articulos {
+        width: 100%;
+        margin: 0;
     }
 
-    /* para los articulos */
     .home main .productosDestacados div.articulos article {
-        width: 26%;
+        width: 23%;
     }
 
     .home main .contenidoAmistad {
@@ -397,14 +379,14 @@
 
     .home main .contenidoAmistad a {
         font-size: 25px;
-       align-content: center;
-       margin-left: 100px;
+        align-content: center;
+        margin-left: 100px;
     }
 
     .home main .contenidoAmistad img {
-       display: flex ;
+        display: flex;
         flex-wrap: wrap;
-margin-left: 180px;
+        margin-left: 180px;
         width: 150px;
         height: 200px;
     }

@@ -13,7 +13,8 @@ const controller = {
   },
   cart: function (req, res, next) {
     similarProducts = products;
-    res.render('product/cart',{similarProducts});
+    let productAdded = products.filter(element => { return element.carrito == 'Added'});
+    res.render('product/cart',{similarProducts,productAdded});
   }
 }
 module.exports = controller;

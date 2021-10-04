@@ -106,10 +106,12 @@
 .productos main .carousel {
     background-color: var(--marron-claro);
     padding: 20px 0;
+    height: 100%;
+}
+.productos main .carousel div{
     display: flex;
     flex-wrap: wrap;
 }
-
 .productos main .carousel article {
     margin: 10px auto;
     padding: 0 10px 20px;
@@ -137,7 +139,6 @@
 
 .productos main .carousel h2 {
     margin: 20px 10% 10px;
-    width: 100%;
     font-family: var(--rosario);
 }
 
@@ -227,25 +228,19 @@ main .contact article a {
         margin-left: -5%;
     }
 
-    .productos main .carousel {
-        height: 550px;
-    }
 
     .productos main .carousel article {
-        width: 30%;
+        max-width: 24%;
+        height: 100%;
     }
 
     .productos main .carousel article:hover {
-        width: 30%;
-    }
-
-    .productos main .carousel .slider3 {
-        display: block;
+        width: 24%;
+        height: max-content;
     }
 
     .productos main .carousel article img {
-        width: 200px;
-        height: 300px;
+        max-width: 100%;
     }
 
     .productos .carousel .fa-chevron-right {
@@ -304,22 +299,13 @@ main .contact article a {
         margin: 50px 0;
     }
 
-    .productos main .carousel {
-        height: 550px;
-    }
-
-    .productos main .carousel article img {
-        width: 220px;
-        height: 320px;
-    }
-
     .productos main .carousel article {
         font-size: 20px;
-        width: 25%;
+        max-width: 20%;
     }
 
     .productos main .carousel article:hover {
-        width: 25%;
+        max-width: 20%;
     }
 
     .productos main .carousel .slider4 {
