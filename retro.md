@@ -56,3 +56,37 @@
 - Apoyo entre compañeros.
 - Poner fechas limites en las tarjetas de Trello.
 
+
+# Retro del Sprint 3
+
+## Hacer más:
+- Dailys (por wpp).
+- Hacer la retro apenas termina el sprint.
+- Corregir a tiempo todo el sprint.
+- Ponerse al dia con todo el material.
+
+
+## Empezar a hacer:
+- Empezar a hacer lo que se dice en la retro.
+- Pedir ayuda con tiempo.
+- Feedback de las correcciones(con el profe Cris).
+- Comunicarse al grupo de Vicky y Cris.
+- Juntarse a medio sprint para ver los detalles.
+
+## Dejar de hacer:
+- Dejar todo para último momento.
+- No atrasarse.
+
+## Hacer menos:
+- Desviarse mucho del tema.
+- Procrastinar.
+
+## Seguir haciendo:
+- La designacion de tareas al inicio del sprint.
+- Poner fechas limites en las tarjetas de Trello.
+- Apoyo entre compañeros.
+- La buena comunicación.
+
+
+
+

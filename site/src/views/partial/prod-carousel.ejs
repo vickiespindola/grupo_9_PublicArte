@@ -1,25 +1,14 @@
 <section class="carousel">
     <h2>Otros productos similares:</h2>
-    <i class="fas fa-chevron-left"></i>
+    <div>
+        <i class="fas fa-chevron-left"></i>
+        <% for(i=0; i<4;i++){ %>
     <article class="slider1">
-        <img src="/img/florero-blanco.png" alt="">
-        <h4>Florero "Diamante"</h4>
-        <p>$9,99</p>
+        <img src="/img/<%= similarProducts[i].imagen %> " alt="">
+        <h4><%= similarProducts[i].titulo %></h4>
+        <p>$<%= similarProducts[i].precio %></p>
     </article>
-    <article class="slider2">
-        <img src="/img/jarron.png" alt="">
-        <h4>Florero "Machiatto"</h4>
-        <p>$9,99</p>
-    </article>
-    <article class="slider3">
-        <img src="/img/portaretrato-rosa.png" alt="">
-        <h4>Portaretrato "Pinky pie"</h4>
-        <p>$9.99</p>
-    </article>
-    <article class="slider4">
-        <img src="/img/portaretrato-flor.png" alt="">
-        <h4>Portaretrato "Amor mío"</h4>
-        <p>$9,99</p>
-    </article>
+    <% } %> 
     <i class="fas fa-chevron-right"></i>
+    </div>
 </section>
