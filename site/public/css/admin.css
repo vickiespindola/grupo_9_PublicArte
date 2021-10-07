@@ -52,13 +52,18 @@
 }
 
 .admin main a div{
-    width: 80%;
-    margin: 10px auto;
+    width: 98%;
+    margin: 5px auto;
+    text-align: start;
+    border-radius: 3px;
 }
 
 .admin main h6{
     width: 60%;
     margin: 5px auto;
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
 }
 
 /* .admin main .dato {
