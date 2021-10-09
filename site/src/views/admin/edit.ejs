@@ -17,7 +17,7 @@
 
         <h1>Edición del producto</h1>
 
-        <form action="" class="form">
+        <form action="/edit/<%= producto.id %>?_method=PUT" method="POST"class="form">
 
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="nombre-producto" name="nombre-producto" value="<%= producto.titulo %>" placeholder="name@example.com">

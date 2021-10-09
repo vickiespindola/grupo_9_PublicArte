@@ -1,15 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const {list,create,store,edit,update,erase} = require('../controllers/adminController')
+const path =  require('path');
+const {list,create,store,edit,update,destroy} = require('../controllers/adminController')
 
+//SHOW ALL PRODUCTS
 router.get('/admin', list);
 
-router.get('/create', create);
-router.post('/create', store);
+// CREATE ONE PRODUCT
+/* para mostrar la vista con el formulario */
+router.get('/create', create)
+/* crea el formulario */
+router.post('/create', store)
 
-router.get('/edit/:id', edit);
-router.put('/edit/:id', update);
+//EDIT ONE PRODUCT
+router.get('/edit/:id', edit)
+router.put('/edit/:id', update)
 
-router.delete('/delete', erase);
+//DELETE ONE PRODUCT
+router.delete('/delete/:id', destroy)
 
 module.exports = router;
