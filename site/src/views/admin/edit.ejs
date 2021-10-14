@@ -17,7 +17,7 @@
 
         <h1>Edición del producto</h1>
 
-        <form action="/edit/<%= producto.id %>?_method=PUT" method="POST"class="form">
+        <form class="form" action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST">
 
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="nombre-producto" name="nombre-producto" value="<%= producto.titulo %>" placeholder="name@example.com">
@@ -57,8 +57,8 @@
             </div>
 
             <div class="boton">
-                <button type="button" type="submit" class="btn btn-primary">Enviar datos</button>
-                <button type="button" type="reset" class="btn btn-secondary">Borrar datos</button>
+                <button  type="submit" class="btn btn-primary">Enviar datos</button>
+                <button  type="reset" class="btn btn-secondary">Borrar datos</button>
             </div>
 
         </form>

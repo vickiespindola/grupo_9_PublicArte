@@ -1,7 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const path =  require('path');
+const multer = require('multer');
 const {list,create,store,edit,update,destroy} = require('../controllers/adminController')
+
+const storage = multer.diskStorage({
+    destination: function (req, file, callback) {
+      callback(null, './public/images/productos')
+    },
+    filename: function (req, file, callback) {
+      callback(null, `image-${Date.now()}${path.extname(file.originalname)}`)
+    }
+});
+  
+const upload = multer({ storage: storage });
 
 //SHOW ALL PRODUCTS
 router.get('/admin', list);
