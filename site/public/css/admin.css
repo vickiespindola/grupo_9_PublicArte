@@ -51,13 +51,28 @@
     color: white;
 }
 
-.admin main .dato {
-    display: none;
-} 
-
-.admin main .dato2 {
-    display: none;
+.admin main a div{
+    width: 98%;
+    margin: 5px auto;
+    text-align: start;
+    border-radius: 3px;
 }
+
+.admin main h6{
+    width: 60%;
+    margin: 5px auto;
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+/* .admin main .dato {
+    display: none;
+}  */
+
+/* .admin main .dato2 {
+    display: none;
+} */
 
 @media (min-width: 426px){
     .admin header{
@@ -66,13 +81,17 @@
     .admin header nav .navbar-brand{
         width: 30%;
     }
-    .admin main .dato2{
+/*    .admin main .dato2{
         display: block;
-    }
+    } */
 }
 
 @media (min-width: 769px){
     .admin header nav .navbar-brand{
         width: 15%;
     }
+    /* .admin main .dato{
+        display: block;
+    } */
 }
+
