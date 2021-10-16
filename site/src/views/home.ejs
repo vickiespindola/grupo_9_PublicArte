@@ -34,15 +34,17 @@
 
         <section class="productosDestacados">
             <h2>Productos Destacados</h2>
-            <div class="articulos">
+            <div class="articulos"> 
                 <% for(let i=0; i<8 ; i++) { %>
+                <% if(products[i].destacado==true){%>
                 <article>
-                    <a href="/detail/<%= productPopular[i].id %> ">
-                        <img src="/img/<%= productPopular[i].imagen %> " alt="">
-                        <h4><%= productPopular[i].titulo %></h4>
-                        <p>$<%= productPopular[i].precio %></p>
+                    <a href="/products/detail/<%= products[i].id %> ">
+                        <img src="/img/products/<%= products[i].imagen %> " alt="">
+                        <h4><%= products[i].titulo %></h4>
+                        <p>$<%= products[i].precio %></p>
                     </a>
                 </article>
+                <% } %>
                 <% } %>
             </div>
         </section>
