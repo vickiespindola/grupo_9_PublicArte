@@ -14,12 +14,12 @@
         
         <h1>Creación del producto</h1>
 
-        <form action="" class="form">
+        <form  class="form" action="/admin/create" method="POST" enctype="multipart/form-data">
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nombre-producto" name="nombre-producto"
+                <input type="text" class="form-control" id="titulo" name="titulo"
                     placeholder="name@example.com">
-                <label for="nombre-producto">Nombre del producto</label>
+                <label for="titulo">Nombre del producto</label>
             </div>
 
             <div class="form-floating mb-3">
@@ -56,8 +56,8 @@
             </div>
 
             <div class="boton">
-                <button type="button" type="submit" class="btn btn-primary">Enviar datos</button>
-                <button type="button" type="reset" class="btn btn-secondary">Borrar datos</button>
+                <button  type="submit" class="btn btn-primary">Enviar datos</button>
+                <button  type="reset" class="btn btn-secondary">Borrar datos</button>
             </div>
 
         </form>

@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "titulo": "Florero 'Rosetta'",
     "descripcion": "1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
@@ -9,8 +10,8 @@
     "autor": "Cosme Fulanito",
     "carrito": "Added",
     "keyword": "popular"
-},
-{
+  },
+  {
     "id": 2,
     "titulo": "Florero 'Diamante'",
     "descripcion": "2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
@@ -21,8 +22,8 @@
     "autor": "Cosme Fulanito",
     "carrito": "notAdded",
     "keyword": "popular"
-},
-{
+  },
+  {
     "id": 3,
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
@@ -33,8 +34,8 @@
     "autor": "José Maria",
     "carrito": "Added",
     "keyword": "popular"
-},
-{
+  },
+  {
     "id": 4,
     "titulo": "Portaretrato 'Pinky pie'",
     "descripcion": "4Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
@@ -45,8 +46,8 @@
     "autor": "Maria José",
     "carrito": "notAdded",
     "keyword": "popular"
-},
-{
+  },
+  {
     "id": 5,
     "titulo": "Portaretrato 'Amor mío'",
     "descripcion": "5Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
@@ -57,20 +58,20 @@
     "autor": "Maria José",
     "carrito": "notAdded",
     "keyword": "popular"
-},
-{
+  },
+  {
     "id": 6,
     "titulo": "Portaretrato 'Shine",
     "descripcion": "6Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
-    "imagen":"portaretrato.png",
-    "marca":"Patito",
-    "categoria":"Deco",
+    "imagen": "portaretrato.png",
+    "marca": "Patito",
+    "categoria": "Deco",
     "precio": 96,
     "autor": "Maria José",
     "carrito": "notAdded",
     "keyword": "popular"
-},
-{
+  },
+  {
     "id": 7,
     "titulo": "Florero 'Diamante'",
     "descripcion": "2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
@@ -81,17 +82,17 @@
     "autor": "Cosme Fulanito",
     "carrito": "notAdded",
     "keyword": "popular"
-},
-{
+  },
+  {
     "id": 8,
-    "titulo": "Jarron 'Machiatto'",
-    "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
-    "imagen": "jarron.png",
+    "titulo": "Jarron 'Machiatte'",
     "marca": "Dia",
     "categoria": "Deco",
+    "descripcion": "   3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?\"\"\"",
+    "imagen": null,
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": "notAdded",
-    "keyword": "popular"
-}
+    "autor": "Yo",
+    "carrito": false,
+    "destacado": false
+  }
 ]

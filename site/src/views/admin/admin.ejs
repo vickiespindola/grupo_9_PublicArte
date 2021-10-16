@@ -9,12 +9,13 @@
 
     <!--Main-->
     <main>
-        <h6>Para crear productos ingrese aquí</h6>
+      <h6>Para crear productos ingrese aquí</h6>
         <a href="/create">
             <div class="d-grid gap-2 d-md-block">
                 <button class="btn btn-primary" type="button">Crear</button>
             </div>
         </a>
+
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -43,14 +44,14 @@
                         <td class="dato"><%= element.material %></td>
                         <td><%= element.precio %></td>
                         <td class="dato"><%= element.autor %></td>
-                        <td> <a href="/edit/<%= element.id %>">
+                        <td>  <a href="/admin/edit/<%= element.id %>">
                                 <div>
-                                    <button class="btn btn-success">Editar</button>
+                                   <button class="btn btn-success">Editar</button>
                                 </div>
                             </a>
-                            <form>
+                            <form action="/admin/delete/<%= element.id %>?_method=DELETE" method="POST">
                                 <div>
-                                    <button class="btn btn-danger">Eliminar</button>
+                                     <button type="submit" class="btn btn-danger" >Eliminar</button>
                                 </div>
                             </form>
                         </td>
