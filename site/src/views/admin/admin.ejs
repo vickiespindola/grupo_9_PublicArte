@@ -9,13 +9,8 @@
 
     <!--Main-->
     <main>
+        
         <div class="table-responsive">
-            <div>
-                <a href="/create">
-                    <input class="crear" type="button" value="Agrega un producto">
-                </a>
-            </div>
-           <!--  <a href="/create"><button type="button" class="btn btn-secondary">Agregar nuevo producto</button></a> -->
             <table class="table">
                 <thead>
                     <tr>
@@ -43,19 +38,16 @@
                         <td class="dato"><%= element.material %></td>
                         <td><%= element.precio %></td>
                         <td class="dato"><%= element.autor %></td>
-                        <td> 
+                        <td>  <a href="/admin/edit/<%= element.id %>">
                                 <div>
-                                    <a href="/edit/<%= element.id %>">
-                                    <button class="btn btn-success" type="submit">Editar</button>
+                                   <button class="btn btn-success">Editar</button>
                                 </div>
                             </a>
-                            
+                            <form action="/admin/delete/<%= element.id %>?_method=DELETE" method="POST">
                                 <div>
-                                    <form class="eliminar" action="/delete/<%= element.id %>?_method=DELETE" method="POST">
-                                    <button class="btn btn-danger"  type="submit">Eliminar</button>
-                                    </form>  
+                                     <button type="submit" class="btn btn-danger" >Eliminar</button>
                                 </div>
-                         
+                            </form>
                         </td>
                     </tr>
 

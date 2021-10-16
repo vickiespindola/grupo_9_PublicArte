@@ -6,23 +6,23 @@ const {list,create,store,edit,update,destroy} = require('../controllers/adminCon
 
 const storage = multer.diskStorage({
     destination: function (req, file, callback) {
-      callback(null, './public/images/productos')
+      callback(null, './public/img/products')
     },
     filename: function (req, file, callback) {
-      callback(null, `image-${Date.now()}${path.extname(file.originalname)}`)
+      callback(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
     }
 });
   
-const upload = multer({ storage: storage });
+const uploadFile = multer({storage});
 
 //SHOW ALL PRODUCTS
-router.get('/admin', list);
+router.get('/', list);
 
 // CREATE ONE PRODUCT
 /* para mostrar la vista con el formulario */
 router.get('/create', create)
 /* crea el formulario */
-router.post('/create', store)
+router.post('/create', uploadFile.single('imagen'), store)
 
 //EDIT ONE PRODUCT
 router.get('/edit/:id', edit)

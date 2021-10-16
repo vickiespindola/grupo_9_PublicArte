@@ -85,23 +85,14 @@
   },
   {
     "id": 8,
-    "titulo": "Jarron 'Machiatto'",
-    "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
-    "imagen": "jarron.png",
+    "titulo": "Jarron 'Machiatte'",
     "marca": "Dia",
     "categoria": "Deco",
+    "descripcion": "   3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?\"\"\"",
+    "imagen": null,
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": "notAdded",
-    "keyword": "popular"
-  },
-  {
-    "nombre-producto": "ejemplo",
-    "marca": "equis",
-    "categoria": "Vajilla",
-    "descripcion": "soy un ejemplo",
-    "imagen": "defaultImage.png",
-    "precio": 150,
-    "id": 9
+    "autor": "Yo",
+    "carrito": false,
+    "destacado": false
   }
 ]
