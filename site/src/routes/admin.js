@@ -31,4 +31,4 @@ router.put('/edit/:id', update)
 //DELETE ONE PRODUCT
 router.delete('/delete/:id', destroy)
 
-module.exports = router;
+module.exports = router; 
