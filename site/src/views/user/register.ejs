@@ -3,7 +3,7 @@
 <!-- Head -->
 <%- include('../partial/head') %>
 
-<body class="formulario">
+<body class="formulario register">
     <!-- Header -->
     <%- include('../partial/header') %>
 
@@ -27,8 +27,22 @@
                 <label for="contrasenia">Contraseña</label>
                 <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese contraseña...">
             </div>
+            <div class="user">
+                <label for="usuario">Perfil del usuario</label>
+                <span>
+                    <div>
+                        <input type="radio" name="usuario" value="comprador">
+                        <label for="comprador">Comprador</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="usuario" value="vendedor">
+                        <label for="vendedor">Vendedor</label>
+                    </div>
+                </span>
+            </div>
             <button type="submit">Crear cuenta</button>
         </form>
+
         <section>
             <h4>Ó crea tu cuenta con:</h4>
             <div>
@@ -37,7 +51,7 @@
             </div>
         </section>
     </main>
-    
+
     <!-- Footer -->
     <%- include('../partial/footer') %>
 
