@@ -9,17 +9,29 @@
 
     <!--Main-->
     <main>
+
+        <div class="create">
+            <h4>Productos</h4>
+            <div>
+                <p>Agregar producto</p>
+                <a href="/admin/create">
+                    <div class="d-grid gap-2 d-md-block boton">
+                        <button class="btn btn-primary" type="button">Crear</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+
         <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">titulo</th>
-                        <th scope="col" class="dato">descripcion</th>
-                        <th scope="col" class="dato">imagen</th>
+                        <th scope="col" class="dato description">descripcion</th>
+                        <!-- <th scope="col" class="dato">imagen</th> -->
                         <th scope="col">marca</th>
                         <th scope="col" class="dato2">categoria</th>
-                        <th scope="col" class="dato">material</th>
                         <th scope="col">precio</th>
                         <th scope="col" class="dato">autor</th>
                         <th scope="col">acción</th>
@@ -30,31 +42,29 @@
                     <tr>
                         <th scope="row"><%= element.id %></th>
                         <td><%= element.titulo %></td>
-                        <td class="dato"><%= element.descripcion %></td>
-                        <td class="dato"><%= element.imagen %></td>
+                        <td class="dato description"><%= element.descripcion %></td>
+                        <!-- <td class="dato"><img src="/img/products/<%= element.imagen %>" alt=""></td> -->
                         <td><%= element.marca %></td>
                         <td class="dato2"><%= element.categoria %></td>
-                        <td class="dato"><%= element.material %></td>
                         <td><%= element.precio %></td>
                         <td class="dato"><%= element.autor %></td>
-                        <td> <a href="/edit/<%= element.id %>">
+                        <td><a href="/admin/edit/<%= element.id %>">
                                 <div>
                                     <button class="btn btn-success">Editar</button>
                                 </div>
                             </a>
-                            <form>
+                            <form action="/admin/delete/<%= element.id %>?_method=DELETE" method="POST">
                                 <div>
-                                    <button class="btn btn-danger">Eliminar</button>
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
                                 </div>
                             </form>
                         </td>
                     </tr>
-
                     <% }) %>
-
                 </tbody>
             </table>
         </div>
+
     </main>
     <!-- Footer -->
     <%- include('../partial/footer.ejs') %>

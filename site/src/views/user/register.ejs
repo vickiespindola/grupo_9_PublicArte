@@ -3,14 +3,14 @@
 <!-- Head -->
 <%- include('../partial/head') %>
 
-<body class="formulario">
+<body class="formulario register">
     <!-- Header -->
     <%- include('../partial/header') %>
 
     <!-- Main -->
     <main>
         <h2>¡Crea tu cuenta!</h2>
-        <form action="/register">
+        <form action="/users/register" enctype="multipart/form-data" method="POST">
             <div>
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre...">
@@ -24,11 +24,29 @@
                 <input type="email" name="email" id="email" placeholder="Ingrese e-mail">
             </div>
             <div>
-                <label for="contrasenia">Contraseña</label>
-                <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese contraseña...">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Ingrese contraseña...">
+            </div>
+            <div>
+                <label for="avatar">Seleccionar una imagen</label>
+                <input type="file" name="avatar" id="avatar" accept=".jpg .png">
+            </div>
+            <div class="user">
+                <label for="usuario">Perfil del usuario</label>
+                <span>
+                    <div>
+                        <input type="radio" name="usuario" value="comprador">
+                        <label for="comprador">Comprador</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="usuario" value="vendedor">
+                        <label for="vendedor">Vendedor</label>
+                    </div>
+                </span>
             </div>
             <button type="submit">Crear cuenta</button>
         </form>
+
         <section>
             <h4>Ó crea tu cuenta con:</h4>
             <div>
@@ -37,7 +55,7 @@
             </div>
         </section>
     </main>
-    
+
     <!-- Footer -->
     <%- include('../partial/footer') %>
 

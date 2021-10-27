@@ -1,0 +1,228 @@
+[
+  {
+    "id": 1,
+    "nombre": "Cosme",
+    "apellido": "Fulanito",
+    "email": "cosmeFulanito@gmail.com",
+    "password": "Cosme1",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Cosme",
+    "apellido": "Abreu",
+    "email": "cosmeAbreu@gmail.com",
+    "password": "Cosme2",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Cosme",
+    "apellido": "Acosta",
+    "email": "cosmeAcosta@gmail.com",
+    "password": "Cosme3",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Cosme",
+    "apellido": "Adam",
+    "email": "cosmeAdam@gmail.com",
+    "password": "Cosme4",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Cosme",
+    "apellido": "Aguilar",
+    "email": "cosmeAguilar@gmail.com",
+    "password": "Cosme5",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Cosme",
+    "apellido": "Aguirre",
+    "email": "cosmeAguirre@gmail.com",
+    "password": "Cosme6",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Cosme",
+    "apellido": "Allen",
+    "email": "cosmeAllen@gmail.com",
+    "password": "Cosme7",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Cosme",
+    "apellido": "Allison",
+    "email": "cosmeAllison@gmail.com",
+    "password": "Cosme8",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 9,
+    "nombre": "Cosme",
+    "apellido": "Alvarado",
+    "email": "cosmeAlvarado@gmail.com",
+    "password": "Cosme9",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Cosme",
+    "apellido": "Alvarez",
+    "email": "cosmeAlvarez@gmail.com",
+    "password": "Cosme10",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 11,
+    "nombre": "Cosme",
+    "apellido": "Anderson",
+    "email": "cosmeAnderson@gmail.com",
+    "password": "Cosme11",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 12,
+    "nombre": "Cosme",
+    "apellido": "Aparicio",
+    "email": "cosmeAparicio@gmail.com",
+    "password": "Cosme12",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 13,
+    "nombre": "Cosme",
+    "apellido": "Aponte",
+    "email": "cosmeAponte@gmail.com",
+    "password": "Cosme13",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 14,
+    "nombre": "Cosme",
+    "apellido": "Aranda",
+    "email": "cosmeAranda@gmail.com",
+    "password": "Cosme14",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 15,
+    "nombre": "Cosme",
+    "apellido": "Armstrong",
+    "email": "cosmeArmstrong@gmail.com",
+    "password": "Cosme15",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 16,
+    "nombre": "Cosme",
+    "apellido": "Ayala",
+    "email": "cosmeAyala@gmail.com",
+    "password": "Cosme16",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 17,
+    "nombre": "Cosme",
+    "apellido": "Baker",
+    "email": "cosmeBaker@gmail.com",
+    "password": "Cosme17",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 18,
+    "nombre": "Cosme",
+    "apellido": "Hernandez",
+    "email": "cosmeHernandez@gmail.com",
+    "password": "Cosme18",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 19,
+    "nombre": "Cosme",
+    "apellido": "Sanchez",
+    "email": "cosmeSanchez@gmail.com",
+    "password": "Cosme19",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 20,
+    "nombre": "Cosme",
+    "apellido": "Polanco",
+    "email": "cosmePolanco@gmail.com",
+    "password": "Cosme20",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 21,
+    "nombre": "Cosme",
+    "apellido": "Rodriguez",
+    "email": "cosmeRodriguez@gmail.com",
+    "password": "Cosme21",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 22,
+    "nombre": "Cosme",
+    "apellido": "Cortez",
+    "email": "cosmeCortez@gmail.com",
+    "password": "Cosme22",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 23,
+    "nombre": "Cosme",
+    "apellido": "Gomez",
+    "email": "cosmeGomez@gmail.com",
+    "password": "Cosme23",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 24,
+    "nombre": "Cosme24",
+    "apellido": "Castaño",
+    "email": "cosmeCastaño@gmail.com",
+    "password": "Cosme24",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 25,
+    "nombre": "Cosme",
+    "apellido": "Torres",
+    "email": "cosmeTorres@gmail.com",
+    "password": "Cosme25",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  }
+  
+]

@@ -1,78 +1,181 @@
-.admin header{
+/*Header */
+.admin header {
     background-color: var(--naranja);
     margin: 0;
 }
 
-.admin header nav img{
+.admin header nav img {
     width: 90%;
 }
 
-.admin header nav .navbar-brand{
+.admin header nav .navbar-brand {
     width: 70%;
 }
-.admin header nav a{
+
+.admin header nav a {
     color: black;
 }
 
-.admin header nav a:hover{
+.admin header nav a:hover {
     color: white;
 }
 
-.admin header nav a:focus{
+.admin header nav a:focus {
     color: white;
 }
 
-.admin header nav .dropdown-item:hover{
+.admin header nav .dropdown-item:hover {
     color: var(--naranja);
 }
 
-.admin header nav input{
+.admin header nav input {
     border: black;
 }
 
-.admin header nav .navbar-toggler:focus{
+.admin header nav .navbar-toggler:focus {
     border: 2px solid var(--gris);
     box-shadow: none;
 }
 
-.admin header nav .navbar-toggler-icon{
+.admin header nav .navbar-toggler-icon {
     padding: 3px;
 }
 
-.admin header nav .btn-outline-success{
+.admin header nav .btn-outline-success {
     border: black 1px solid;
     color: black;
-    
+
 }
 
-.admin header nav .btn-outline-success:hover{
+.admin header nav .btn-outline-success:hover {
     background-color: var(--gris);
     border: var(--gris) 1px solid;
     color: white;
 }
 
+/*Create product*/
+.admin main .create a div {
+    width: 98%;
+    margin: 5px auto;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.admin main h4 {
+    width: 50%;
+    margin: 5px auto;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.admin main .create p{
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+.admin main .create a .boton {
+    width: 50%;
+}
+
+.admin main .create a .boton button {
+    background-color: var(--naranja);
+    border-color: var(--naranja);
+    margin: 10px 0 15px;
+}
+
+/*Table*/
 .admin main .dato {
     display: none;
-} 
+}
 
 .admin main .dato2 {
     display: none;
 }
 
-@media (min-width: 426px){
-    .admin header{
+.admin main .description {
+    width: 20%;
+}
+
+.admin main table {
+    width: 100%;
+}
+
+.admin main table td button {
+    width: 50px;
+    font-size: 12px;
+    padding: 10px 3px;
+    margin: 2px 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 426px) {
+    /*Header*/
+    .admin header {
         margin: 0;
     }
-    .admin header nav .navbar-brand{
+
+    .admin header nav .navbar-brand {
         width: 30%;
     }
-    .admin main .dato2{
-        display: block;
+
+    /*create button*/
+    .admin main .create{
+        display: flex;
+        flex-direction: row;
+        margin: 30px auto;
+        justify-content: space-between;
+        width: 70%;
+        border-bottom: 1px solid rgb(199, 198, 198);
+    }
+
+    .admin main .create div{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .admin main h4{
+        width: 20%;
+        margin: 10px 0;
+    }
+
+    .admin main .create a .boton{
+        display: flex;
+        text-align: end;
+        margin: 5px;
+        width: 70px;
+    }
+
+    /*Table*/
+    .admin main .dato2 {
+        display: revert;
+    }
+
+    .admin main table td button{
+        padding: 10px 10px;
+        width: 60px;
+        justify-content:center;
     }
 }
 
-@media (min-width: 769px){
-    .admin header nav .navbar-brand{
+@media (min-width: 769px) {
+    /*Header*/
+    .admin header nav .navbar-brand {
         width: 15%;
+    }
+
+    /*Table*/
+    .admin main .dato {
+        display: revert;
+    }
+
+    .admin main .description{
+        width: 30%;
+    }
+
+    .admin main table td button{
+        font-size:16px;
+        padding:10px;
+        margin: 5px 0;
     }
 }
