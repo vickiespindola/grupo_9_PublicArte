@@ -1,226 +1,228 @@
-[{
-    "id" : 1,
-    "Nombre" : "Cosme",
-    "Apellido" : "Fulanito",
-    "Email" : "cosmeFulanito@gmail.com",
-    "Contraseña" : "Cosme1",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 2,
-    "Nombre" : "Cosme",
-    "Apellido" : "Abreu",
-    "Email" : "cosmeAbreu@gmail.com",
-    "Contraseña" : "Cosme2",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 3,
-    "Nombre" : "Cosme",
-    "Apellido" : "Acosta",
-    "Email" : "cosmeAcosta@gmail.com",
-    "Contraseña" : "Cosme3",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 4,
-    "Nombre" : "Cosme",
-    "Apellido" : "Adam",
-    "Email" : "cosmeAdam@gmail.com",
-    "Contraseña" : "Cosme4",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 5,
-    "Nombre" : "Cosme",
-    "Apellido" : "Aguilar",
-    "Email" : "cosmeAguilar@gmail.com",
-    "Contraseña" : "Cosme5",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 6,
-    "Nombre" : "Cosme",
-    "Apellido" : "Aguirre",
-    "Email" : "cosmeAguirre@gmail.com",
-    "Contraseña" : "Cosme6",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 7,
-    "Nombre" : "Cosme",
-    "Apellido" : "Allen",
-    "Email" : "cosmeAllen@gmail.com",
-    "Contraseña" : "Cosme7",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 8,
-    "Nombre" : "Cosme",
-    "Apellido" : "Allison",
-    "Email" : "cosmeAllison@gmail.com",
-    "Contraseña" : "Cosme8",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 9,
-    "Nombre" : "Cosme",
-    "Apellido" : "Alvarado",
-    "Email" : "cosmeAlvarado@gmail.com",
-    "Contraseña" : "Cosme9",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 10,
-    "Nombre" : "Cosme",
-    "Apellido" : "Alvarez",
-    "Email" : "cosmeAlvarez@gmail.com",
-    "Contraseña" : "Cosme10",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 11,
-    "Nombre" : "Cosme",
-    "Apellido" : "Anderson",
-    "Email" : "cosmeAnderson@gmail.com",
-    "Contraseña" : "Cosme11",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 12,
-    "Nombre" : "Cosme",
-    "Apellido" : "Aparicio",
-    "Email" : "cosmeAparicio@gmail.com",
-    "Contraseña" : "Cosme12",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 13,
-    "Nombre" : "Cosme",
-    "Apellido" : "Aponte",
-    "Email" : "cosmeAponte@gmail.com",
-    "Contraseña" : "Cosme13",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 14,
-    "Nombre" : "Cosme",
-    "Apellido" : "Aranda",
-    "Email" : "cosmeAranda@gmail.com",
-    "Contraseña" : "Cosme14",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 15,
-    "Nombre" : "Cosme",
-    "Apellido" : "Armstrong",
-    "Email" : "cosmeArmstrong@gmail.com",
-    "Contraseña" : "Cosme15",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 16,
-    "Nombre" : "Cosme",
-    "Apellido" : "Ayala",
-    "Email" : "cosmeAyala@gmail.com",
-    "Contraseña" : "Cosme16",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 17,
-    "Nombre" : "Cosme",
-    "Apellido" : "Baker",
-    "Email" : "cosmeBaker@gmail.com",
-    "Contraseña" : "Cosme17",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 18,
-    "Nombre" : "Cosme",
-    "Apellido" : "Hernandez",
-    "Email" : "cosmeHernandez@gmail.com",
-    "Contraseña" : "Cosme18",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 19,
-    "Nombre" : "Cosme",
-    "Apellido" : "Sanchez",
-    "Email" : "cosmeSanchez@gmail.com",
-    "Contraseña" : "Cosme19",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 20,
-    "Nombre" : "Cosme",
-    "Apellido" : "Polanco",
-    "Email" : "cosmePolanco@gmail.com",
-    "Contraseña" : "Cosme20",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 21,
-    "Nombre" : "Cosme",
-    "Apellido" : "Rodriguez",
-    "Email" : "cosmeRodriguez@gmail.com",
-    "Contraseña" : "Cosme21",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 22,
-    "Nombre" : "Cosme",
-    "Apellido" : "Cortez",
-    "Email" : "cosmeCortez@gmail.com",
-    "Contraseña" : "Cosme22",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 23,
-    "Nombre" : "Cosme",
-    "Apellido" : "Gomez",
-    "Email" : "cosmeGomez@gmail.com",
-    "Contraseña" : "Cosme23",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 24,
-    "Nombre" : "Cosme24",
-    "Apellido" : "Castaño",
-    "Email" : "cosmeCastaño@gmail.com",
-    "Contraseña" : "Cosme24",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-},
-{
-    "id" : 25,
-    "Nombre" : "Cosme",
-    "Apellido" : "Torres",
-    "Email" : "cosmeTorres@gmail.com",
-    "Contraseña" : "Cosme25",
-    "Categoria" : "Vendedor",
-    "Imagen" : "https://robohash.org/voluptatequaeexpedita.bmp?size=50x50&set=set1"
-}
+[
+  {
+    "id": 1,
+    "nombre": "Cosme",
+    "apellido": "Fulanito",
+    "email": "cosmeFulanito@gmail.com",
+    "password": "Cosme1",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Cosme",
+    "apellido": "Abreu",
+    "email": "cosmeAbreu@gmail.com",
+    "password": "Cosme2",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Cosme",
+    "apellido": "Acosta",
+    "email": "cosmeAcosta@gmail.com",
+    "password": "Cosme3",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Cosme",
+    "apellido": "Adam",
+    "email": "cosmeAdam@gmail.com",
+    "password": "Cosme4",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Cosme",
+    "apellido": "Aguilar",
+    "email": "cosmeAguilar@gmail.com",
+    "password": "Cosme5",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Cosme",
+    "apellido": "Aguirre",
+    "email": "cosmeAguirre@gmail.com",
+    "password": "Cosme6",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Cosme",
+    "apellido": "Allen",
+    "email": "cosmeAllen@gmail.com",
+    "password": "Cosme7",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Cosme",
+    "apellido": "Allison",
+    "email": "cosmeAllison@gmail.com",
+    "password": "Cosme8",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 9,
+    "nombre": "Cosme",
+    "apellido": "Alvarado",
+    "email": "cosmeAlvarado@gmail.com",
+    "password": "Cosme9",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Cosme",
+    "apellido": "Alvarez",
+    "email": "cosmeAlvarez@gmail.com",
+    "password": "Cosme10",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 11,
+    "nombre": "Cosme",
+    "apellido": "Anderson",
+    "email": "cosmeAnderson@gmail.com",
+    "password": "Cosme11",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 12,
+    "nombre": "Cosme",
+    "apellido": "Aparicio",
+    "email": "cosmeAparicio@gmail.com",
+    "password": "Cosme12",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 13,
+    "nombre": "Cosme",
+    "apellido": "Aponte",
+    "email": "cosmeAponte@gmail.com",
+    "password": "Cosme13",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 14,
+    "nombre": "Cosme",
+    "apellido": "Aranda",
+    "email": "cosmeAranda@gmail.com",
+    "password": "Cosme14",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 15,
+    "nombre": "Cosme",
+    "apellido": "Armstrong",
+    "email": "cosmeArmstrong@gmail.com",
+    "password": "Cosme15",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 16,
+    "nombre": "Cosme",
+    "apellido": "Ayala",
+    "email": "cosmeAyala@gmail.com",
+    "password": "Cosme16",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 17,
+    "nombre": "Cosme",
+    "apellido": "Baker",
+    "email": "cosmeBaker@gmail.com",
+    "password": "Cosme17",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 18,
+    "nombre": "Cosme",
+    "apellido": "Hernandez",
+    "email": "cosmeHernandez@gmail.com",
+    "password": "Cosme18",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 19,
+    "nombre": "Cosme",
+    "apellido": "Sanchez",
+    "email": "cosmeSanchez@gmail.com",
+    "password": "Cosme19",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 20,
+    "nombre": "Cosme",
+    "apellido": "Polanco",
+    "email": "cosmePolanco@gmail.com",
+    "password": "Cosme20",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 21,
+    "nombre": "Cosme",
+    "apellido": "Rodriguez",
+    "email": "cosmeRodriguez@gmail.com",
+    "password": "Cosme21",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 22,
+    "nombre": "Cosme",
+    "apellido": "Cortez",
+    "email": "cosmeCortez@gmail.com",
+    "password": "Cosme22",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 23,
+    "nombre": "Cosme",
+    "apellido": "Gomez",
+    "email": "cosmeGomez@gmail.com",
+    "password": "Cosme23",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 24,
+    "nombre": "Cosme24",
+    "apellido": "Castaño",
+    "email": "cosmeCastaño@gmail.com",
+    "password": "Cosme24",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": 25,
+    "nombre": "Cosme",
+    "apellido": "Torres",
+    "email": "cosmeTorres@gmail.com",
+    "password": "Cosme25",
+    "usuario": "Vendedor",
+    "avatar": "default-image.png"
+  }
+  
 ]
