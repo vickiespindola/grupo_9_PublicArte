@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('../partial/head') %>
+
+<body class="users">
+    <!-- Header -->
+    <%- include('../partial/header') %>
+    <main>
+        <div class="profile">
+            <div>
+                <img src="/img/users/<%= locals.userLogged.avatar %> " alt="">
+                <br>
+            </div>
+            <div>
+                <h1>Hola, <%= locals.userLogged.nombre%> </h1>
+                <p><%= locals.userLogged.email %> </p>
+                <a href="/users/logout/"><button>Cerrar sesión</button></a>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <%- include('../partial/footer') %>
+</body>
+
+</html>

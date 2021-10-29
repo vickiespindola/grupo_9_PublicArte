@@ -1,0 +1,43 @@
+.users main .profile{
+    margin: 30px auto;
+    
+}
+
+.users main .profile div{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.users main .profile div img{
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.users main button{
+    background-color: var(--naranja);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius:5px;
+}
+
+@media (min-width: 426px) {
+    .users main .profile{
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 769px){
+    .users main .profile{
+        margin: 50px 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .users main .profile div{
+        width: 20%;
+        margin: 10px;
+    }
+}
