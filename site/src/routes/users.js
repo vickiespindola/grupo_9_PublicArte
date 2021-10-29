@@ -18,20 +18,22 @@ const {
 //Middlewares
 const registerValidate = require('../middlewares/registerValidate')
 const loginValidate = require('../middlewares/loginValidate')
+const guestUser = require('../middlewares/guestUser')
+const authUser = require('../middlewares/authUser')
 
 /* Routes. */
 
 // LOGIN USER
-router.get('/login', viewLogin);
+router.get('/login', guestUser, viewLogin);
 router.post('/login', loginValidate,login);
 
 //CREATE USER 
-router.get('/register', viewRegister);
+router.get('/register', guestUser, viewRegister);
 router.post('/register', usersMulter.single('avatar'), registerValidate,
   register)
 
 //USER PROFILE
-router.get('/profile', userProfile)
+router.get('/profile', authUser, userProfile)
 
 //LOGOUT PROFILE
 router.get('/logout/', logout);
