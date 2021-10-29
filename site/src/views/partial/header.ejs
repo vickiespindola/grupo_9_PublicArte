@@ -13,15 +13,21 @@
         <div class="nav-bar">
             <form action="/search"><input type="search" placeholder="Buscar"><i class="fas fa-search"></i></i></form>
         </div>
-        <div class="user-icon">
-            <a href="/users/login"><i class="far fa-user"></i></a>
-        </div>
         <div class="cart-icon">
             <a href="/products/cart"><i class="fas fa-cart-plus"></i></a>
         </div>
+        <% if(locals.isLogged){ %>
+        <div class="profile">
+            <a href="/users/profile">
+                <img src="/img/users/<%= locals.userLogged.avatar %>" alt="" width="40" style="border-radius:100%">
+                Hi <%= locals.userLogged.nombre %>
+            </a>
+        </div>
+        <% } else { %>
         <div class="header-button">
             <a href="/users/login"><button class="login">Ingresa</button></a>
             <a href="/users/register"><button class="register">Registrate</button></a>
         </div>
+        <% } %>
     </nav>
 </header>

@@ -1,29 +1,39 @@
+//node_modules
 const express = require('express');
 const router = express.Router();
-const {login, register,viewRegister} = require('../controllers/usersController')
-const fs = require('fs'); 
+const fs = require('fs');
 const path = require('path');
-const multer = require('multer');
+const usersMulter = require('../middlewares/usersMulter');
 
-const storage = multer.diskStorage({
-    destination: function (req, file, callback) {
-      callback(null, './public/img/users')
-    },
-    filename: function (req, file, callback) {
-      callback(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
-    }
-});
-  
-const uploadFile = multer({storage});
+//controller
+const {
+  viewLogin,
+  login,
+  register,
+  viewRegister,
+  userProfile,
+  logout
+} = require('../controllers/usersController')
 
-/* GET users listing. */
+//Middlewares
+const registerValidate = require('../middlewares/registerValidate')
+const loginValidate = require('../middlewares/loginValidate')
+
+/* Routes. */
 
 // LOGIN USER
-router.get('/login', login);
+router.get('/login', viewLogin);
+router.post('/login', loginValidate,login);
 
- //CREATE USER 
+//CREATE USER 
 router.get('/register', viewRegister);
-/* ESTA RUTA DESPUES LA LLEVAMOS AL CONTROLADOR */
-router.post('/register', uploadFile.single('avatar'),
-register )
+router.post('/register', usersMulter.single('avatar'), registerValidate,
+  register)
+
+//USER PROFILE
+router.get('/profile', userProfile)
+
+//LOGOUT PROFILE
+router.get('/logout/', logout);
+
 module.exports = router;

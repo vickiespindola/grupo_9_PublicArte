@@ -223,6 +223,14 @@
     "password": "Cosme25",
     "usuario": "Vendedor",
     "avatar": "default-image.png"
+  },
+  {
+    "id": 26,
+    "nombre": "Eliana",
+    "apellido": "Tolosa",
+    "email": "tolosa.eliana.m@gmail.com",
+    "usuario": "comprador",
+    "password": "$2a$10$SyFbMq6J38Y3iN0eDDeTv.4AuLXJ3oi/b6kOQf9NBqKzniOFSU1lq",
+    "avatar": "default-image.png"
   }
-  
 ]

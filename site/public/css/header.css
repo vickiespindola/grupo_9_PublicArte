@@ -71,6 +71,10 @@ header nav .nav-bar{
     border-bottom: 2px solid black;
 }
 
+header nav .profile{
+    display: none;
+}
+
 @media (min-width: 426px) {
     header{
         display: flex;
@@ -102,6 +106,9 @@ header nav .nav-bar{
     }
     header nav i{
         font-size: 30px;
+    }
+    header nav .profile{
+        display: block;
     }
 }
 

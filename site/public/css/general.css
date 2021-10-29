@@ -15,6 +15,10 @@ li {
     list-style: none;
 }
 
+small{
+    color: white;
+}
+
 :root {
     --naranja: #ef7437;
     --marron-claro: #ddc6aa;
