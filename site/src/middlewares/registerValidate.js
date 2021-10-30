@@ -11,7 +11,7 @@ module.exports = [
     .notEmpty().withMessage('*El e-mail no puede estar vacio.').bail()
     .isEmail().withMessage('*El e-mail no es valido.'),
 
-    check('password1')
+    check('password')
     .notEmpty().withMessage('*La contraseña no puede estar vacia.').bail()
     .isLength({min: 8}).withMessage('*La contraseña debe tener un minimo de 8 caracteres.'),
 

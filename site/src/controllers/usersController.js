@@ -18,18 +18,16 @@ const controller = {
       let loginErrors = validationResult(req);
 
       if (loginErrors.isEmpty()) {
-         const {
-            email,
-            password
-         } = req.body
 
-         const usuario = users.find(e => e.email === email);
-         let hash = bcrypt.compareSync(password, usuario.password)
-         if (hash) {
-            delete usuario.password;
-            req.session.userLogged = usuario;
-            res.redirect('/users/profile')
+         const usuario = users.find(e => e.email === req.body.email.trim());
+
+         req.session.userLogged = {
+            id: usuario.id,
+            nombre: usuario.nombre,
+            usuario: usuario.usuario,
+            avatar: usuario.avatar
          }
+         res.redirect('/users/profile')
       } else {
          res.render('user/login', {
             errors: loginErrors.mapped(),
@@ -44,7 +42,15 @@ const controller = {
    },
    register: function (req, res, next) {
 
-      const registerErrors = validationResult(req);
+      const errors = validationResult(req);
+
+      if (req.fileValidationError) {
+         let image = {
+            param: 'avatar',
+            msg: req.fileValidationError,
+         }
+         errors.errors.push(image)
+      }
 
       if (registerErrors.isEmpty()) {
 
@@ -53,17 +59,17 @@ const controller = {
             apellido,
             email,
             usuario,
-            password1,
+            password,
             avatar
          } = req.body
 
          let newUser = {
-            id: users[users.length-1] ? users[users.length - 1].id + 1: 1,
+            id: users[users.length - 1] ? users[users.length - 1].id + 1 : 1,
             nombre,
             apellido,
             email,
             usuario,
-            password1: bcrypt.hashSync(password1, 10),
+            password: bcrypt.hashSync(password, 10),
             avatar: req.file ? req.file.filename : 'default-image.png',
          }
 
@@ -80,7 +86,7 @@ const controller = {
 
       } else {
          res.render('user/register', {
-            errors: registerErrors.mapped(),
+            errors: errors.mapped(),
             old: req.body
          })
       }
