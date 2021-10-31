@@ -3,7 +3,6 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const path = require('path');
-const usersMulter = require('../middlewares/usersMulter');
 
 //controller
 const {
@@ -16,6 +15,7 @@ const {
 } = require('../controllers/usersController')
 
 //Middlewares
+const usersMulter = require('../middlewares/usersMulter');
 const registerValidate = require('../middlewares/registerValidate')
 const loginValidate = require('../middlewares/loginValidate')
 const guestUser = require('../middlewares/guestUser')
@@ -25,7 +25,7 @@ const authUser = require('../middlewares/authUser')
 
 // LOGIN USER
 router.get('/login', guestUser, viewLogin);
-router.post('/login', loginValidate,login);
+router.post('/login', loginValidate, login);
 
 //CREATE USER 
 router.get('/register', guestUser, viewRegister);
