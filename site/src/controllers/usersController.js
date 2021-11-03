@@ -52,7 +52,7 @@ const controller = {
          errors.errors.push(image)
       }
 
-      if (registerErrors.isEmpty()) {
+      if (errors.isEmpty()) {
 
          const {
             nombre,

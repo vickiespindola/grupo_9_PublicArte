@@ -131,14 +131,15 @@
 }
 
 .home main .contenidoAmistad {
-
     padding: 20px 0;
-    background-color: whitesmoke;
+}
 
+.home main .contenidoAmistad div{
     display: flex;
-    flex-wrap: wrap;
-    margin: 10% 20%;
+    flex-direction: column;
     text-align: center;
+    width: 80%;
+    margin: 10% auto;
 }
 
 .home main .contenidoAmistad a {
@@ -148,8 +149,8 @@
 }
 
 .home main .contenidoAmistad img {
-    width: 100px;
-    height: 150px;
+    max-width:50%;
+    margin: 10px auto;
 }
 
 .home main .contact {
@@ -183,7 +184,6 @@
     }
 
     .home main .carrusel div.contenido {
-
         top: 150px;
         width: 80%;
         margin: 3% 6%;
@@ -194,14 +194,12 @@
 
         font-size: 16px;
 
-
         padding: 5px 10px;
 
         margin: 5px;
     }
 
     .home main .carrusel div.contenido h3 {
-
         font-size: 27px;
 
         width: 100%;
@@ -211,16 +209,12 @@
         margin: 10px;
         font-family: var(--rosarivo);
         font-size: 16px;
-
-
     }
 
     .home main .botones {
         background-color: var(--gris);
         display: flex;
         flex-wrap: wrap;
-
-
     }
 
     .home main .botones ul {
@@ -228,13 +222,11 @@
         display: inline-block;
         padding: 23px 0;
         margin-left: 10px;
-
     }
 
     .home main .botones ul li {
         width: 23%;
         padding: 0 10px;
-
     }
 
     .home main .botones ul li.botoncontacto a {
@@ -270,23 +262,24 @@
     .home main .productosDestacados article h4 {
         font-family: var(--rosario);
         font-size: 15px;
-
     }
 
     .home main .productosDestacados article img {
-
         width: 220px;
         height: 320px;
     }
 
     .home main .contenidoAmistad {
-
         padding: 20px 0;
         display: flex;
         flex-wrap: wrap;
-        margin: 10% 30%;
+        margin: 10px auto;
         text-align: center;
         width: 40%;
+    }
+
+    .home main .contenidoAmistad div{
+        margin: 0 auto; 
     }
 
     .home main .contenidoAmistad a {
@@ -296,13 +289,11 @@
     }
 
     .home main .contenidoAmistad img {
-        width: 150px;
-        height: 200px;
+        max-width: 50%;
     }
 
     .home main .contact {
         background-color: var(--marron-claro);
-
     }
 
     .home main .contact h1 {
@@ -380,14 +371,9 @@
     .home main .contenidoAmistad a {
         font-size: 25px;
         align-content: center;
-        margin-left: 100px;
     }
 
     .home main .contenidoAmistad img {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 180px;
-        width: 150px;
-        height: 200px;
+        max-width: 50%;
     }
 }
