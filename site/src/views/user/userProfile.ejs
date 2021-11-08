@@ -14,7 +14,25 @@
             </div>
             <div>
                 <h1>Hola, <%= locals.userLogged.nombre%> </h1>
-                <p><%= locals.userLogged.email %> </p>
+                <h4>Información personal</h4>
+                <form action="/user/profile">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="nombre"
+                            value="<%= locals.userLogged.nombreCompleto  %> " placeholder="name@example.com" readonly>
+                        <label for="floatingInput">Nombre Completo</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email"
+                            value="<%= locals.userLogged.email %>" placeholder="name@example.com" readonly>
+                        <label for="floatingInput">Direccion de E-mail</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="usuario"
+                            value="<%= locals.userLogged.usuario %>" placeholder="name@example.com" readonly>
+                        <label for="floatingInput">Tipo de usuario</label>
+                    </div>
+                </form>
+                <a href="/users/profile/edit"><button>Editar perfil</button></a>
                 <a href="/users/logout/"><button>Cerrar sesión</button></a>
             </div>
         </div>

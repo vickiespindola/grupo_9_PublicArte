@@ -24,6 +24,8 @@ const controller = {
          req.session.userLogged = {
             id: usuario.id,
             nombre: usuario.nombre,
+            nombreCompleto: usuario.nombre + ' ' + usuario.apellido,
+            email: usuario.email,
             usuario: usuario.usuario,
             avatar: usuario.avatar
          }
@@ -80,7 +82,11 @@ const controller = {
          req.session.userLogged = {
             id: newUser.id,
             nombre: newUser.nombre,
-            usuario: newUser.usuario
+            nombreCompleto: newUser.nombre + ' ' + newUser.apellido,
+            email: newUser.email,
+            usuario: newUser.usuario,
+            avatar: newUser.avatar
+
          }
          res.redirect('/')
 
@@ -96,6 +102,37 @@ const controller = {
       res.render('user/userProfile', {
          user: req.session.userLogged
       })
+   },
+   editProfile: function (req, res) {
+      res.render('user/editProfile', {
+         user: req.session.userLogged
+      })
+   },
+   storeProfile: function (req, res) {
+      let id = +req.params.id
+
+      const {
+         nombre,
+         apellido,
+         avatar,
+         usuario,
+         email,
+      } = req.body
+
+      let user = users.find(element => element.id == id);
+
+      let editUser = {
+         id: +req.params.id,
+         nombre,
+         apellido,
+         avatar: req.file ? req.file.filename : null,
+         usuario,
+         email,
+      }
+      let userModificado = users.map(e => e.id === +req.params.id ? editUser : user)
+      fs.writeFileSync(productsFilePath, JSON.stringify(userModificado, null, 2));
+
+      res.redirect('/users/profile')
    },
    logout: function (req, res) {
       req.session.destroy();
