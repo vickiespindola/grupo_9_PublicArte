@@ -39,7 +39,7 @@ router.get('/profile', authUser, userProfile)
 
 //EDIT PROFILE
 router.get('/profile/edit', authUser, editProfile)
-router.put('/profile/edit', authUser, storeProfile)
+router.put('/profile/edit', usersMulter.single('avatar'),authUser, storeProfile)
 
 //LOGOUT PROFILE
 router.get('/logout/', logout);

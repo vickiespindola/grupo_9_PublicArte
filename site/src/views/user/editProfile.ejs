@@ -8,19 +8,24 @@
     <%- include('../partial/header') %>
 
     <main>
-        <form action="/user/profile/edit?_method=PUT" method="POST">
+        <form action="/users/profile/edit?_method=PUT" method="POST">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nombre" value="<%= locals.userLogged.nombreCompleto  %> "
+                <input type="text" class="form-control" name="nombre" id="nombre" value="<%= locals.userLogged.nombre  %> "
                     placeholder="name@example.com">
-                <label for="floatingInput">Nombre Completo</label>
+                <label for="floatingInput">Nombre</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="email" value="<%= locals.userLogged.email %>"
+                <input type="text" class="form-control" name="apellido" id="apellido" value="<%= locals.userLogged.apellido  %> "
+                    placeholder="name@example.com">
+                <label for="floatingInput">Apellido</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" name="email" id="email" value="<%= locals.userLogged.email %>"
                     placeholder="name@example.com">
                 <label for="floatingInput">Direccion de E-mail</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="usuario" value="<%= locals.userLogged.usuario %>"
+                <input type="text" class="form-control" name="usuario" id="usuario" value="<%= locals.userLogged.usuario %>"
                     placeholder="name@example.com">
                 <label for="floatingInput">Tipo de usuario</label>
             </div>

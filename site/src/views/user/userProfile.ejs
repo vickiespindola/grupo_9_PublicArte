@@ -15,7 +15,7 @@
             <div>
                 <h1>Hola, <%= locals.userLogged.nombre%> </h1>
                 <h4>Información personal</h4>
-                <form action="/user/profile">
+                <form action="/users/profile">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="nombre"
                             value="<%= locals.userLogged.nombreCompleto  %> " placeholder="name@example.com" readonly>

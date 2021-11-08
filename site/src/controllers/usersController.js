@@ -24,6 +24,7 @@ const controller = {
          req.session.userLogged = {
             id: usuario.id,
             nombre: usuario.nombre,
+            apellido: usuario.apellido,
             nombreCompleto: usuario.nombre + ' ' + usuario.apellido,
             email: usuario.email,
             usuario: usuario.usuario,
@@ -82,6 +83,7 @@ const controller = {
          req.session.userLogged = {
             id: newUser.id,
             nombre: newUser.nombre,
+            apellido: newUser.apellido,
             nombreCompleto: newUser.nombre + ' ' + newUser.apellido,
             email: newUser.email,
             usuario: newUser.usuario,
@@ -130,7 +132,7 @@ const controller = {
          email,
       }
       let userModificado = users.map(e => e.id === +req.params.id ? editUser : user)
-      fs.writeFileSync(productsFilePath, JSON.stringify(userModificado, null, 2));
+      fs.writeFileSync(usersFilePath, JSON.stringify(userModificado, null, 2));
 
       res.redirect('/users/profile')
    },
