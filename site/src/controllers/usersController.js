@@ -25,7 +25,6 @@ const controller = {
             id: usuario.id,
             nombre: usuario.nombre,
             apellido: usuario.apellido,
-            nombreCompleto: usuario.nombre + ' ' + usuario.apellido,
             email: usuario.email,
             usuario: usuario.usuario,
             avatar: usuario.avatar
@@ -84,7 +83,6 @@ const controller = {
             id: newUser.id,
             nombre: newUser.nombre,
             apellido: newUser.apellido,
-            nombreCompleto: newUser.nombre + ' ' + newUser.apellido,
             email: newUser.email,
             usuario: newUser.usuario,
             avatar: newUser.avatar
@@ -105,7 +103,7 @@ const controller = {
          user: req.session.userLogged
       })
    },
-   editProfile: function (req, res) {
+   /* editProfile: function (req, res) {
       res.render('user/editProfile', {
          user: req.session.userLogged
       })
@@ -134,8 +132,17 @@ const controller = {
       let userModificado = users.map(e => e.id === +req.params.id ? editUser : user)
       fs.writeFileSync(usersFilePath, JSON.stringify(userModificado, null, 2));
 
+      req.session.userLogged = {
+         id: editUser.id,
+         nombre: editUser.nombre,
+         apellido: editUser.apellido,
+         email: editUser.email,
+         usuario: editUser.usuario,
+         avatar: editUser.avatar
+      }
+
       res.redirect('/users/profile')
-   },
+   }, */
    logout: function (req, res) {
       req.session.destroy();
       res.redirect('/')
