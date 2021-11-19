@@ -10,14 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Producers.hasMany(models.Products),{
-        as :'product',
-        foreingKey:'id_Product' 
-      }
+      Producers.hasMany(models.Products, {
+        as: 'products',
+        foreignKey: 'id_producer'
+      })
     }
   };
   Producers.init({
-    id_users: DataTypes.INTEGER
+    id_user: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Producers',

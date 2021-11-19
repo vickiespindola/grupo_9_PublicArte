@@ -10,14 +10,13 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-      Images.belongsTo(models.Products),{
-        as:'products'
-      }
+      Images.belongsTo(models.Products, {
+        as: 'products'
+      })
     }
   };
   Images.init({
-    archivo: DataTypes.STRING,
+    file: DataTypes.STRING,
     id_product: DataTypes.INTEGER
   }, {
     sequelize,

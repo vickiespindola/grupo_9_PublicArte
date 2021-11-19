@@ -10,23 +10,21 @@ module.exports = {
       },
       id_user: {
         type: Sequelize.INTEGER,
-        reference:{
-          model:{
-            tableName: 'Users'
+        references: {
+          model: {
+            tableName: "Users"
           },
-          key: 'id'
-        },
-        onDelete: 'cascade'
+          key: "id"
+        }
       },
       id_cart: {
         type: Sequelize.INTEGER,
-        reference:{
-          model:{
-            tableName: 'Carts'
+        references: {
+          model: {
+            tableName: "Carts"
           },
-          key: 'id'
-        },
-        onDelete: 'cascade'
+          key: "id"
+        }
       },
       createdAt: {
         allowNull: false,

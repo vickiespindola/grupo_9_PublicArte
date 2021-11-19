@@ -8,44 +8,41 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      title: {
+      name: {
         type: Sequelize.STRING
       },
       description: {
         type: Sequelize.STRING
       },
       price: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.INTEGER
       },
       id_category: {
         type: Sequelize.INTEGER,
-        reference:{
-          model:{
-            tableName: 'Categories'
+        references: {
+          model: {
+            tableName: "Categories"
           },
-          key: 'id'
-        },
-        onDelete: 'cascade'
+          key: "id"
+        }
       },
       id_producer: {
         type: Sequelize.INTEGER,
-        reference:{
-          model:{
-            tableName: 'Producers'
+        references: {
+          model: {
+            tableName: "Producers"
           },
-          key: 'id'
-        },
-        onDelete: 'cascade'
+          key: "id"
+        }
       },
       id_brand: {
         type: Sequelize.INTEGER,
-        reference:{
-          model:{
-            tableName: 'Brand'
+        references: {
+          model: {
+            tableName: "Brands"
           },
-          key: 'id'
-        },
-        onDelete: 'cascade'
+          key: "id"
+        }
       },
       createdAt: {
         allowNull: false,
