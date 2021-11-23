@@ -6,10 +6,10 @@ const path = require('path');
 
 //controller
 const {
-  viewLogin,
   login,
+  processLogin,
   register,
-  viewRegister,
+  processRegister,
   userProfile,
   /* editProfile,
   storeProfile, */
@@ -18,28 +18,28 @@ const {
 
 //Middlewares
 const usersMulter = require('../middlewares/usersMulter');
-const registerValidate = require('../middlewares/registerValidate')
-const loginValidate = require('../middlewares/loginValidate')
+const registerValidate = require('../validations/registerValidate')
+const loginValidate = require('../validations/loginValidate')
 const guestUser = require('../middlewares/guestUser')
 const authUser = require('../middlewares/authUser')
 
 /* Routes. */
 
 // LOGIN USER
-router.get('/login', guestUser, viewLogin);
-router.post('/login', loginValidate, login);
+router.get('/login', guestUser, Login);
+router.post('/login', loginValidate, processLogin);
 
 //CREATE USER 
-router.get('/register', guestUser, viewRegister);
+router.get('/register', guestUser, Register);
 router.post('/register', usersMulter.single('avatar'), registerValidate,
-  register)
+  processRegister)
 
 //USER PROFILE
 router.get('/profile', authUser, userProfile)
 
 //EDIT PROFILE
-/* router.get('/profile/edit', authUser, editProfile)
-router.put('/profile/edit', usersMulter.single('avatar'),authUser, storeProfile) */
+/* router.get('/profile/edit/:id', authUser, editProfile)
+router.put('/profile/edit/:id', usersMulter.single('avatar'),authUser, updateProfile) */
 
 //LOGOUT PROFILE
 router.get('/logout/', logout);
