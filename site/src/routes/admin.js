@@ -1,24 +1,33 @@
 const express = require('express');
 const router = express.Router();
-const path =  require('path');
-const {list,create,store,edit,update,destroy} = require('../controllers/adminController')
+const path = require('path');
+const {
+    list,
+    create,
+    store,
+    edit,
+    update,
+    destroy
+} = require('../controllers/adminController')
 
 const productsMulter = require('../middlewares/productsMulter');
+const productValidate = require('../validations/productValidate');
+const authUser = require('../middlewares/authUser');
 
 //SHOW ALL PRODUCTS
-router.get('/', list);
+router.get('/', authUser, list);
 
 // CREATE ONE PRODUCT
 /* para mostrar la vista con el formulario */
-router.get('/create', create)
+router.get('/create', authUser, create)
 /* crea el formulario */
-router.post('/create', productsMulter.single('imagen'), store)
+router.post('/create', productsMulter.single('imagen'), authUser, productValidate, store)
 
 //EDIT ONE PRODUCT
-router.get('/edit/:id', edit)
-router.put('/edit/:id', productsMulter.single('imagen'), update)
+router.get('/edit/:id', authUser, edit)
+router.put('/edit/:id', productsMulter.single('imagen'), authUser, productValidate, update)
 
 //DELETE ONE PRODUCT
-router.delete('/delete/:id', destroy)
+router.delete('/delete/:id', authUser, destroy)
 
-module.exports = router; 
+module.exports = router;

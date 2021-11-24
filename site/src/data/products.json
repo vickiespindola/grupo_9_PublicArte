@@ -6,9 +6,7 @@
     "marca": "Pirulo",
     "categoria": "Deco",
     "precio": 91,
-    "autor": "Cosme Fulanito",
-    "carrito": false,
-    "destacado": true
+    "autor": "Cosme Fulanito"
 }, {
     "id": 2,
     "titulo": "Florero 'Diamante'",
@@ -17,9 +15,7 @@
     "marca": "Pirulo",
     "categoria": "Deco",
     "precio": 92,
-    "autor": "Cosme Fulanito",
-    "carrito": false,
-    "destacado": true
+    "autor": "Cosme Fulanito"
 }, {
     "id": 3,
     "titulo": "Jarron 'Machiatto'",
@@ -28,9 +24,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": true
+    "autor": "José Maria"
 }, {
     "id": 4,
     "titulo": "Portaretrato 'Pinky pie'",
@@ -39,9 +33,7 @@
     "marca": "Patito",
     "categoria": "Deco",
     "precio": 94,
-    "autor": "Maria José",
-    "carrito": false,
-    "destacado": true
+    "autor": "Maria José"
 }, {
     "id": 5,
     "titulo": "Portaretrato 'Amor mío'",
@@ -50,9 +42,7 @@
     "marca": "Patito",
     "categoria": "Deco",
     "precio": 95,
-    "autor": "Maria José",
-    "carrito": false,
-    "destacado": true
+    "autor": "Maria José"
 }, {
     "id": 6,
     "titulo": "Portaretrato 'Shine",
@@ -61,9 +51,7 @@
     "marca": "Patito",
     "categoria": "Deco",
     "precio": 96,
-    "autor": "Maria José",
-    "carrito": false,
-    "destacado": true
+    "autor": "Maria José"
 }, {
     "id": 7,
     "titulo": "Florero 'Diamante'",
@@ -72,9 +60,7 @@
     "marca": "Pirulo",
     "categoria": "Deco",
     "precio": 92,
-    "autor": "Cosme Fulanito",
-    "carrito": false,
-    "destacado": true
+    "autor": "Cosme Fulanito"
 }, {
     "id": 8,
     "titulo": "Jarron 'Machiatto'",
@@ -83,9 +69,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": true
+    "autor": "José Maria"
 }, {
     "id": 9,
     "titulo": "Jarron 'Machiatto'",
@@ -94,9 +78,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 10,
     "titulo": "Jarron 'Machiatto'",
@@ -105,9 +87,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 11,
     "titulo": "Jarron 'Machiatto'",
@@ -116,9 +96,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 12,
     "titulo": "Jarron 'Machiatto'",
@@ -127,9 +105,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 13,
     "titulo": "Jarron 'Machiatto'",
@@ -138,9 +114,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 14,
     "titulo": "Jarron 'Machiatto'",
@@ -149,9 +123,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 15,
     "titulo": "Jarron 'Machiatto'",
@@ -160,9 +132,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 16,
     "titulo": "Jarron 'Machiatto'",
@@ -171,9 +141,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 17,
     "titulo": "Jarron 'Machiatto'",
@@ -182,9 +150,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 18,
     "titulo": "Jarron 'Machiatto'",
@@ -193,9 +159,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 19,
     "titulo": "Jarron 'Machiatto'",
@@ -204,9 +168,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 20,
     "titulo": "Jarron 'Machiatto'",
@@ -215,9 +177,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 21,
     "titulo": "Jarron 'Machiatto'",
@@ -226,9 +186,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 22,
     "titulo": "Jarron 'Machiatto'",
@@ -237,9 +195,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 23,
     "titulo": "Jarron 'Machiatto'",
@@ -248,9 +204,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 24,
     "titulo": "Jarron 'Machiatto'",
@@ -259,9 +213,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 25,
     "titulo": "Jarron 'Machiatto'",
@@ -270,9 +222,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 26,
     "titulo": "Jarron 'Machiatto'",
@@ -281,9 +231,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 27,
     "titulo": "Jarron 'Machiatto'",
@@ -292,9 +240,7 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }, {
     "id": 28,
     "titulo": "Jarron 'Machiatto'",
@@ -303,7 +249,5 @@
     "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
-    "autor": "José Maria",
-    "carrito": false,
-    "destacado": false
+    "autor": "José Maria"
 }]
