@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('../partial/head') %>
+
+<body>
+    <!-- Header -->
+    <%- include('../partial/header') %>
+
+    <main>
+        <form action="/users/profile/edit?_method=PUT" method="POST">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="nombre" id="nombre" value="<%= locals.userLogged.nombre  %> "
+                    placeholder="name@example.com">
+                <label for="floatingInput">Nombre</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="apellido" id="apellido" value="<%= locals.userLogged.apellido  %> "
+                    placeholder="name@example.com">
+                <label for="floatingInput">Apellido</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" name="email" id="email" value="<%= locals.userLogged.email %>"
+                    placeholder="name@example.com">
+                <label for="floatingInput">Direccion de E-mail</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="usuario" id="usuario" value="<%= locals.userLogged.usuario %>"
+                    placeholder="name@example.com">
+                <label for="floatingInput">Tipo de usuario</label>
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Default file input example</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <button type="submit">Guardar cambios</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <%- include('../partial/footer') %>
+</body>
+
+</html>

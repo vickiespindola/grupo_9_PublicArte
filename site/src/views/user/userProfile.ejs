@@ -8,14 +8,39 @@
     <%- include('../partial/header') %>
     <main>
         <div class="profile">
-            <div>
+            <div class="imagen">
                 <img src="/img/users/<%= locals.userLogged.avatar %> " alt="">
                 <br>
-            </div>
-            <div>
                 <h1>Hola, <%= locals.userLogged.nombre%> </h1>
-                <p><%= locals.userLogged.email %> </p>
-                <a href="/users/logout/"><button>Cerrar sesión</button></a>
+            </div>
+            <div class="info">
+                <h4>Información personal</h4>
+                <form action="/users/profile">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="nombre" id="nombre"
+                            value="<%= locals.userLogged.nombre  %> " placeholder="name@example.com" readonly>
+                        <label for="floatingInput">Nombre</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="apellido" id="apellido"
+                            value="<%= locals.userLogged.apellido  %> " placeholder="name@example.com" readonly>
+                        <label for="floatingInput">Apellido</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" value="<%= locals.userLogged.email %>"
+                            placeholder="name@example.com" readonly>
+                        <label for="floatingInput">Direccion de E-mail</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="usuario" value="<%= locals.userLogged.usuario %>"
+                            placeholder="name@example.com" readonly>
+                        <label for="floatingInput">Tipo de usuario</label>
+                    </div>
+                    <div class="boton">
+                        <a href="/users/profile/edit"><button>Editar perfil</button></a>
+                        <a href="/users/logout/"><button>Cerrar sesión</button></a>
+                    </div>
+                </form>
             </div>
         </div>
     </main>

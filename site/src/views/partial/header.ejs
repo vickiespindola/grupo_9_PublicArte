@@ -17,9 +17,9 @@
             <a href="/products/cart"><i class="fas fa-cart-plus"></i></a>
         </div>
         <% if(locals.isLogged){ %>
-        <div class="profile">
+        <div class="header-profile">
             <a href="/users/profile">
-                <img src="/img/users/<%= locals.userLogged.avatar %>" alt="" width="40" style="border-radius:100%">
+                <img src="/img/users/<%= locals.userLogged.avatar %>" alt="">
                 Hi <%= locals.userLogged.nombre %>
             </a>
         </div>

@@ -11,6 +11,8 @@ const {
   register,
   viewRegister,
   userProfile,
+  /* editProfile,
+  storeProfile, */
   logout
 } = require('../controllers/usersController')
 
@@ -34,6 +36,10 @@ router.post('/register', usersMulter.single('avatar'), registerValidate,
 
 //USER PROFILE
 router.get('/profile', authUser, userProfile)
+
+//EDIT PROFILE
+/* router.get('/profile/edit', authUser, editProfile)
+router.put('/profile/edit', usersMulter.single('avatar'),authUser, storeProfile) */
 
 //LOGOUT PROFILE
 router.get('/logout/', logout);

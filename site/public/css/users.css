@@ -1,43 +1,110 @@
-.users main .profile{
-    margin: 30px auto;
-    
+.header-profile {
+    display: none;
 }
 
-.users main .profile div{
+.header-profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.users main .profile {
+    margin: 30px auto;
+
+}
+
+.users main .profile div {
     margin: 20px auto;
     text-align: center;
 }
 
-.users main .profile div img{
-    width: 200px;
-    text-align: center;
-    margin: 0 auto;
+.users main .profile .imagen h1 {
+    margin: 15px 0 10px;
 }
 
-.users main button{
+.users main .profile div img {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.users main .profile div form div {
+    width: 90%;
+}
+
+.users main .boton {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px 0;
+}
+
+.users main .boton a {
+    width: 45%;
+}
+
+.users main .boton button {
     background-color: var(--naranja);
     color: white;
     border: none;
-    padding: 5px;
-    border-radius:5px;
+    width: 100%;
+    padding: 15px 0px;
+    border-radius: 5px;
 }
 
 @media (min-width: 426px) {
-    .users main .profile{
+    .users main .profile {
         margin: 20px auto;
-        display: flex;
+        /* display: flex; */
+        width: 70%;
         justify-content: space-around;
+    }
+
+    .header-profile {
+        display: block;
     }
 }
 
-@media (min-width: 769px){
-    .users main .profile{
-        margin: 50px 10%;
+@media (min-width: 769px) {
+    .header-profile img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .users main .profile {
+        margin: 50px auto;
         display: flex;
+        width: 100%;
         justify-content: space-around;
     }
-    .users main .profile div{
+
+    .users main .profile div {
+        width: 100%;
+        margin: 15px 5%;
+    }
+
+    .users main .profile .imagen{
         width: 20%;
-        margin: 10px;
+    }
+
+    .users main .profile .info{
+        width: 50%;
+    }
+
+    .users main .profile .info div img{
+        height: 250px;
+        width: 250px;
+    }
+
+    .users main .profile .info div form div {
+        width: 100%;
+    }
+
+    .users main .info .boton button {
+        width: 100%;
+        margin: 0;
     }
 }
