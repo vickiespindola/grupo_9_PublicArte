@@ -12,6 +12,7 @@ const controller = {
     //listar
     list: (req, res, next) => {
         Products.findAll({
+                include: ['brands','categories','producers','images'],
                 order: [
                     ['name', 'ASC']
                 ]

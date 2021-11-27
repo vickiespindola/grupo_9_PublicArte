@@ -9,6 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_user: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {
@@ -18,6 +19,7 @@ module.exports = {
         }
       },
       id_cart: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {

@@ -1,13 +1,13 @@
 'use strict';
-let roles= [ 'admi', 'user', 'seler']
+let role= [ 'admin', 'vendedor', 'comprador']
 
-let array= roles.map(rol =>{
-  let constructor = {
-    name: rol,
+let roles= role.map(role =>{
+  let array = {
+    name: role,
     createdAt: new Date,
     updatedAt: new Date,
 }
-return constructor
+return array
 })
 
 module.exports = {
