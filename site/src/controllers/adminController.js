@@ -1,87 +1,141 @@
-const path = require('path')
-const fs = require('fs')
+const {
+    validationResult
+} = require('express-validator');
+const db = require('../database/models');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"))
+const {
+    Console
+} = require('console');
+const sequelize = db.sequelize;
 
 const controller = {
-   //listar
-    list: (req, res, next) => { 
-        let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'), 'utf-8'));
-       res.render('admin/admin', {
-           products: JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'), 'utf-8'))
-        });
+    //listar
+    list: (req, res, next) => {
+        Products.findAll({
+                include: ['brands','categories','producers','images'],
+                order: [
+                    ['name', 'ASC']
+                ]
+            })
+            .then(products => {
+                res.render('admin/admin', {
+                    products
+                })
+            })
+            .catch((error) => res.send(error))
     },
     //crear
     create: (req, res, next) => {
         res.render('admin/create');
     },
-    
+
     store: (req, res) => {
-      const {titulo,marca,categoria,descripcion,imagen,precio} = req.body
 
-        let productoNuevo = {
-            id : products[products.length - 1].id + 1,
-            titulo,
-            marca,
-            categoria,
-            descripcion,
-            imagen : req.file ? req.file.filename : 'default-image.png',
-            precio : +precio,
-            autor : 'Yo',
-            carrito : false,
-            destacado : false,
+        const errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            const {
+                titulo,
+                marca,
+                categoria,
+                descripcion,
+                precio,
+                marca,
+                categoria
+            } = req.body
+
+            let img = req.files[0].filename;
+
+            db.Products.create({
+                    name: titulo.trim(),
+                    description: descripcion.trim(),
+                    price: +precio.trim(),
+                    avatar: img ? img : 'default-image.png',
+                    id_brand: marca,
+                    id_category: categoria
+                })
+                .then(() => {
+                    return res.redirect('/admin')
+                })
+                .catch(error => {
+                    res.render(error)
+                })
         }
-        productos.push(productoNuevo)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/admin')
-},
 
-   //editar
+    },
+
+    //editar
     edit: (req, res) => {
-       let producto = products.find(element => element.id === +req.params.id);
-        res.render('admin/edit', {producto});
+        db.Products.findByPk(+req.params.id)
+            .then(producto => res.render('admin/edit', {
+                producto
+            }))
+            .catch(error => {
+                res.render(error)
+            })
     },
 
     update: (req, res) => {
-	    let id = +req.params.id
 
-        const {
-            titulo,
-            marca,
-            categoria,
-            descripcion,
-            imagen,
-            precio,
-        } = req.body
+        const errors = validationResult(req);
 
-       let producto = products.find(element => element.id == id);
+        if (errors.isEmpty()) {
+            const {
+                titulo,
+                marca,
+                categoria,
+                descripcion,
+                precio,
+                marca,
+                categoria
+            } = req.body
 
-       let productoEditado = {
-        id: +req.params.id,
-        titulo,
-        marca,
-        categoria,
-        descripcion,
-        imagen: req.file ? req.file.filename : null,
-        precio: +precio,
-        autor: 'Yo',
-        carrito: false,
-        destacado: false,
+            let img = req.files[0] ? req.files[0].filename : undefined;
 
-       }
-       let modificado = products.map(producto => producto.id === +req.params.id ? productoEditado : producto)
-        fs.writeFileSync(productsFilePath, JSON.stringify(modificado, null, 2));
+            db.users.update({
+                    name: titulo.trim(),
+                    description: descripcion.trim(),
+                    price: +precio.trim(),
+                    avatar: img ? img : 'default-image.png',
+                    id_brand: marca,
+                    id_category: categoria
+                }, {
+                    where: {
+                        id: +req.params.id
+                    }
+                })
+                .then(producto => {
+                    res.redirect("/admin", {
+                        producto
+                    })
+                })
+                .catch(err => {
+                    res.send(err)
+                })
 
-        res.redirect('/admin')
+        } else {
+
+            res.render('user/editProfile', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
+
     },
-    //eliminar
-    destroy : (req, res) => {
-		products = products.filter(product => product.id !== +req.params.id)
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-		res.redirect('/admin')
-	}
- 
+    destroy: (req, res) => {
+        db.Products.destroy({
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(result => {
+                return res.redirect("/admin")
+            })
+            .catch((error) => {
+                res.send(error)
+            })
+    }
+
 }
 module.exports = controller;

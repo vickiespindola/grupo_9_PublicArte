@@ -2,22 +2,27 @@
 
 const productos = require('../../data/products.json')
 
-let products = productos.map( producto =>{
-  let product= {
-    id: producto.id,    
-    name:producto.titulo,
-    description:producto.descripcion,
-    price:producto.precio,
-    id_category:producto.categoria,
-    id_pruducer: producto.autor,
-    id_brand:producto.marca,
+let products = productos.map((producto,index) => {
 
+  function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  let product = {
+    name: producto.titulo,
+    description: producto.descripcion,
+    price: producto.precio,
+    id_category: random(1,6),
+    id_producer: 1,
+    id_brand: random(1,3),
     createdAt: new Date,
     updatedAt: new Date,
-   } 
-return products
+  }
+  
+  return product
 
 })
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 

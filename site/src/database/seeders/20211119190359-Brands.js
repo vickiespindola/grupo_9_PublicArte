@@ -1,19 +1,20 @@
 'use strict';
-const productos = require('../../data/products.json')
 
-let marcas = productos.map( products =>{
-  let marca= {
-    name: products.marca,
+const marcas= ['Pirulo', 'Patito', 'Dia']
+
+let brands = marcas.map(marcas => {
+  let marca = {
+    name: marcas,
     createdAt: new Date,
     updatedAt: new Date,
-   } 
-return marca
-
+  }
+  return marca
 })
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
-    await queryInterface.bulkInsert('Brands', marcas, {});
+    await queryInterface.bulkInsert('Brands', brands, {});
 
   },
 

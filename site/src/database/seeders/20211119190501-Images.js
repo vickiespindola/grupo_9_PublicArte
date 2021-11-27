@@ -1,21 +1,20 @@
 'use strict';
 const productos = require('../../data/products.json')
 
-let imagenes = images.map( images =>{
-  let img= {
-    id: images.id, 
-    file:images.imagen,
-    id_product:images.id,
+let images = productos.map((images,index) => {
+  let img = {
+    file: images.imagen,
+    id_product: index + 1,
     createdAt: new Date,
     updatedAt: new Date,
-   } 
-return producer
-
+  }
+  return img
 })
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
-    await queryInterface.bulkInsert('Images', imagenes, {});
+    await queryInterface.bulkInsert('Images', images, {});
 
   },
 

@@ -1,19 +1,20 @@
 'use strict';
-let categorias= [ 'billeteras', 'carteras', 'monederos', 'floreros', 'cuadros', 'accesorios']
-let array= categorias.map(categoria =>{
-  let categories = {
+
+let categorias = ['Billeteras', 'Carteras', 'Monederos', 'Cuadros', 'Accesorios', 'Vajilla', 'Deco', 'Vestimenta']
+
+let categories = categorias.map(categoria => {
+  let newArray = {
     name: categoria,
     createdAt: new Date,
     updatedAt: new Date,
-} 
-return categories
+  }
+  return newArray
 })
-
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
-    await queryInterface.bulkInsert('Categories', categorias, {});
+    await queryInterface.bulkInsert('Categories', categories, {});
 
   },
 

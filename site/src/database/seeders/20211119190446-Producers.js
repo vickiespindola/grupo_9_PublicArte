@@ -1,21 +1,20 @@
 'use strict';
 
+const users = require('../../data/users.json')
 
-const productos = require('../../data/products.json')
-
-let productores = productos.map( productor =>{
-  let producer= {
-    id_user: productor.autor,    
+let producers = users.map((usuario,index) => {
+  let producer = {
+    id_user: index + 1,
     createdAt: new Date,
     updatedAt: new Date,
-   } 
-return producer
-
+  }
+  return producer
 })
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
-    await queryInterface.bulkInsert('Producers', productores, {});
+    await queryInterface.bulkInsert('Producers', producers, {});
 
   },
 

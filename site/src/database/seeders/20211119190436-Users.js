@@ -1,15 +1,14 @@
 'use strict';
 const usuarios = require('../../data/users.json')
 
-let usuario= usuarios.map(user =>{
-  let constructor = {
-    id:user.id,
+let users= usuarios.map(user =>{
+  let usuario = {
     name: user.nombre,
     last_name: user.apellido,
     email: user.email,
     password: user.password,
     avatar: user.avatar,
-    id_role: user.usuario,
+    id_role: 1,
     createdAt: new Date,
     updatedAt: new Date,
 }
@@ -19,7 +18,7 @@ return usuario
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
-    await queryInterface.bulkInsert('Users', usuario, {});
+    await queryInterface.bulkInsert('Users', users, {});
 
   },
 

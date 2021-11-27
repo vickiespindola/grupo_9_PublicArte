@@ -9,12 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       amount: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       total_price: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       id_user: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {
@@ -24,6 +27,7 @@ module.exports = {
         }
       },
       id_product: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {
