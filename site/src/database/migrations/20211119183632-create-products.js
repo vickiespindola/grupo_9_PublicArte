@@ -9,15 +9,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       description: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       price: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       id_category: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {
@@ -27,6 +31,7 @@ module.exports = {
         }
       },
       id_producer: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {
@@ -36,6 +41,7 @@ module.exports = {
         }
       },
       id_brand: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {

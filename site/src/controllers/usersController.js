@@ -55,7 +55,7 @@ module.exports = {
                   nombre: usuario.name,
                   apellido: usuario.last_name,
                   email: usuario.email,
-                  role: usuario.d_role,
+                  role: usuario.id_role,
                   avatar: usuario.avatar
                }
                return res.redirect('/users/profile');
@@ -97,7 +97,7 @@ module.exports = {
                   nombre: usuario.name,
                   apellido: usuario.last_name,
                   email: usuario.email,
-                  role: usuario.d_role,
+                  role: usuario.id_role,
                   avatar: usuario.avatar
                }
 
@@ -126,89 +126,83 @@ module.exports = {
          user: req.session.userLogged
       })
    },
+
    editProfile: function (req, res) {
 
       db.Users.findByPk(+req.params.id)
          .then(usuario => {
             res.render('user/editProfile', {
-               usuario: usuario.dataValues
+               usuario: req.session.userLogged
             })
          })
          .catch(error => {
             res.render(error)
          })
    },
+
    updateProfile: function (req, res) {
 
-      db.Users.update(
-            req.body, {
+      const errors = validationResult(req);
+
+      if (errors.isEmpty()) {
+
+         db.users.update({
+               name: req.body.nombre.trim(),
+               last_name: req.body.apellido.trim(),
+               email: req.body.email.trim(),
+               image: req.file ? req.file.filename : 'default-image.png',
+               id_role: role
+            }, {
                where: {
-                  id: +req.params.id
+                  email: req.body.email
                }
             })
-         .then(result => {
-            if (result[0] != 0) {
-               res.redirect('/users/profile', {
-                  user: req.session.userLogged
+
+            .then(usuario => {
+               req.session.userLogged = {
+                  id: usuario.id,
+                  nombre: usuario.name,
+                  apellido: usuario.last_name,
+                  email: usuario.email,
+                  role: usuario.id_role,
+                  avatar: usuario.avatar
+               }
+               res.redirect("/users/profile", {
+                  usuario: req.session.userLogged
                })
-            } else {
+            })
 
-            }
+            .catch(err => {
+               res.send(err)
+            })
+
+      } else {
+
+         res.render('user/editProfile', {
+            errors: errors.mapped(),
+            old: req.body
          })
-         .catch(error => {
-            res.render(error)
-         })
-
-      /*
-            const {
-               nombre,
-               apellido,
-               avatar,
-               role,
-               email,
-            } = req.body
-
-            let user = users.find(element => element.id == id);
-
-            let editUser = {
-               id: +req.params.id,
-               nombre,
-               apellido,
-               avatar: req.file ? req.file.filename : null,
-               role,
-               email,
-            }
-            let userModificado = users.map(e => e.id === +req.params.id ? editUser : user)
-            fs.writeFileSync(usersFilePath, JSON.stringify(userModificado, null, 2));
-
-            req.session.userLogged = {
-               id: editUser.id,
-               nombre: editUser.nombre,
-               apellido: editUser.apellido,
-               email: editUser.email,
-               role: editUser.usuario,
-               avatar: editUser.avatar
-            }
-
-            res.redirect('/users/profile')
-         }, */
+      }
    },
 
-   /* deleteProfile: function(req, res){
-
-   }, */
+   deleteProfile: function (req, res) {
+      db.Users.destroy({
+         where: {
+            id: +req.params.id
+         }
+      })
+   },
 
    logout: function (req, res) {
 
-      req.session.destroy();
+      req.session.destroy(function () {
+         if (req.cookies.PublicArte) {
+            res.clearCookie('PublicArte', {
+               path: '/'
+            });
+            res.redirect('/')
+         }
+      })
 
-      if (req.cookies.PublicArte) {
-         res.cookie('PublicArte', '', {
-            maxAge: -1
-         })
-      }
-
-      res.redirect('/')
    }
-
 }
