@@ -11,7 +11,7 @@ const sequelize = db.sequelize;
 const controller = {
     //listar
     list: (req, res, next) => {
-        Products.findAll({
+        db.Products.findAll({
                 include: [{
                     all: true
                 }],
@@ -78,13 +78,28 @@ const controller = {
 
     //editar
     edit: (req, res) => {
-        db.Products.findByPk(+req.params.id)
-            .then(producto => res.render('admin/edit', {
-                producto
-            }))
+        const categories = db.Categories.findAll()
+        const brands = db.Brands.findAll()
+        const products = db.Products.findByPk(+req.params.id)
+
+        Promise.all([categories, brands, products])
+            .then(([categories, brands, products]) => {
+                return res.render('admin/edit', {
+                    brands,
+                    categories,
+                    products
+                });
+            })
             .catch(error => {
                 res.render(error)
             })
+
+        /* .then(producto => res.render('admin/edit', {
+            producto
+        }))
+        .catch(error => {
+            res.render(error)
+        }) */
     },
 
     /* update: (req, res) => {

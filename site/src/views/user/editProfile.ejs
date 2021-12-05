@@ -3,12 +3,12 @@
 <!-- Head -->
 <%- include('../partial/head') %>
 
-<body>
+<body class="users">
     <!-- Header -->
     <%- include('../partial/header') %>
 
     <main>
-        <form action="/users/profile/edit/<%= usuario.id %>?_method=PUT" method="POST">
+        <form action="/users/profile/edit/<%=usuario.id%>?_method=PUT" method="POST">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" name="nombre" id="nombre" value="<%= usuario.nombre  %> "
                     placeholder="name@example.com">
@@ -25,7 +25,7 @@
                 <label for="floatingInput">Direccion de E-mail</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="usuario" id="usuario" value="<%= usuario.usuario %>"
+                <input type="text" class="form-control" name="role" id="role" value="<%= usuario.usuario %>"
                     placeholder="name@example.com">
                 <label for="floatingInput">Tipo de usuario</label>
             </div>

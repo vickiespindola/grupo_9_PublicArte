@@ -20,14 +20,14 @@ module.exports = {
    processRegister: function (req, res, next) {
 
       const errors = validationResult(req);
+      const {
+         nombre,
+         apellido,
+         email,
+         password
+      } = req.body
 
       if (errors.isEmpty()) {
-         const {
-            nombre,
-            apellido,
-            email,
-            password
-         } = req.body
 
          /* if (req.fileValidationError) {
             let image = {
@@ -40,10 +40,6 @@ module.exports = {
          /* let img = req.files[0].filename; */
 
          db.Users.create({
-               include: [{
-                  association: 'roles'
-               }]
-            }, {
                name: nombre.trim(),
                last_name: apellido.trim(),
                email: email.trim(),
@@ -135,20 +131,20 @@ module.exports = {
          })
    },
 
-   /* editProfile: function (req, res) {
-
-      db.Users.findByPk(+req.params.id)
+   editProfile: function (req, res) {
+      
+      db.Users.findByPk(+req.session.userLogged.id)
          .then(usuario => {
-            res.render('user/editProfile', {
+            return res.render('user/editProfile', {
                usuario: req.session.userLogged
             })
          })
          .catch(error => {
             res.render(error)
          })
-   }, */
+   },
 
-   /* updateProfile: function (req, res) {
+   updateProfile: function (req, res) {
 
       const errors = validationResult(req);
 
@@ -191,15 +187,15 @@ module.exports = {
             old: req.body
          })
       }
-   }, */
+   },
 
-   /* deleteProfile: function (req, res) {
+   deleteProfile: function (req, res) {
       db.Users.destroy({
          where: {
             id: +req.params.id
          }
       })
-   }, */
+   },
 
    logout: function (req, res) {
 

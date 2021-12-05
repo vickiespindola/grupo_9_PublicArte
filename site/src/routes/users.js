@@ -11,9 +11,9 @@ const {
   register,
   processRegister,
   userProfile,
-  /*   editProfile,*/
-  /* updateProfile, */
-  /* deleteProfile, */
+  editProfile,
+  updateProfile,
+  deleteProfile,
   logout
 } = require('../controllers/usersController')
 
@@ -39,11 +39,11 @@ router.post('/register', usersMulter.single('avatar'), registerValidate,
 router.get('/profile', authUser, userProfile)
 
 //EDIT PROFILE
-/* router.get('/profile/edit/:id', authUser, editProfile) */
-/* router.put('/profile/edit/:id', usersMulter.single('avatar'), authUser, updateProfile) */
+router.get('/profile/edit/:id', authUser, editProfile)
+router.put('/profile/edit/:id', usersMulter.single('avatar'), authUser, updateProfile)
 
 //DELETE PROFILE
-/* router.delete('/profile/delete/:id', authUser, deleteProfile) */
+router.delete('/profile/delete/:id', authUser, deleteProfile)
 
 //LOGOUT PROFILE
 router.get('/logout', logout);
