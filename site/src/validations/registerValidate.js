@@ -27,20 +27,20 @@ module.exports = [
         min: 8
     }).withMessage('*La contraseña debe tener un minimo de 8 caracteres.'),
 
-    check('role')
-    .notEmpty().withMessage('*Por favor elija un perfil de usuario.'),
+    /* check('role')
+    .notEmpty().withMessage('*Por favor elija un perfil de usuario.'), */
 
     body('email').custom(value => {
         return db.Users.findOne({
-            where : {
-                email : value
-            }
-        })
-        .then(usuario => {
-            if(usuario){
-                return Promise.reject('Este email ya está registrado')
-            }
-        })
+                where: {
+                    email: value
+                }
+            })
+            .then(usuario => {
+                if (usuario) {
+                    return Promise.reject('Este email ya está registrado')
+                }
+            })
     }),
     body('password2').custom((value, {
         req

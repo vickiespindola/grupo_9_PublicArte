@@ -1,36 +1,35 @@
-const fs = require('fs');
-const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
 
 const controller = {
-  detail: function (req, res, next) {
-    let {
-      id
-    } = req.params;
-    let productDetail = products.find(element => element.id == id)
-    let similarProducts = products.filter(element => element.categoria === productDetail.categoria)
 
-    fs.writeFileSync(productsFilePath, JSON.stringify(products))
-    res.render('product/detail', {
-      productDetail,
-      similarProducts
-    });
+  detail: function (req, res) {
+    db.Products.findByPk(req.params.id, {
+        include: [{
+          all: true
+        }]
+      })
+      .then((products) => {
+        return res.render('product/detail', {
+          products
+        })
+      })
+      .catch((error) => res.send(error))
+
   },
+
   cart: (req, res) => {
-    
-    similarProducts = products;
-    let productAdded = products.filter(element => {
-      return element.carrito == true
-    });
 
-    fs.writeFileSync(productsFilePath, JSON.stringify(products))
+    db.Products.findAll({
+        include: [{
+          all: true
+        }]
+      })
+      .then(products => {
+        return res.render('product/cart', {
+          products
+        })
+      })
 
-    res.render('product/cart', {
-      similarProducts,
-      productAdded
-    });
   }
 }
 module.exports = controller;

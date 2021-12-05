@@ -12,7 +12,9 @@ const controller = {
     //listar
     list: (req, res, next) => {
         Products.findAll({
-                include: ['brands','categories','producers','images'],
+                include: [{
+                    all: true
+                }],
                 order: [
                     ['name', 'ASC']
                 ]
@@ -26,10 +28,20 @@ const controller = {
     },
     //crear
     create: (req, res, next) => {
-        res.render('admin/create');
+        const categories = db.Categories.findAll()
+        const brands = db.Brands.findAll()
+
+        Promise.all([categories, brands])
+            .then(([categories, brands]) => {
+                return res.render('admin/create', {
+                    brands,
+                    categories
+                });
+            })
+
     },
 
-    store: (req, res) => {
+    /* store: (req, res) => {
 
         const errors = validationResult(req);
 
@@ -62,7 +74,7 @@ const controller = {
                 })
         }
 
-    },
+    }, */
 
     //editar
     edit: (req, res) => {
@@ -75,7 +87,7 @@ const controller = {
             })
     },
 
-    update: (req, res) => {
+    /* update: (req, res) => {
 
         const errors = validationResult(req);
 
@@ -121,21 +133,21 @@ const controller = {
             })
         }
 
-    },
+    }, */
 
-    destroy: (req, res) => {
-        db.Products.destroy({
-                where: {
-                    id: req.params.id
-                }
-            })
-            .then(result => {
-                return res.redirect("/admin")
-            })
-            .catch((error) => {
-                res.send(error)
-            })
-    }
+    /*    destroy: (req, res) => {
+           db.Products.destroy({
+                   where: {
+                       id: req.params.id
+                   }
+               })
+               .then(result => {
+                   return res.redirect("/admin")
+               })
+               .catch((error) => {
+                   res.send(error)
+               })
+       } */
 
 }
 module.exports = controller;

@@ -15,17 +15,21 @@ module.exports = [
     .custom((value, {
         req
     }) => {
+        console.log(req.body)
         return db.Users.findOne({
+                include: [{
+                    all: true
+                }]
+            }, {
                 where: {
                     email: value
                 }
             })
             .then(usuario => {
                 if (!usuario || !bcryptjs.compareSync(req.body.password, usuario.password)) {
-                    return Promise.reject()
+                    return Promise.reject('email y/o contraseña incorrectas')
                 }
             })
-            .catch(() => Promise.reject('email y/o contraseña incorrectas'))
     })
-    
+
 ]

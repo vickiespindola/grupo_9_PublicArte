@@ -20,7 +20,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      id_category: {
+      categoriesId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
@@ -30,7 +30,7 @@ module.exports = {
           key: "id"
         }
       },
-      id_producer: {
+      producersId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
@@ -40,7 +40,7 @@ module.exports = {
           key: "id"
         }
       },
-      id_brand: {
+      brandsId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {

@@ -26,28 +26,30 @@ module.exports = {
             nombre,
             apellido,
             email,
-            role,
             password
          } = req.body
 
-         /* 
-         if (req.fileValidationError) {
+         /* if (req.fileValidationError) {
             let image = {
                param: 'avatar',
                msg: req.fileValidationError,
             }
             errors.errors.push(image)
-         }
-         */
-         let img = req.files[0].filename;
+         } */
+
+         /* let img = req.files[0].filename; */
 
          db.Users.create({
+               include: [{
+                  association: 'roles'
+               }]
+            }, {
                name: nombre.trim(),
                last_name: apellido.trim(),
                email: email.trim(),
                password: bcryptjs.hashSync(password.trim(), 10),
-               avatar: img ? img : 'default-image.png',
-               id_role: role
+               avatar: req.file ? req.file.filename : 'default-image.png',
+               rolesId: 3
             })
             .then(usuario => {
                req.session.userLogged = {
@@ -55,7 +57,7 @@ module.exports = {
                   nombre: usuario.name,
                   apellido: usuario.last_name,
                   email: usuario.email,
-                  role: usuario.id_role,
+                  role: usuario.rolesId,
                   avatar: usuario.avatar
                }
                return res.redirect('/users/profile');
@@ -72,7 +74,7 @@ module.exports = {
 
    },
 
-   Login: function (req, res) {
+   login: function (req, res) {
       res.render('user/login');
    },
 
@@ -80,11 +82,11 @@ module.exports = {
 
       const errors = validationResult(req)
 
+      const {
+         email
+      } = req.body
+
       if (errors.isEmpty()) {
-         const {
-            email,
-            recordar
-         } = req.body
 
          db.Users.findOne({
                where: {
@@ -97,11 +99,11 @@ module.exports = {
                   nombre: usuario.name,
                   apellido: usuario.last_name,
                   email: usuario.email,
-                  role: usuario.id_role,
+                  role: usuario.rolesId,
                   avatar: usuario.avatar
                }
 
-               if (recordar) {
+               if (req.body.recordar) {
                   res.cookie('PublicArte', req.session.userLogged, {
                      maxAge: 1000 * 60 * 24 * 100000
                   })
@@ -122,12 +124,18 @@ module.exports = {
    },
 
    userProfile: function (req, res) {
-      res.render('user/userProfile', {
+      /* res.render('user/userProfile', {
          user: req.session.userLogged
-      })
+      }) */
+      db.Users.findByPk(req.session.userLogged.id)
+         .then(user => {
+            return res.render('user/userProfile', {
+               user: req.session.userLogged
+            })
+         })
    },
 
-   editProfile: function (req, res) {
+   /* editProfile: function (req, res) {
 
       db.Users.findByPk(+req.params.id)
          .then(usuario => {
@@ -138,9 +146,9 @@ module.exports = {
          .catch(error => {
             res.render(error)
          })
-   },
+   }, */
 
-   updateProfile: function (req, res) {
+   /* updateProfile: function (req, res) {
 
       const errors = validationResult(req);
 
@@ -183,26 +191,26 @@ module.exports = {
             old: req.body
          })
       }
-   },
+   }, */
 
-   deleteProfile: function (req, res) {
+   /* deleteProfile: function (req, res) {
       db.Users.destroy({
          where: {
             id: +req.params.id
          }
       })
-   },
+   }, */
 
    logout: function (req, res) {
 
-      req.session.destroy(function () {
-         if (req.cookies.PublicArte) {
-            res.clearCookie('PublicArte', {
-               path: '/'
-            });
-            res.redirect('/')
-         }
-      })
+      req.session.destroy()
+      /* if (req.cookies.PublicArte) {
+         res.clearCookie('PublicArte', {
+            path: '/'
+         });
+      } */
+      res.redirect('/')
+      /* res.send(req.session.userLogged) */
 
    }
 }

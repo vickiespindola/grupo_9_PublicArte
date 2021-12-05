@@ -36,12 +36,12 @@
             <h2>Productos Destacados</h2>
             <div class="articulos"> 
                 <% for(let i=0; i<8 ; i++) { %>
-                <% if(products[i].destacado==true){%>
+                <% if(products){%>
                 <article>
                     <a href="/products/detail/<%= products[i].id %> ">
-                        <img src="/img/products/<%= products[i].imagen %> " alt="">
-                        <h4><%= products[i].titulo %></h4>
-                        <p>$<%= products[i].precio %></p>
+                        <img src="/img/products/<%= products[i].images[0].file %> " alt="">
+                        <h4><%= products[i].name %></h4>
+                        <p>$<%= products[i].price %></p>
                     </a>
                 </article>
                 <% } %>
@@ -52,7 +52,7 @@
         <section class="contenidoAmistad">
             <div>
                 <a href="">Especial Día de la Amistad</a>
-                <img src="/img/img1.png" alt="">
+                <img src="/img/diadelamigo.png" alt="">
             </div>
         </section>
 

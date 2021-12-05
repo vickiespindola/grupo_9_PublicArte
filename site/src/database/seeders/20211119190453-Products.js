@@ -12,9 +12,9 @@ let products = productos.map((producto,index) => {
     name: producto.titulo,
     description: producto.descripcion,
     price: producto.precio,
-    id_category: random(1,6),
-    id_producer: 1,
-    id_brand: random(1,3),
+    categoriesId: random(1,6),
+    producersId: 1,
+    brandsId: random(1,3),
     createdAt: new Date,
     updatedAt: new Date,
   }
