@@ -1,4 +1,5 @@
 //Modules
+require('dotenv').config()
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -14,7 +15,7 @@ const productsRouter = require('./routes/products');
 const adminRouter = require('./routes/admin');
 
 //middlewares
-const userLogged =require('./middlewares/userLogged');
+const userLogged = require('./middlewares/userLogged');
 
 const app = express();
 
@@ -38,11 +39,11 @@ app.use(session({
 }))
 app.use(userLogged)
 
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/admin', adminRouter);
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

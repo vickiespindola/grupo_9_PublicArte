@@ -4,10 +4,10 @@
         <i class="fas fa-chevron-left"></i>
         <% for(i=0; i<4;i++){ %>
         <article class="slider1">
-            <a href="/products/detail/<%=similarProducts[i].id%> ">
-                <img src="/img/products/<%= similarProducts[i].imagen %> " alt="">
-                <h4><%= similarProducts[i].titulo %></h4>
-                <p>$<%= similarProducts[i].precio %></p>
+            <a href="/products/detail/<%=products.id%> ">
+                <img src="/img/products/<%= products.images %> " alt="">
+                <h4><%= products.name %></h4>
+                <p>$<%= products.price %></p>
             </a>
         </article>
         <% } %>

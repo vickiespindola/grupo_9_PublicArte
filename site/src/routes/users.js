@@ -6,42 +6,46 @@ const path = require('path');
 
 //controller
 const {
-  viewLogin,
   login,
+  processLogin,
   register,
-  viewRegister,
+  processRegister,
   userProfile,
-  /* editProfile,
-  storeProfile, */
+  editProfile,
+  updateProfile,
+  deleteProfile,
   logout
 } = require('../controllers/usersController')
 
 //Middlewares
+const registerValidate = require('../validations/registerValidate')
+const loginValidate = require('../validations/loginValidate')
 const usersMulter = require('../middlewares/usersMulter');
-const registerValidate = require('../middlewares/registerValidate')
-const loginValidate = require('../middlewares/loginValidate')
 const guestUser = require('../middlewares/guestUser')
 const authUser = require('../middlewares/authUser')
 
 /* Routes. */
 
 // LOGIN USER
-router.get('/login', guestUser, viewLogin);
-router.post('/login', loginValidate, login);
+router.get('/login', guestUser, login);
+router.post('/login', loginValidate, processLogin);
 
 //CREATE USER 
-router.get('/register', guestUser, viewRegister);
+router.get('/register', guestUser, register);
 router.post('/register', usersMulter.single('avatar'), registerValidate,
-  register)
+  processRegister)
 
 //USER PROFILE
 router.get('/profile', authUser, userProfile)
 
 //EDIT PROFILE
-/* router.get('/profile/edit', authUser, editProfile)
-router.put('/profile/edit', usersMulter.single('avatar'),authUser, storeProfile) */
+router.get('/profile/edit/:id', authUser, editProfile)
+router.put('/profile/edit/:id', usersMulter.single('avatar'), authUser, updateProfile)
+
+//DELETE PROFILE
+router.delete('/profile/delete/:id', authUser, deleteProfile)
 
 //LOGOUT PROFILE
-router.get('/logout/', logout);
+router.get('/logout', logout);
 
 module.exports = router;

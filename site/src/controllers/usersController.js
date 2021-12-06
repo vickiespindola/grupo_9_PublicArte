@@ -1,95 +1,66 @@
-const fs = require('fs');
-const path = require('path');
 const {
    validationResult
-} = require('express-validator')
+} = require('express-validator');
+const bcryptjs = require('bcryptjs');
+const db = require('../database/models');
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const {
+   Console
+} = require('console');
+const sequelize = db.sequelize;
 
-const bcrypt = require('bcryptjs');
+module.exports = {
 
-const controller = {
-   viewLogin: function (req, res) {
-      res.render('user/login');
-   },
-   login: function (req, res) {
-
-      let loginErrors = validationResult(req);
-
-      if (loginErrors.isEmpty()) {
-
-         const usuario = users.find(e => e.email === req.body.email.trim());
-
-         req.session.userLogged = {
-            id: usuario.id,
-            nombre: usuario.nombre,
-            apellido: usuario.apellido,
-            email: usuario.email,
-            usuario: usuario.usuario,
-            avatar: usuario.avatar
-         }
-         res.redirect('/users/profile')
-      } else {
-         res.render('user/login', {
-            errors: loginErrors.mapped(),
-            old: req.body
-         })
-      }
-   },
-   viewRegister: function (req, res) {
+   register: function (req, res) {
 
       res.render('user/register');
 
    },
-   register: function (req, res, next) {
+
+   processRegister: function (req, res, next) {
 
       const errors = validationResult(req);
-
-      if (req.fileValidationError) {
-         let image = {
-            param: 'avatar',
-            msg: req.fileValidationError,
-         }
-         errors.errors.push(image)
-      }
+      const {
+         nombre,
+         apellido,
+         email,
+         password
+      } = req.body
 
       if (errors.isEmpty()) {
 
-         const {
-            nombre,
-            apellido,
-            email,
-            usuario,
-            password,
-            avatar
-         } = req.body
+         /* if (req.fileValidationError) {
+            let image = {
+               param: 'avatar',
+               msg: req.fileValidationError,
+            }
+            errors.errors.push(image)
+         } */
 
-         let newUser = {
-            id: users[users.length - 1] ? users[users.length - 1].id + 1 : 1,
-            nombre,
-            apellido,
-            email,
-            usuario,
-            password: bcrypt.hashSync(password, 10),
-            avatar: req.file ? req.file.filename : 'default-image.png',
-         }
+         /* let img = req.files[0].filename; */
 
-         users.push(newUser)
-
-         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-
-         req.session.userLogged = {
-            id: newUser.id,
-            nombre: newUser.nombre,
-            apellido: newUser.apellido,
-            email: newUser.email,
-            usuario: newUser.usuario,
-            avatar: newUser.avatar
-
-         }
-         res.redirect('/')
-
+         db.Users.create({
+               name: nombre.trim(),
+               last_name: apellido.trim(),
+               email: email.trim(),
+               password: bcryptjs.hashSync(password.trim(), 10),
+               avatar: req.file ? req.file.filename : 'default-image.png',
+               rolesId: 3
+            })
+            .then(usuario => {
+               req.session.userLogged = {
+                  id: usuario.id,
+                  nombre: usuario.name,
+                  apellido: usuario.last_name,
+                  email: usuario.email,
+                  role: usuario.rolesId,
+                  avatar: usuario.avatar
+               }
+               return res.redirect('/users/profile');
+            })
+            .catch(error => {
+               res.render(error)
+            })
       } else {
          res.render('user/register', {
             errors: errors.mapped(),
@@ -98,55 +69,144 @@ const controller = {
       }
 
    },
-   userProfile: function (req, res) {
-      res.render('user/userProfile', {
-         user: req.session.userLogged
-      })
+
+   login: function (req, res) {
+      res.render('user/login');
    },
-   /* editProfile: function (req, res) {
-      res.render('user/editProfile', {
-         user: req.session.userLogged
-      })
-   },
-   storeProfile: function (req, res) {
-      let id = +req.params.id
+
+   processLogin: function (req, res) {
+
+      const errors = validationResult(req)
 
       const {
-         nombre,
-         apellido,
-         avatar,
-         usuario,
-         email,
+         email
       } = req.body
 
-      let user = users.find(element => element.id == id);
+      if (errors.isEmpty()) {
 
-      let editUser = {
-         id: +req.params.id,
-         nombre,
-         apellido,
-         avatar: req.file ? req.file.filename : null,
-         usuario,
-         email,
+         db.Users.findOne({
+               where: {
+                  email
+               }
+            })
+            .then(usuario => {
+               req.session.userLogged = {
+                  id: usuario.id,
+                  nombre: usuario.name,
+                  apellido: usuario.last_name,
+                  email: usuario.email,
+                  role: usuario.rolesId,
+                  avatar: usuario.avatar
+               }
+
+               if (req.body.recordar) {
+                  res.cookie('PublicArte', req.session.userLogged, {
+                     maxAge: 1000 * 60 * 24 * 100000
+                  })
+               }
+               res.redirect('/');
+            })
+            .catch(error => {
+               res.render(error)
+            })
+
+      } else {
+         res.render('user/login', {
+            errors: errors.mapped(),
+            old: req.body
+         })
       }
-      let userModificado = users.map(e => e.id === +req.params.id ? editUser : user)
-      fs.writeFileSync(usersFilePath, JSON.stringify(userModificado, null, 2));
 
-      req.session.userLogged = {
-         id: editUser.id,
-         nombre: editUser.nombre,
-         apellido: editUser.apellido,
-         email: editUser.email,
-         usuario: editUser.usuario,
-         avatar: editUser.avatar
+   },
+
+   userProfile: function (req, res) {
+      /* res.render('user/userProfile', {
+         user: req.session.userLogged
+      }) */
+      db.Users.findByPk(req.session.userLogged.id)
+         .then(user => {
+            return res.render('user/userProfile', {
+               user: req.session.userLogged
+            })
+         })
+   },
+
+   editProfile: function (req, res) {
+      
+      db.Users.findByPk(+req.session.userLogged.id)
+         .then(usuario => {
+            return res.render('user/editProfile', {
+               usuario: req.session.userLogged
+            })
+         })
+         .catch(error => {
+            res.render(error)
+         })
+   },
+
+   updateProfile: function (req, res) {
+
+      const errors = validationResult(req);
+
+      if (errors.isEmpty()) {
+
+         db.users.update({
+               name: req.body.nombre.trim(),
+               last_name: req.body.apellido.trim(),
+               email: req.body.email.trim(),
+               image: req.file ? req.file.filename : 'default-image.png',
+               id_role: role
+            }, {
+               where: {
+                  email: req.body.email
+               }
+            })
+
+            .then(usuario => {
+               req.session.userLogged = {
+                  id: usuario.id,
+                  nombre: usuario.name,
+                  apellido: usuario.last_name,
+                  email: usuario.email,
+                  role: usuario.id_role,
+                  avatar: usuario.avatar
+               }
+               res.redirect("/users/profile", {
+                  usuario: req.session.userLogged
+               })
+            })
+
+            .catch(err => {
+               res.send(err)
+            })
+
+      } else {
+
+         res.render('user/editProfile', {
+            errors: errors.mapped(),
+            old: req.body
+         })
       }
+   },
 
-      res.redirect('/users/profile')
-   }, */
+   deleteProfile: function (req, res) {
+      db.Users.destroy({
+         where: {
+            id: +req.params.id
+         }
+      })
+   },
+
    logout: function (req, res) {
-      req.session.destroy();
+
+      req.session.destroy()
+      /* if (req.cookies.PublicArte) {
+         res.clearCookie('PublicArte', {
+            path: '/'
+         });
+      } */
       res.redirect('/')
+      /* res.send(req.session.userLogged) */
+
    }
 }
-
-module.exports = controller;

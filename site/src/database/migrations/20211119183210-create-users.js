@@ -8,30 +8,35 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      first_name: {
+      name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       last_name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       email: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       password: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       avatar: {
+        allowNull: false,
         type: Sequelize.STRING
       },
-      id_role: {
+      rolesId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
-        reference:{
-          model:{
-            tableName: 'Roles'
+        references: {
+          model: {
+            tableName: "Roles"
           },
-          key: 'id'
-        },
-       
+          key: "id"
+        }
       },
       createdAt: {
         allowNull: false,

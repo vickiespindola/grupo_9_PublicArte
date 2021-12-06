@@ -54,8 +54,8 @@
                 <input type="file" name="avatar" id="avatar" accept=".jpg .png"
                     value=<%= locals.old && old.avatar ? old.avatar : null %>>
             </div>
-            <div class="user">
-                <label for="usuario">Perfil del usuario</label>
+            <!-- <div class="user">
+                <label for="role">Perfil del usuario</label>
                 <span>
                     <div>
                         <input type="radio" name="usuario" value="comprador">
@@ -66,10 +66,10 @@
                         <label for="vendedor">Vendedor</label>
                     </div>
                 </span>
-                <% if(locals.errors && errors.usuario){ %>
-                <small> <%= errors.usuario.msg %> </small>
+                <% if(locals.errors && errors.role){ %>
+                <small> <%= errors.role.msg %> </small>
                 <% } %>
-            </div>
+            </div> -->
             <button type="submit">Crear cuenta</button>
         </form>
 

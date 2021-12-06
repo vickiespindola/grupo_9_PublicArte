@@ -9,30 +9,32 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       amount: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       total_price: {
-        type: Sequelize.DECIMAL(10)
+        allowNull: false,
+        type: Sequelize.INTEGER
       },
-      id_user: {
+      usersId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
-        reference:{
-          model:{
-            tableName: 'Users'
+        references: {
+          model: {
+            tableName: "Users"
           },
-          key: 'id'
-        },
-        onDelete: 'cascade'
+          key: "id"
+        }
       },
-      id_product: {
+      productsId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
-        reference:{
-          model:{
-            tableName: 'Products'
+        references: {
+          model: {
+            tableName: "Products"
           },
-          key: 'id'
-        },
-        onDelete: 'cascade'
+          key: "id"
+        }
       },
       createdAt: {
         allowNull: false,
