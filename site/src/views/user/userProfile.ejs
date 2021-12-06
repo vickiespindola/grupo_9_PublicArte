@@ -17,36 +17,39 @@
                 <h4>Información personal</h4>
                 <form action="/users/profile/" method="post">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" name="nombre" id="nombre" value="<%= user.nombre  %> "
-                            placeholder="name@example.com" readonly>
+                        <input type="text" class="form-control" name="nombre" id="nombre"
+                            value="<%= locals.userLogged.nombre  %> " placeholder="name@example.com" readonly>
                         <label for="floatingInput">Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" name="apellido" id="apellido"
-                            value="<%= user.apellido  %> " placeholder="name@example.com" readonly>
+                            value="<%= locals.userLogged.apellido  %> " placeholder="name@example.com" readonly>
                         <label for="floatingInput">Apellido</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="email" value="<%= user.email %>"
+                        <input type="email" class="form-control" id="email" value="<%= locals.userLogged.email %>"
                             placeholder="name@example.com" readonly>
                         <label for="floatingInput">Direccion de E-mail</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="role" value="<%= user.role %>"
+                        <input type="text" class="form-control" id="role" value="<%= locals.userLogged.role %>"
                             placeholder="name@example.com" readonly>
                         <label for="floatingInput">Tipo de usuario</label>
                     </div>
                 </form>
-                <form action="/users/profile/edit/<%= user.id %>">
-                    <div class="boton">
-                        <a href="/users/profile/edit/<%= user.id %>"><button type="submit">Editar perfil</button></a>
-                    </div>
-                </form>
-                <form action="/users/logout/">
-                    <div class="boton">
-                        <a href="/users/logout/"><button type="submit">Cerrar sesión</button></a>
-                    </div>
-                </form>
+                <div class="botones">
+                    <form action="/users/profile/edit/<%= locals.userLogged.id %>">
+                        <div class="boton">
+                            <a href="/users/profile/edit/<%= locals.userLogged.id %>"><button type="submit">Editar
+                                    perfil</button></a>
+                        </div>
+                    </form>
+                    <form action="/users/logout/">
+                        <div class="boton">
+                            <a href="/users/logout/"><button type="submit">Cerrar sesión</button></a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>

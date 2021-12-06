@@ -13,14 +13,15 @@ const {
   userProfile,
   editProfile,
   updateProfile,
-  deleteProfile,
+  /* deleteProfile, */
   logout
 } = require('../controllers/usersController')
 
 //Middlewares
 const registerValidate = require('../validations/registerValidate')
 const loginValidate = require('../validations/loginValidate')
-const usersMulter = require('../middlewares/usersMulter');
+const profileValidate = require('../validations/profileValidate')
+const usersMulter = require('../middlewares/usersMulter')
 const guestUser = require('../middlewares/guestUser')
 const authUser = require('../middlewares/authUser')
 
@@ -40,10 +41,10 @@ router.get('/profile', authUser, userProfile)
 
 //EDIT PROFILE
 router.get('/profile/edit/:id', authUser, editProfile)
-router.put('/profile/edit/:id', usersMulter.single('avatar'), authUser, updateProfile)
+router.put('/profile/edit/:id', usersMulter.single('avatar'), profileValidate, authUser, updateProfile)
 
 //DELETE PROFILE
-router.delete('/profile/delete/:id', authUser, deleteProfile)
+/* router.delete('/profile/delete/:id', authUser, deleteProfile) */
 
 //LOGOUT PROFILE
 router.get('/logout', logout);

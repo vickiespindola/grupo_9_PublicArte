@@ -54,6 +54,49 @@
     padding: 15px 0px;
     border-radius: 5px;
 }
+.users main .boton button {
+    background-color: var(--naranja);
+    color: white;
+    border: none;
+    padding: 15px 0px;
+    border-radius: 5px;
+}
+
+.users main .botones{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.users main .botones form{
+    width: 100%;
+}
+
+.users main .botones form button{
+    width: 100%;
+}
+
+.edit main{
+    text-align: center
+}
+
+.edit h3{
+    text-align: center
+}
+
+.edit form{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.edit main .boton button{
+    width: 100%;
+}
+
+.edit form div{
+    margin: 20px 0;
+}
 
 @media (min-width: 426px) {
     .users main .profile {
@@ -66,6 +109,20 @@
     .header-profile {
         display: block;
     }
+
+    .users main .botones form button{
+        width: 90%;
+    }
+
+    .edit form{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .edit main .boton button{
+        width: 50%;
+    }
+
 }
 
 @media (min-width: 769px) {
@@ -100,11 +157,20 @@
     }
 
     .users main .profile .info div form div {
-        width: 100%;
+        width: 80%;
     }
 
     .users main .info .boton button {
         width: 100%;
         margin: 0;
+    }
+
+    .users main .botones{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .edit main .boton button{
+        width: 30%;
     }
 }

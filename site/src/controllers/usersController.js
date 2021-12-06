@@ -120,9 +120,7 @@ module.exports = {
    },
 
    userProfile: function (req, res) {
-      /* res.render('user/userProfile', {
-         user: req.session.userLogged
-      }) */
+
       db.Users.findByPk(req.session.userLogged.id)
          .then(user => {
             return res.render('user/userProfile', {
@@ -132,7 +130,7 @@ module.exports = {
    },
 
    editProfile: function (req, res) {
-      
+
       db.Users.findByPk(+req.session.userLogged.id)
          .then(usuario => {
             return res.render('user/editProfile', {
@@ -146,7 +144,7 @@ module.exports = {
 
    updateProfile: function (req, res) {
 
-      const errors = validationResult(req);
+      /* const errors = validationResult(req);
 
       if (errors.isEmpty()) {
 
@@ -186,27 +184,89 @@ module.exports = {
             errors: errors.mapped(),
             old: req.body
          })
+      } */
+
+      const errors = validationResult(req);
+
+      const {
+         nombre,
+         apellido,
+         email,
+         password
+      } = req.body;
+
+      if (errors.isEmpty()) {
+         db.Users.update({
+               name: nombre.trim(),
+               last_name: apellido.trim(),
+               email: email.trim(),
+               avatar: req.file ? req.file.filename : req.session.userLogged.avatar,
+            }, {
+               where: {
+                  id: +req.session.userLogged.id
+               }
+            })
+            .then(() => {
+               if (password) {
+                  db.Users.update({
+                        password: bcryptjs.hashSync(password.trim(), 10)
+                     }, {
+                        where: {
+                           id: req.session.userLogged.id
+                        }
+                     })
+                     .then(() => {
+                        req.session.destroy();
+                        return res.redirect('/users/login')
+                     })
+                     .catch(error => console.log(error))
+               } else {
+
+                  db.Users.findByPk(+req.session.userLogged.id)
+                     .then(user => {
+                        req.session.userLogged = {
+                           id: user.id,
+                           nombre: user.name,
+                           apellido: user.last_name,
+                           email: user.email,
+                           role: user.rolesId,
+                           avatar: user.avatar
+                        }
+                        res.locals.userLogged = req.session.userLogged
+
+                        return res.redirect('/users/profile')
+                     })
+                     .catch(error => console.log(error))
+               }
+            })
+            .catch(error => console.log(error))
+
+      } else {
+         res.render('user/editProfile', {
+            errors: errors.mapped(),
+            old: req.body
+         })
       }
+
    },
 
-   deleteProfile: function (req, res) {
+   /* deleteProfile: function (req, res) {
       db.Users.destroy({
          where: {
             id: +req.params.id
          }
       })
-   },
+   }, */
 
    logout: function (req, res) {
 
       req.session.destroy()
-      /* if (req.cookies.PublicArte) {
+      if (req.cookies.PublicArte) {
          res.clearCookie('PublicArte', {
             path: '/'
          });
-      } */
+      }
       res.redirect('/')
-      /* res.send(req.session.userLogged) */
 
    }
 }
