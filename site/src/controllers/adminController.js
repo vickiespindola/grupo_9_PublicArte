@@ -11,8 +11,10 @@ const sequelize = db.sequelize;
 const controller = {
     //listar
     list: (req, res, next) => {
-        Products.findAll({
-                include: ['brands','categories','producers','images'],
+        db.Products.findAll({
+                include: [{
+                    all: true
+                }],
                 order: [
                     ['name', 'ASC']
                 ]
@@ -26,10 +28,20 @@ const controller = {
     },
     //crear
     create: (req, res, next) => {
-        res.render('admin/create');
+        const categories = db.Categories.findAll()
+        const brands = db.Brands.findAll()
+
+        Promise.all([categories, brands])
+            .then(([categories, brands]) => {
+                return res.render('admin/create', {
+                    brands,
+                    categories
+                });
+            })
+
     },
 
-    store: (req, res) => {
+    /* store: (req, res) => {
 
         const errors = validationResult(req);
 
@@ -62,20 +74,35 @@ const controller = {
                 })
         }
 
-    },
+    }, */
 
     //editar
     edit: (req, res) => {
-        db.Products.findByPk(+req.params.id)
-            .then(producto => res.render('admin/edit', {
-                producto
-            }))
+        const categories = db.Categories.findAll()
+        const brands = db.Brands.findAll()
+        const products = db.Products.findByPk(+req.params.id)
+
+        Promise.all([categories, brands, products])
+            .then(([categories, brands, products]) => {
+                return res.render('admin/edit', {
+                    brands,
+                    categories,
+                    products
+                });
+            })
             .catch(error => {
                 res.render(error)
             })
+
+        /* .then(producto => res.render('admin/edit', {
+            producto
+        }))
+        .catch(error => {
+            res.render(error)
+        }) */
     },
 
-    update: (req, res) => {
+    /* update: (req, res) => {
 
         const errors = validationResult(req);
 
@@ -121,21 +148,21 @@ const controller = {
             })
         }
 
-    },
+    }, */
 
-    destroy: (req, res) => {
-        db.Products.destroy({
-                where: {
-                    id: req.params.id
-                }
-            })
-            .then(result => {
-                return res.redirect("/admin")
-            })
-            .catch((error) => {
-                res.send(error)
-            })
-    }
+    /*    destroy: (req, res) => {
+           db.Products.destroy({
+                   where: {
+                       id: req.params.id
+                   }
+               })
+               .then(result => {
+                   return res.redirect("/admin")
+               })
+               .catch((error) => {
+                   res.send(error)
+               })
+       } */
 
 }
 module.exports = controller;

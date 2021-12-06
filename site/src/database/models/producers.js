@@ -12,12 +12,16 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Producers.hasMany(models.Products, {
         as: 'products',
-        foreignKey: 'id_producer'
+        foreignKey: 'producersId'
+      }),
+      Producers.belongsTo(models.Users,{
+        as: 'users',
+        foreignKey: 'usersId'
       })
     }
   };
   Producers.init({
-    id_user: DataTypes.INTEGER
+    usersId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Producers',

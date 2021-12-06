@@ -8,10 +8,15 @@
             <li><a href="/">Home</a></li>
             <li><a href="/">Artesanos</a></li>
             <li><a href="/">Productos</a></li>
+            <% if(locals.userLogged){ %>
             <li><a href="/admin">Administrador</a></li>
+            <% } %>
         </ul>
         <div class="nav-bar">
-            <form action="/search"><input type="search" placeholder="Buscar"><i class="fas fa-search"></i></i></form>
+            <form action="/search" method="GET">
+                <input type="search" name="keywords" id="keywords" placeholder="Buscar">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
         </div>
         <div class="cart-icon">
             <a href="/products/cart"><i class="fas fa-cart-plus"></i></a>

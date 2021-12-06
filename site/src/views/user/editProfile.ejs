@@ -3,37 +3,67 @@
 <!-- Head -->
 <%- include('../partial/head') %>
 
-<body>
+<body class="users edit">
     <!-- Header -->
     <%- include('../partial/header') %>
 
     <main>
-        <form action="/users/profile/edit/<%= usuario.id %>?_method=PUT" method="POST">
+        <h3>Editar usuario:</h3>
+        <form action="/users/profile/edit/<%=locals.userLogged.id%>?_method=PUT" method="POST"
+            enctype="multipart/form-data">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="nombre" id="nombre" value="<%= usuario.nombre  %> "
-                    placeholder="name@example.com">
+                <input type="text" class="form-control" name="nombre" id="nombre"
+                    value="<%= locals.userLogged.nombre  %> " placeholder="name@example.com">
                 <label for="floatingInput">Nombre</label>
-            </div> 
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="apellido" id="apellido" value="<%= usuario.apellido  %> "
-                    placeholder="name@example.com">
-                <label for="floatingInput">Apellido</label>
+                <% if(locals.errors && errors.nombre){ %>
+                <small> <%= errors.nombre.msg %> </small>
+                <% } %>
             </div>
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" name="email" id="email" value="<%= usuario.email %>"
+                <input type="text" class="form-control" name="apellido" id="apellido"
+                    value="<%= locals.userLogged.apellido  %> " placeholder="name@example.com">
+                <label for="floatingInput">Apellido</label>
+                <% if(locals.errors && errors.apellido){ %>
+                <small> <%= errors.apellido.msg %> </small>
+                <% } %>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" name="email" id="email" value="<%= locals.userLogged.email %>"
                     placeholder="name@example.com">
                 <label for="floatingInput">Direccion de E-mail</label>
+                <% if(locals.errors && errors.email){ %>
+                <small> <%= errors.email.msg %> </small>
+                <% } %>
             </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="usuario" id="usuario" value="<%= usuario.usuario %>"
+            <!-- <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="role" id="role" value="<%= locals.userLogged.role %>"
                     placeholder="name@example.com">
                 <label for="floatingInput">Tipo de usuario</label>
+                <% if(locals.errors && errors.role){ %>
+                    <small> <%= errors.role.msg %> </small>
+                    <% } %>
+            </div> -->
+            <div class="form-floating">
+                <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                <label for="password">Cambiar contraseña</label>
+                <% if(locals.errors && errors.password){ %>
+                <small> <%= errors.password.msg %> </small>
+                <% } %>
+            </div>
+            <div class="form-floating">
+                <input type="password" name="password2" class="form-control" id="password2" placeholder="Password">
+                <label for="floatingPassword">Repetir contraseña</label>
+                <% if(locals.errors && errors.password2){ %>
+                <small> <%= errors.password2.msg %> </small>
+                <% } %>
             </div>
             <div class="mb-3">
-                <label for="formFile" class="form-label">Default file input example</label>
-                <input class="form-control" type="file" id="formFile">
+                <label for="avatar" class="form-label">Cambiar foto de perfil:</label>
+                <input class="form-control" type="file" id="avatar" name="avatar" accept=".jpg .png">
             </div>
-            <button type="submit">Guardar cambios</button>
+            <div class="boton">
+                <button type="submit">Guardar cambios</button>
+            </div>
         </form>
     </main>
 

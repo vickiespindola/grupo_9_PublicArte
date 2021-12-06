@@ -17,42 +17,40 @@
 
         <h1>Edición del producto</h1>
 
-        <form class="form" action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST">
+        <form class="form" action="/admin/edit/<%= products.id %>?_method=PUT" method="POST">
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="titulo" name="titulo" value="<%= producto.titulo %>" placeholder="name@example.com">
+                <input type="text" class="form-control" id="titulo" name="titulo" value="<%= products.name %>" placeholder="name@example.com">
                 <label for="nombre-producto">Nombre del producto</label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="marca" name="marca" value="<%= producto.marca %>" placeholder="name@example.com">
+                <input type="text" class="form-control" id="marca" name="marca" value="<%= brands.name %> " placeholder="name@example.com">
                 <label for="marca">Nombre de la marca</label>
             </div>
 
             <div class="form-floating">
                 <select class="form-select" id="categoria" name="categoria" aria-label="Floating label select example">
-                    <option>Seleccione una categoria</option>
-                    <option value="Vajilla" <%= producto.categoria == 'Vajilla' ? 'selected' : '' %>>Vajilla</option>
-                    <option value="Deco" <%= producto.categoria == 'Deco' ? 'selected' : '' %>>Deco</option>
-                    <option value="Accesorios" <%= producto.categoria == 'Accesorios' ? 'selected' : '' %>>Accesorios</option>
-                    <option value="Vestimenta" <%= producto.categoria == 'Vestimenta' ? 'selected' : '' %>>Vestimenta</option>
+                    <% categories.forEach(category => { %>
+                        <option <%= products.categoriesId == category.id && 'selected' %>  value="<%= category.id %>"><%= category.name %> </option>
+                    <% }) %>
                 </select>
                 <label for="categoria">Categoria del producto</label>
             </div>
 
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="descripcion" name="descripcion"> <%= producto.descripcion %>"</textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="descripcion" name="descripcion"> <%= products.description %>"</textarea>
                 <label for="descripcion">Descripción del producto</label>
             </div>
 
             <div class="mb-3">
                 <label for="imagen" class="form-label">Seleccione la imagen del producto</label>
-                <input class="form-control" type="file" id="imagen" name="imagen" value="<%= producto.imagen %>">
+                <input class="form-control" type="file" id="imagen" name="imagen" value="<%= products.images %>">
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">$</span>
-                <input type="number" class="form-control" placeholder="Precio del producto" id="precio" name="precio" value="<%=producto.precio%>">
+                <input type="number" class="form-control" placeholder="Precio del producto" id="precio" name="precio" value="<%=products.price%>">
                 <span class="input-group-text">.00</span>
             </div>
 

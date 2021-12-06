@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
-    <%- include('../partial/head') %> 
+<%- include('../partial/head') %>
 
 <body class="product-detail productos">
-<!-- Header -->
+    <!-- Header -->
     <%- include('../partial/header') %>
 
-<!-- Main -->     
+    <!-- Main -->
     <main>
         <section class="product">
             <aside>
-                <img class="img-product" src="/img/products/<%- productDetail.imagen %>" alt="">
+                <img class="img-product" src="/img/products/<%- products.images[0].file %>" alt="">
                 <div>
-                    <img class="img1" src="/img/products/<%- productDetail.imagen %>" alt="">
-                    <img class="img2" src="/img/products/<%- productDetail.imagen %>" alt="">
-                    <img class="img3" src="/img/products/<%- productDetail.imagen %>" alt="">
-                    <img class="img4" src="/img/products/<%- productDetail.imagen %>" alt="">
+                    <img class="img1" src="/img/products/<%- products.images[0].file %>" alt="">
+                    <img class="img2" src="/img/products/<%- products.images[0].file %>" alt="">
+                    <img class="img3" src="/img/products/<%- products.images[0].file %>" alt="">
+                    <img class="img4" src="/img/products/<%- products.images[0].file %>" alt="">
                 </div>
             </aside>
             <article class="detail">
-                <h1><%- productDetail.titulo %>"</h1>
+                <h1><%- products.name %></h1>
                 <div>
                     <button class="descrip-button">Descripción <i class="fas fa-chevron-right"></i></button>
-                    <p class="description"><%- productDetail.descripcion %></p>
-                    <span class="description"><%- productDetail.marca %></span>
+                    <p class="description"><%- products.description %></p>
+                    <span class="description"><%- products.brand %></span>
                 </div>
                 <div class="price">
-                    <p>$500</p>
+                    <p>$<%- products.price %></p>
                     <span><i class="fas fa-minus"></i>1<i class="fas fa-plus"></i></span>
                     <button class="add-cart">
                         <i class="fas fa-cart-plus"></i> + Añadir al carrito
@@ -38,15 +38,15 @@
         </section>
 
         <!-- Carousel -->
-        <%- include('../partial/prod-carousel.ejs') %> 
+        <!-- <%- include('../partial/prod-carousel.ejs') %>  -->
 
         <!-- Contacto -->
-        <%- include('../partial/contact.ejs') %> 
+        <%- include('../partial/contact.ejs') %>
 
     </main>
-<!-- Footer -->
+    <!-- Footer -->
     <%- include('../partial/footer') %>
-    
+
 </body>
 
 </html>

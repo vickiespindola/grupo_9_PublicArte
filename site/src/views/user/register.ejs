@@ -54,7 +54,7 @@
                 <input type="file" name="avatar" id="avatar" accept=".jpg .png"
                     value=<%= locals.old && old.avatar ? old.avatar : null %>>
             </div>
-            <div class="user">
+            <!-- <div class="user">
                 <label for="role">Perfil del usuario</label>
                 <span>
                     <div>
@@ -69,7 +69,7 @@
                 <% if(locals.errors && errors.role){ %>
                 <small> <%= errors.role.msg %> </small>
                 <% } %>
-            </div>
+            </div> -->
             <button type="submit">Crear cuenta</button>
         </form>
 
