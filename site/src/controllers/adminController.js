@@ -11,6 +11,7 @@ const sequelize = db.sequelize;
 const controller = {
     //listar
     list: (req, res, next) => {
+
         db.Products.findAll({
                 include: [{
                     all: true
@@ -25,14 +26,16 @@ const controller = {
                 })
             })
             .catch((error) => res.send(error))
+
     },
     //crear
     create: (req, res, next) => {
+
         const categories = db.Categories.findAll()
         const brands = db.Brands.findAll()
 
         Promise.all([categories, brands])
-            .then(([categories, brands]) => {
+            .then(([categories, brands, products]) => {
                 return res.render('admin/create', {
                     brands,
                     categories
@@ -41,46 +44,81 @@ const controller = {
 
     },
 
-    /* store: (req, res) => {
+    store: (req, res) => {
 
         const errors = validationResult(req);
+        const brand = db.Brands.findOne({
+            where: {
+                name: req.body.marca
+            }
+        });
+        const category = db.Categories.findOne({
+            where: {
+                name: req.body.categorias
+            }
+        })
+        const producer = db.Categories.findOne({
+            where: {
+                id: req.session.userLogged.id
+            }
+        })
+
+        const {
+            titulo,
+            descripcion,
+            precio
+        } = req.body
 
         if (errors.isEmpty()) {
-            const {
-                titulo,
-                marca,
-                categoria,
-                descripcion,
-                precio,
-                marca,
-                categoria
-            } = req.body
+            Promise.All([category, brand, producer])
+                .then(([category, brand, producer]) => {
+                    db.Products.create({
+                            name: titulo.trim(),
+                            description: descripcion.trim(),
+                            price: +precio.trim(),
+                            categoriesId: category.id,
+                            producersId: producer.id,
+                            brandsId: brand.id
+                        })
+                        .then((product) => {
+                            if (req.files.length > 0) {
 
-            let img = req.files[0].filename;
+                                const images = req.files.map(image => {
+                                    let images = {
+                                        file: image.filename,
+                                        productsId: product.id
+                                    }
+                                })
 
-            db.Products.create({
-                    name: titulo.trim(),
-                    description: descripcion.trim(),
-                    price: +precio.trim(),
-                    avatar: img ? img : 'default-image.png',
-                    id_brand: marca,
-                    id_category: categoria
-                })
-                .then(() => {
-                    return res.redirect('/admin')
+                                db.Images.bulkCreate(images, {
+                                        validate: true
+                                    })
+                                    .catch(error => {
+                                        res.render(error)
+                                    })
+                            }
+                            return res.redirect('/admin')
+                        })
+                        .catch(error => {
+                            res.render(error)
+                        })
                 })
                 .catch(error => {
                     res.render(error)
                 })
         }
-
-    }, */
+    },
 
     //editar
     edit: (req, res) => {
+
         const categories = db.Categories.findAll()
         const brands = db.Brands.findAll()
-        const products = db.Products.findByPk(+req.params.id)
+        const products = db.Products.findByPk(+req.params.id, {
+            include: [{
+                all: true
+            }]
+        })
 
         Promise.all([categories, brands, products])
             .then(([categories, brands, products]) => {
@@ -94,75 +132,85 @@ const controller = {
                 res.render(error)
             })
 
-        /* .then(producto => res.render('admin/edit', {
-            producto
-        }))
-        .catch(error => {
-            res.render(error)
-        }) */
     },
 
-    /* update: (req, res) => {
+    update: (req, res) => {
 
-        const errors = validationResult(req);
+        const errors = validationResult(req)
+
+        const brand = db.Brands.findOne({
+            where: {
+                name: req.body.marca
+            }
+        });
+        const category = db.Categories.findOne({
+            where: {
+                name: req.body.categorias
+            }
+        })
+        const producer = db.Categories.findOne({
+            where: {
+                id: req.session.userLogged.id
+            }
+        })
+
+        const {
+            titulo,
+            descripcion,
+            precio
+        } = req.body
 
         if (errors.isEmpty()) {
-            const {
-                titulo,
-                marca,
-                categoria,
-                descripcion,
-                precio,
-                marca,
-                categoria
-            } = req.body
 
-            let img = req.files[0] ? req.files[0].filename : undefined;
-
-            db.users.update({
-                    name: titulo.trim(),
-                    description: descripcion.trim(),
-                    price: +precio.trim(),
-                    avatar: img ? img : 'default-image.png',
-                    id_brand: marca,
-                    id_category: categoria
-                }, {
-                    where: {
-                        id: +req.params.id
-                    }
-                })
-                .then(producto => {
-                    res.redirect("/admin", {
-                        producto
+            Promise.all([category, brand, producer])
+                .then(([category, brand, producer]) => {
+                    db.Products.update({
+                        name: titulo.trim(),
+                        description: descripcion.trim(),
+                        price: +precio.trim(),
+                        brandsId: brand.id,
+                        producersId: producer.id,
+                        categoriesId: category.id,
+                    }, {
+                        where: {
+                            id: +req.params.id
+                        }
+                    })
+                    .then(producto => {
+                        res.redirect("/admin", {
+                            producto
+                        })
+                    })
+                    .catch(error => {
+                        res.render(error)
                     })
                 })
-                .catch(err => {
-                    res.send(err)
+                .catch(error => {
+                    res.render(error)
                 })
 
         } else {
-
             res.render('user/editProfile', {
                 errors: errors.mapped(),
                 old: req.body
             })
         }
 
-    }, */
+    },
 
-    /*    destroy: (req, res) => {
-           db.Products.destroy({
-                   where: {
-                       id: req.params.id
-                   }
-               })
-               .then(result => {
-                   return res.redirect("/admin")
-               })
-               .catch((error) => {
-                   res.send(error)
-               })
-       } */
+    destroy: (req, res) => {
+        db.Products.destroy({
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(result => {
+                return res.redirect("/admin")
+            })
+            .catch((error) => {
+                res.send(error)
+            })
+    }
 
 }
 module.exports = controller;
