@@ -17,7 +17,7 @@ const controller = {
                     all: true
                 }],
                 order: [
-                    ['name', 'ASC']
+                    ['id', 'ASC']
                 ]
             })
             .then(products => {
@@ -32,12 +32,10 @@ const controller = {
     create: (req, res, next) => {
 
         const categories = db.Categories.findAll()
-        const brands = db.Brands.findAll()
 
-        Promise.all([categories, brands])
-            .then(([categories, brands, products]) => {
+        Promise.all([categories])
+            .then(([categories]) => {
                 return res.render('admin/create', {
-                    brands,
                     categories
                 });
             })
@@ -47,65 +45,59 @@ const controller = {
     store: (req, res) => {
 
         const errors = validationResult(req);
-        const brand = db.Brands.findOne({
-            where: {
-                name: req.body.marca
-            }
-        });
-        const category = db.Categories.findOne({
-            where: {
-                name: req.body.categorias
-            }
-        })
-        const producer = db.Categories.findOne({
-            where: {
-                id: req.session.userLogged.id
-            }
-        })
 
         const {
             titulo,
             descripcion,
-            precio
+            precio,
+            categoria
         } = req.body
 
         if (errors.isEmpty()) {
-            Promise.All([category, brand, producer])
-                .then(([category, brand, producer]) => {
-                    db.Products.create({
-                            name: titulo.trim(),
-                            description: descripcion.trim(),
-                            price: +precio.trim(),
-                            categoriesId: category.id,
-                            producersId: producer.id,
-                            brandsId: brand.id
-                        })
-                        .then((product) => {
-                            if (req.files.length > 0) {
-
-                                const images = req.files.map(image => {
-                                    let images = {
-                                        file: image.filename,
-                                        productsId: product.id
-                                    }
-                                })
-
-                                db.Images.bulkCreate(images, {
-                                        validate: true
-                                    })
-                                    .catch(error => {
-                                        res.render(error)
-                                    })
+            db.Products.create({
+                    name: titulo.trim(),
+                    description: descripcion.trim(),
+                    price: +precio.trim(),
+                    categoriesId: +categoria,
+                    usersId: req.session.userLogged.id,
+                })
+                .then((product) => {
+                    if (req.files.length != 0) {
+                        let images = req.files.map(image => {
+                            let item = {
+                                file: image.filename,
+                                productsId: product.id
                             }
-                            return res.redirect('/admin')
+                            return item
                         })
-                        .catch(error => {
-                            res.render(error)
-                        })
+                        db.Images.bulkCreate(images, {
+                                validate: true
+                            })
+                            .then(() => {
+                                return res.redirect('/admin')
+                            })
+                            .catch(error => {
+                                res.render(error)
+                            })
+                    } else {
+                        db.Images.create({
+                                file: 'default-image.png',
+                                productsId: product.id
+                            })
+                            .then(() => res.redirect('admin'))
+                            .catch(error => {
+                                res.render(error)
+                            })
+                    }
                 })
                 .catch(error => {
                     res.render(error)
                 })
+        } else {
+            res.render('admin/create', {
+                errors: errors.mapped(),
+                old: req.body
+            })
         }
     },
 
@@ -113,84 +105,84 @@ const controller = {
     edit: (req, res) => {
 
         const categories = db.Categories.findAll()
-        const brands = db.Brands.findAll()
         const products = db.Products.findByPk(+req.params.id, {
             include: [{
                 all: true
             }]
         })
+        const images = db.Images.findAll({
+            where: productsId = +req.params.id
+        })
 
-        Promise.all([categories, brands, products])
-            .then(([categories, brands, products]) => {
+        Promise.all([categories, products, images])
+            .then(([categories, products]) => {
                 return res.render('admin/edit', {
-                    brands,
                     categories,
-                    products
+                    products,
+                    images
                 });
             })
             .catch(error => {
                 res.render(error)
             })
-
     },
 
     update: (req, res) => {
 
         const errors = validationResult(req)
 
-        const brand = db.Brands.findOne({
-            where: {
-                name: req.body.marca
-            }
-        });
-        const category = db.Categories.findOne({
-            where: {
-                name: req.body.categorias
-            }
-        })
-        const producer = db.Categories.findOne({
-            where: {
-                id: req.session.userLogged.id
-            }
-        })
+        const images = db.Categories.findAll()
 
         const {
             titulo,
             descripcion,
-            precio
+            precio,
+            categoria
         } = req.body
 
         if (errors.isEmpty()) {
-
-            Promise.all([category, brand, producer])
-                .then(([category, brand, producer]) => {
-                    db.Products.update({
-                        name: titulo.trim(),
-                        description: descripcion.trim(),
-                        price: +precio.trim(),
-                        brandsId: brand.id,
-                        producersId: producer.id,
-                        categoriesId: category.id,
-                    }, {
-                        where: {
-                            id: +req.params.id
-                        }
-                    })
-                    .then(producto => {
-                        res.redirect("/admin", {
-                            producto
+            db.Products.update({
+                    name: titulo.trim(),
+                    description: descripcion.trim(),
+                    price: +precio.trim(),
+                    categoriesId: +categoria,
+                    usersId: req.session.userLogged.id,
+                })
+                .then((product) => {
+                    if (req.files.length != 0) {
+                        let images = req.files.map(image => {
+                            let item = {
+                                file: image.filename,
+                                productsId: product.id
+                            }
+                            return item
                         })
-                    })
-                    .catch(error => {
-                        res.render(error)
-                    })
+                        db.Images.bulkCreate(images, {
+                                validate: true
+                            })
+                            .then(() => {
+                                return res.redirect('/admin')
+                            })
+                            .catch(error => {
+                                res.render(error)
+                            })
+                    } else {
+                        /* db.Images.create({
+                            file: ,
+                            productsId: product.id
+                        })
+                        .then(() => res.redirect('admin'))
+                        .catch(error => {
+                            res.render(error)
+                        }) */
+                    }
                 })
                 .catch(error => {
                     res.render(error)
                 })
 
         } else {
-            res.render('user/editProfile', {
+            res.render('admin/edit', {
                 errors: errors.mapped(),
                 old: req.body
             })
@@ -200,6 +192,9 @@ const controller = {
 
     destroy: (req, res) => {
         db.Products.destroy({
+                include: [{
+                    all: true
+                }],
                 where: {
                     id: req.params.id
                 }

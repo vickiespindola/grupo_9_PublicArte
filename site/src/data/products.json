@@ -3,7 +3,6 @@
     "titulo": "Florero 'Rosetta'",
     "descripcion": "1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img1.png",
-    "marca": "Pirulo",
     "categoria": "Deco",
     "precio": 91,
     "productor": "Cosme Fulanito"
@@ -12,7 +11,6 @@
     "titulo": "Florero 'Diamante'",
     "descripcion": "2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img2.png",
-    "marca": "Pirulo",
     "categoria": "Deco",
     "precio": 92,
     "productor": "Cosme Fulanito"
@@ -21,7 +19,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img3.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -30,7 +27,6 @@
     "titulo": "Portaretrato 'Pinky pie'",
     "descripcion": "4Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img4.png",
-    "marca": "Patito",
     "categoria": "Deco",
     "precio": 94,
     "productor": "Maria José"
@@ -39,7 +35,6 @@
     "titulo": "Portaretrato 'Amor mío'",
     "descripcion": "5Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img5.png",
-    "marca": "Patito",
     "categoria": "Deco",
     "precio": 95,
     "productor": "Maria José"
@@ -48,7 +43,6 @@
     "titulo": "Portaretrato 'Shine",
     "descripcion": "6Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img6.png",
-    "marca": "Patito",
     "categoria": "Deco",
     "precio": 96,
     "productor": "Maria José"
@@ -57,7 +51,6 @@
     "titulo": "Florero 'Diamante'",
     "descripcion": "2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img7.png",
-    "marca": "Pirulo",
     "categoria": "Deco",
     "precio": 92,
     "productor": "Cosme Fulanito"
@@ -66,7 +59,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img8.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -75,7 +67,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img9.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -84,7 +75,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img10.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -93,7 +83,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img11.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -102,7 +91,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img12.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -111,7 +99,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img13.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -120,7 +107,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img14.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -129,7 +115,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img15.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -138,7 +123,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img16.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -147,7 +131,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img17.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -156,7 +139,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img18.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -165,7 +147,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img19.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -174,7 +155,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img20.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -183,7 +163,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img21.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -192,7 +171,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img22.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -201,7 +179,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img23.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -210,7 +187,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img24.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -219,7 +195,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img25.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -228,7 +203,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img26.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -237,7 +211,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img27.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
@@ -246,7 +219,6 @@
     "titulo": "Jarron 'Machiatto'",
     "descripcion": "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quia doloremque repudiandae dicta enim natus dolores nesciunt ipsam minima et praesentium temporibus. Dicta error fugiat temporibus reprehenderit eaque, accusamus dignissimos?",
     "imagen": "img28.png",
-    "marca": "Dia",
     "categoria": "Deco",
     "precio": 93,
     "productor": "José Maria"
