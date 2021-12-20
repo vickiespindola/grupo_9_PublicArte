@@ -25,7 +25,7 @@
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="marca" name="marca" value="<%= products.brands.name %> " placeholder="name@example.com">
+                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %> " placeholder="name@example.com" readonly>
                 <label for="marca">Nombre de la marca</label>
             </div>
 
@@ -45,7 +45,7 @@
 
             <div class="mb-3">
                 <label for="imagen" class="form-label">Seleccione la imagen del producto</label>
-                <input class="form-control" type="file" id="imagen" name="imagen" value="<%= products.images %>">
+                <input class="form-control" type="file" id="imagen" name="imagen" value="<%= images.file %>" multiple>
             </div>
 
             <div class="input-group mb-3">

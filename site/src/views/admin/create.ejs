@@ -22,7 +22,8 @@
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="marca" name="marca" placeholder="name@example.com">
+                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %>"
+                    placeholder="name@example.com" readonly>
                 <label for="marca">Nombre de la marca</label>
             </div>
 
@@ -30,7 +31,7 @@
                 <select class="form-select" id="categoria" name="categoria" aria-label="Floating label select example">
                     <option selected>Seleccione una categoria</option>
                     <% categories.forEach(category => { %>
-                    <option value="<%= category.id %>"><%= category.name %> </option>
+                    <option value="<%= category.id %>"> <%= category.name %> </option>
                     <% }) %>
                 </select>
                 <label for="categoria">Categoria del producto</label>
@@ -44,7 +45,7 @@
 
             <div class="mb-3">
                 <label for="imagen" class="form-label">Seleccione la imagen del producto</label>
-                <input class="form-control" type="file" id="imagen" name="imagen">
+                <input class="form-control" type="file" id="imagen" name="imagen" multiple>
             </div>
 
             <div class="input-group mb-3">

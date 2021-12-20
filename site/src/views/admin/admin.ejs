@@ -44,10 +44,10 @@
                         <td><%= element.name %></td>
                         <td class="dato description"><%= element.description %></td>
                         <!-- <td class="dato"><img src="/img/products/<%= element.images %>" alt=""></td> -->
-                        <td><%= element.brands.name %></td>
+                        <td><%= element.users.brand %></td>
                         <td class="dato2"><%= element.categories.name %></td>
                         <td><%= element.price %></td>
-                        <td class="dato"><%= element.producers.usersId %></td>
+                        <td class="dato"><%= (element.users.name + ' ' +element.users.last_name) %></td>
                         <td><a href="/admin/edit/<%= element.id %>">
                                 <div>
                                     <button class="btn btn-success">Editar</button>

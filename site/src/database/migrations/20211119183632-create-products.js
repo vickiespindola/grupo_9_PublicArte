@@ -30,22 +30,12 @@ module.exports = {
           key: "id"
         }
       },
-      producersId: {
+      usersId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: "Producers"
-          },
-          key: "id"
-        }
-      },
-      brandsId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: {
-            tableName: "Brands"
+            tableName: "Users"
           },
           key: "id"
         }

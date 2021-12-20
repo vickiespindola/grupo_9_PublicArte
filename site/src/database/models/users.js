@@ -22,8 +22,8 @@ module.exports = (sequelize, DataTypes) => {
         as: 'orders',
         foreignKey: 'usersId'
       }),
-      Users.hasOne(models.Producers,{
-        as: 'producers',
+      Users.hasMany(models.Products,{
+        as: 'products',
         foreignKey: 'usersId'
       })
     }
@@ -34,6 +34,7 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     avatar: DataTypes.STRING,
+    brand: DataTypes.STRING,
     rolesId: DataTypes.INTEGER
   }, {
     sequelize,

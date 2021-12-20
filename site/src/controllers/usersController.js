@@ -45,6 +45,7 @@ module.exports = {
                email: email.trim(),
                password: bcryptjs.hashSync(password.trim(), 10),
                avatar: req.file ? req.file.filename : 'default-image.png',
+               brand: null,
                rolesId: 3
             })
             .then(usuario => {
@@ -54,7 +55,8 @@ module.exports = {
                   apellido: usuario.last_name,
                   email: usuario.email,
                   role: usuario.rolesId,
-                  avatar: usuario.avatar
+                  avatar: usuario.avatar,
+                  brand: usuario.brand
                }
                return res.redirect('/users/profile');
             })
@@ -96,7 +98,8 @@ module.exports = {
                   apellido: usuario.last_name,
                   email: usuario.email,
                   role: usuario.rolesId,
-                  avatar: usuario.avatar
+                  avatar: usuario.avatar,
+                  brand: usuario.brand
                }
 
                if (req.body.recordar) {
