@@ -21,11 +21,11 @@ router.get('/', authUser, list);
 /* para mostrar la vista con el formulario */
 router.get('/create', authUser, create)
 /* crea el formulario */
-router.post('/create', productsMulter.single('imagen'), authUser, productValidate, store)
+router.post('/create', productsMulter.array('imagen'), authUser, productValidate, store)
 
 //EDIT ONE PRODUCT
 router.get('/edit/:id', authUser, edit)
-router.put('/edit/:id', productsMulter.single('imagen'), authUser, productValidate, update)
+router.put('/edit/:id', productsMulter.array('imagen'), authUser, productValidate, update)
 
 //DELETE ONE PRODUCT
 router.delete('/delete/:id', authUser, destroy)

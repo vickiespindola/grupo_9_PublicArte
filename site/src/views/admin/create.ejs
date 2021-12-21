@@ -11,29 +11,28 @@
 
     <!--Main-->
     <main>
-        
+
         <h1>Creación del producto</h1>
 
-        <form  class="form" action="/admin/create" method="POST" enctype="multipart/form-data">
+        <form class="form" action="/admin/create" method="POST" enctype="multipart/form-data">
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="titulo" name="titulo"
-                    placeholder="name@example.com">
+                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="name@example.com">
                 <label for="titulo">Nombre del producto</label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="marca" name="marca" placeholder="name@example.com">
+                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %>"
+                    placeholder="name@example.com" readonly>
                 <label for="marca">Nombre de la marca</label>
             </div>
 
             <div class="form-floating">
                 <select class="form-select" id="categoria" name="categoria" aria-label="Floating label select example">
                     <option selected>Seleccione una categoria</option>
-                    <option value="Vajilla">Vajilla</option>
-                    <option value="Deco">Deco</option>
-                    <option value="Accesorios">Accesorios</option>
-                    <option value="Vestimenta">Vestimenta</option>
+                    <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>"> <%= category.name %> </option>
+                    <% }) %>
                 </select>
                 <label for="categoria">Categoria del producto</label>
             </div>
@@ -46,7 +45,7 @@
 
             <div class="mb-3">
                 <label for="imagen" class="form-label">Seleccione la imagen del producto</label>
-                <input class="form-control" type="file" id="imagen" name="imagen">
+                <input class="form-control" type="file" id="imagen" name="imagen" multiple>
             </div>
 
             <div class="input-group mb-3">
@@ -56,8 +55,8 @@
             </div>
 
             <div class="boton">
-                <button  type="submit" class="btn btn-primary">Enviar datos</button>
-                <button  type="reset" class="btn btn-secondary">Borrar datos</button>
+                <button type="submit" class="btn btn-primary">Enviar datos</button>
+                <button type="reset" class="btn btn-secondary">Borrar datos</button>
             </div>
 
         </form>
@@ -70,7 +69,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
-    
+
 </body>
 
 </html>

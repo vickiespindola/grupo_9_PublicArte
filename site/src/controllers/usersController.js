@@ -20,34 +20,33 @@ module.exports = {
    processRegister: function (req, res, next) {
 
       const errors = validationResult(req);
+      const {
+         nombre,
+         apellido,
+         email,
+         password
+      } = req.body
 
       if (errors.isEmpty()) {
-         const {
-            nombre,
-            apellido,
-            email,
-            role,
-            password
-         } = req.body
 
-         /* 
-         if (req.fileValidationError) {
+         /* if (req.fileValidationError) {
             let image = {
                param: 'avatar',
                msg: req.fileValidationError,
             }
             errors.errors.push(image)
-         }
-         */
-         let img = req.files[0].filename;
+         } */
+
+         /* let img = req.files[0].filename; */
 
          db.Users.create({
                name: nombre.trim(),
                last_name: apellido.trim(),
                email: email.trim(),
                password: bcryptjs.hashSync(password.trim(), 10),
-               avatar: img ? img : 'default-image.png',
-               id_role: role
+               avatar: req.file ? req.file.filename : 'default-image.png',
+               brand: null,
+               rolesId: 3
             })
             .then(usuario => {
                req.session.userLogged = {
@@ -55,8 +54,9 @@ module.exports = {
                   nombre: usuario.name,
                   apellido: usuario.last_name,
                   email: usuario.email,
-                  role: usuario.id_role,
-                  avatar: usuario.avatar
+                  role: usuario.rolesId,
+                  avatar: usuario.avatar,
+                  brand: usuario.brand
                }
                return res.redirect('/users/profile');
             })
@@ -72,7 +72,7 @@ module.exports = {
 
    },
 
-   Login: function (req, res) {
+   login: function (req, res) {
       res.render('user/login');
    },
 
@@ -80,11 +80,11 @@ module.exports = {
 
       const errors = validationResult(req)
 
+      const {
+         email
+      } = req.body
+
       if (errors.isEmpty()) {
-         const {
-            email,
-            recordar
-         } = req.body
 
          db.Users.findOne({
                where: {
@@ -97,11 +97,12 @@ module.exports = {
                   nombre: usuario.name,
                   apellido: usuario.last_name,
                   email: usuario.email,
-                  role: usuario.id_role,
-                  avatar: usuario.avatar
+                  role: usuario.rolesId,
+                  avatar: usuario.avatar,
+                  brand: usuario.brand
                }
 
-               if (recordar) {
+               if (req.body.recordar) {
                   res.cookie('PublicArte', req.session.userLogged, {
                      maxAge: 1000 * 60 * 24 * 100000
                   })
@@ -122,16 +123,20 @@ module.exports = {
    },
 
    userProfile: function (req, res) {
-      res.render('user/userProfile', {
-         user: req.session.userLogged
-      })
+
+      db.Users.findByPk(req.session.userLogged.id)
+         .then(user => {
+            return res.render('user/userProfile', {
+               user: req.session.userLogged
+            })
+         })
    },
 
    editProfile: function (req, res) {
 
-      db.Users.findByPk(+req.params.id)
+      db.Users.findByPk(+req.session.userLogged.id)
          .then(usuario => {
-            res.render('user/editProfile', {
+            return res.render('user/editProfile', {
                usuario: req.session.userLogged
             })
          })
@@ -142,7 +147,7 @@ module.exports = {
 
    updateProfile: function (req, res) {
 
-      const errors = validationResult(req);
+      /* const errors = validationResult(req);
 
       if (errors.isEmpty()) {
 
@@ -182,27 +187,89 @@ module.exports = {
             errors: errors.mapped(),
             old: req.body
          })
+      } */
+
+      const errors = validationResult(req);
+
+      const {
+         nombre,
+         apellido,
+         email,
+         password
+      } = req.body;
+
+      if (errors.isEmpty()) {
+         db.Users.update({
+               name: nombre.trim(),
+               last_name: apellido.trim(),
+               email: email.trim(),
+               avatar: req.file ? req.file.filename : req.session.userLogged.avatar,
+            }, {
+               where: {
+                  id: +req.session.userLogged.id
+               }
+            })
+            .then(() => {
+               if (password) {
+                  db.Users.update({
+                        password: bcryptjs.hashSync(password.trim(), 10)
+                     }, {
+                        where: {
+                           id: req.session.userLogged.id
+                        }
+                     })
+                     .then(() => {
+                        req.session.destroy();
+                        return res.redirect('/users/login')
+                     })
+                     .catch(error => console.log(error))
+               } else {
+
+                  db.Users.findByPk(+req.session.userLogged.id)
+                     .then(user => {
+                        req.session.userLogged = {
+                           id: user.id,
+                           nombre: user.name,
+                           apellido: user.last_name,
+                           email: user.email,
+                           role: user.rolesId,
+                           avatar: user.avatar
+                        }
+                        res.locals.userLogged = req.session.userLogged
+
+                        return res.redirect('/users/profile')
+                     })
+                     .catch(error => console.log(error))
+               }
+            })
+            .catch(error => console.log(error))
+
+      } else {
+         res.render('user/editProfile', {
+            errors: errors.mapped(),
+            old: req.body
+         })
       }
+
    },
 
-   deleteProfile: function (req, res) {
+   /* deleteProfile: function (req, res) {
       db.Users.destroy({
          where: {
             id: +req.params.id
          }
       })
-   },
+   }, */
 
    logout: function (req, res) {
 
-      req.session.destroy(function () {
-         if (req.cookies.PublicArte) {
-            res.clearCookie('PublicArte', {
-               path: '/'
-            });
-            res.redirect('/')
-         }
-      })
+      req.session.destroy()
+      if (req.cookies.PublicArte) {
+         res.clearCookie('PublicArte', {
+            path: '/'
+         });
+      }
+      res.redirect('/')
 
    }
 }

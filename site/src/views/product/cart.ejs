@@ -14,26 +14,26 @@
         </div>
         <section>
             <% let total = 0 %> 
-            <% productAdded.map(element => { %>
+            <% products.map(element => { %>
             <article class="container">
                 <div class="items">
-                    <img class="product-img" src="/img/products/<%= element.imagen %>" alt="<%= element.titulo %>">
+                    <img class="product-img" src="/img/products/<%= element.images[0].file %>" alt="<%= element.titulo %>">
 
                     <div class="item1">
                         <a href="">
-                            <h4 class="tittle-img"><%= element.titulo %></h4>
+                            <h4 class="tittle-img"><%= element.name %></h4>
                         </a>
-                        <p class="product-description"><%= element.descripcion %></p>
+                        <p class="product-description"><%= element.description %></p>
                     </div>
 
                     <div class="item2">
                         <span class="quantity"><i class="fas fa-minus"></i>1<i class="fas fa-plus"></i></span>
-                        <span class="price">$<%= element.precio %></span>
+                        <span class="price">$<%= element.price %></span>
                         <i class="fas fa-trash-alt"></i>
                     </div>
                 </div>
             </article>
-            <% total += element.precio %> 
+            <% total += element.price %> 
             <% }) %>
 
             <article class="total-product">
@@ -49,7 +49,7 @@
         </section>
         <!-- Carousel -->
 
-        <%- include('../partial/prod-carousel.ejs') %>
+        <!-- <%- include('../partial/prod-carousel.ejs') %> -->
 
     </main>
 

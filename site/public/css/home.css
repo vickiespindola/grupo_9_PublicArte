@@ -134,7 +134,7 @@
     padding: 20px 0;
 }
 
-.home main .contenidoAmistad div{
+.home main .contenidoAmistad div {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -149,7 +149,7 @@
 }
 
 .home main .contenidoAmistad img {
-    max-width:50%;
+    max-width: 50%;
     margin: 10px auto;
 }
 
@@ -166,9 +166,9 @@
     color: var(--marron-oscuro);
 }
 
-
-
-
+.home .sin-producto {
+    margin: 50px 0;
+}
 
 @media (min-width: 426px) {
 
@@ -278,8 +278,8 @@
         width: 40%;
     }
 
-    .home main .contenidoAmistad div{
-        margin: 0 auto; 
+    .home main .contenidoAmistad div {
+        margin: 0 auto;
     }
 
     .home main .contenidoAmistad a {
@@ -304,6 +304,14 @@
         color: var(--marron-oscuro);
     }
 
+    .home .sin-producto {
+        margin: 150px 0;
+    }
+}
+
+.home .search div img {
+    width: 220px;
+    height: 320px;
 }
 
 @media (min-width: 769px) {
@@ -363,7 +371,7 @@
         padding: 20px 0;
         display: flex;
         flex-wrap: wrap;
-        margin: 10% 30%;
+        margin: 30px auto;
         text-align: center;
         width: 40%;
     }

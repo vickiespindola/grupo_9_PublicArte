@@ -16,7 +16,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      id_user: {
+      usersId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
@@ -26,7 +26,7 @@ module.exports = {
           key: "id"
         }
       },
-      id_product: {
+      productsId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {

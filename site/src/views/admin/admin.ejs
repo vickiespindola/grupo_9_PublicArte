@@ -41,13 +41,13 @@
                     <% products.forEach(element => { %>
                     <tr>
                         <th scope="row"><%= element.id %></th>
-                        <td><%= element.titulo %></td>
-                        <td class="dato description"><%= element.descripcion %></td>
-                        <!-- <td class="dato"><img src="/img/products/<%= element.imagen %>" alt=""></td> -->
-                        <td><%= element.marca %></td>
-                        <td class="dato2"><%= element.categoria %></td>
-                        <td><%= element.precio %></td>
-                        <td class="dato"><%= element.autor %></td>
+                        <td><%= element.name %></td>
+                        <td class="dato description"><%= element.description %></td>
+                        <!-- <td class="dato"><img src="/img/products/<%= element.images %>" alt=""></td> -->
+                        <td><%= element.users.brand %></td>
+                        <td class="dato2"><%= element.categories.name %></td>
+                        <td><%= element.price %></td>
+                        <td class="dato"><%= (element.users.name + ' ' +element.users.last_name) %></td>
                         <td><a href="/admin/edit/<%= element.id %>">
                                 <div>
                                     <button class="btn btn-success">Editar</button>
