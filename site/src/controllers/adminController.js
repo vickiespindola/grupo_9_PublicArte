@@ -97,12 +97,18 @@ const controller = {
                     res.render(error)
                 })
         } else {
-            res.render('admin/create', {
-                errors: errors.mapped(),
-                old: req.body
-            })
+            let categories = db.Categories.findAll()
+
+            Promise.all([categories])
+                .then(([categories]) => {
+                    return res.render('admin/create', {
+                        categories,
+                        errors: errors.mapped(),
+                        old: req.body,
+                    });
+                })
         }
-        
+
     },
 
     //editar
@@ -189,10 +195,23 @@ const controller = {
                 .catch(error => console.log(error))
 
         } else {
-            res.render('admin/edit', {
-                errors: errors.mapped(),
-                old: req.body
+            const products = db.Products.findByPk(+req.params.id, {
+                include: [{
+                    all: true
+                }]
             })
+
+            const categories = db.Categories.findAll()
+
+            Promise.all([products, categories])
+                .then(([products, categories]) => {
+                    return res.render('admin/edit', {
+                        products,
+                        categories,
+                        errors: errors.mapped(),
+                        old: req.body,
+                    });
+                })
         }
 
     },

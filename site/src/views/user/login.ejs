@@ -15,14 +15,14 @@
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Ingrese su E-mail...">
                 <% if(locals.errors && errors.email){ %>
-                <small> <%= errors.email.msg %> </small>
+                <small class="error"> <%= errors.email.msg %> </small>
                 <% } %>
             </div>
             <div>
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Ingrese su contraseña...">
                 <% if(locals.errors && errors.password){ %>
-                <small> <%= errors.password.msg %> </small>
+                <small class="error"> <%= errors.password.msg %> </small>
                 <% } %>
             </div>
             <div>

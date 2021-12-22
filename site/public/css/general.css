@@ -15,7 +15,7 @@ li {
     list-style: none;
 }
 
-small{
+small.error{
     color: darkred;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius:5px;
