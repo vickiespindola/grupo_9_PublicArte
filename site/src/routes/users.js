@@ -13,6 +13,8 @@ const {
   userProfile,
   editProfile,
   updateProfile,
+  password,
+  updatePassword,
   /* deleteProfile, */
   logout
 } = require('../controllers/usersController')
@@ -42,6 +44,10 @@ router.get('/profile', authUser, userProfile)
 //EDIT PROFILE
 router.get('/profile/edit/:id', authUser, editProfile)
 router.put('/profile/edit/:id', usersMulter.single('avatar'), profileValidate, authUser, updateProfile)
+
+//CHANGE USER'S PASSWORD
+router.get('/profile/change-password', authUser, profileValidate, password)
+router.put('/profile/change-password', authUser, profileValidate, updatePassword)
 
 //DELETE PROFILE
 /* router.delete('/profile/delete/:id', authUser, deleteProfile) */

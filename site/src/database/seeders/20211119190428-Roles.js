@@ -1,5 +1,5 @@
 'use strict';
-let role= [ 'admin', 'vendedor', 'comprador']
+let role= [ 'admin', 'vendedor', 'usuario']
 
 let roles= role.map(role =>{
   let array = {

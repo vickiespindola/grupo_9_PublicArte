@@ -147,47 +147,6 @@ module.exports = {
 
    updateProfile: function (req, res) {
 
-      /* const errors = validationResult(req);
-
-      if (errors.isEmpty()) {
-
-         db.users.update({
-               name: req.body.nombre.trim(),
-               last_name: req.body.apellido.trim(),
-               email: req.body.email.trim(),
-               image: req.file ? req.file.filename : 'default-image.png',
-               id_role: role
-            }, {
-               where: {
-                  email: req.body.email
-               }
-            })
-
-            .then(usuario => {
-               req.session.userLogged = {
-                  id: usuario.id,
-                  nombre: usuario.name,
-                  apellido: usuario.last_name,
-                  email: usuario.email,
-                  role: usuario.id_role,
-                  avatar: usuario.avatar
-               }
-               res.redirect("/users/profile", {
-                  usuario: req.session.userLogged
-               })
-            })
-
-            .catch(err => {
-               res.send(err)
-            })
-
-      } else {
-
-         res.render('user/editProfile', {
-            errors: errors.mapped(),
-            old: req.body
-         })
-      } */
 
       const errors = validationResult(req);
 
@@ -195,57 +154,89 @@ module.exports = {
          nombre,
          apellido,
          email,
-         password
+         marca
       } = req.body;
 
       if (errors.isEmpty()) {
+         
          db.Users.update({
                name: nombre.trim(),
                last_name: apellido.trim(),
                email: email.trim(),
                avatar: req.file ? req.file.filename : req.session.userLogged.avatar,
+               brand: marca
             }, {
                where: {
                   id: +req.session.userLogged.id
                }
             })
             .then(() => {
-               if (password) {
-                  db.Users.update({
-                        password: bcryptjs.hashSync(password.trim(), 10)
-                     }, {
-                        where: {
-                           id: req.session.userLogged.id
-                        }
-                     })
-                     .then(() => {
-                        req.session.destroy();
-                        return res.redirect('/users/login')
-                     })
-                     .catch(error => console.log(error))
-               } else {
+               db.Users.findByPk(+req.session.userLogged.id)
+                  .then(user => {
+                     req.session.userLogged = {
+                        id: user.id,
+                        nombre: user.name,
+                        apellido: user.last_name,
+                        email: user.email,
+                        role: user.rolesId,
+                        avatar: user.avatar,
+                        brand: usuario.brand
+                     }
+                     res.locals.userLogged = req.session.userLogged
 
-                  db.Users.findByPk(+req.session.userLogged.id)
-                     .then(user => {
-                        req.session.userLogged = {
-                           id: user.id,
-                           nombre: user.name,
-                           apellido: user.last_name,
-                           email: user.email,
-                           role: user.rolesId,
-                           avatar: user.avatar
-                        }
-                        res.locals.userLogged = req.session.userLogged
-
-                        return res.redirect('/users/profile')
-                     })
-                     .catch(error => console.log(error))
-               }
+                     return res.redirect('/users/profile')
+                  })
+                  .catch(error => console.log(error))
             })
             .catch(error => console.log(error))
 
       } else {
          res.render('user/editProfile', {
+            errors: errors.mapped(),
+            old: req.body
+         })
+      }
+
+   },
+
+   password: (req, res) => {
+
+      res.render('user/change-password')
+
+   },
+
+   updatePassword: (req, res) => {
+
+      const errors = validationResult(req);
+
+      if (errors.isEmpty()) {
+
+         const {
+            newPassword
+         } = req.body
+
+         if (newPassword) {
+            const newPass = bcryptjs.hashSync(newPassword.trim(), 10)
+
+            db.Users.update({
+                  password: newPass
+               }, {
+                  where: {
+                     id: +req.session.userLogged.id
+                  }
+               })
+               .then(() => {
+                  req.session.destroy();
+                  return res.redirect('/users/login')
+               })
+               .catch(error => console.log(error))
+         }
+         else{
+            console.log("No se pudo cambiar la contraseña")
+         }
+
+      } else {
+         res.render('user/change-password', {
             errors: errors.mapped(),
             old: req.body
          })

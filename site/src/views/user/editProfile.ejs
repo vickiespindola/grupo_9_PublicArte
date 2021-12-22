@@ -16,7 +16,7 @@
                     value="<%= locals.userLogged.nombre  %> " placeholder="name@example.com">
                 <label for="floatingInput">Nombre</label>
                 <% if(locals.errors && errors.nombre){ %>
-                <small> <%= errors.nombre.msg %> </small>
+                <small class="error"> <%= errors.nombre.msg %> </small>
                 <% } %>
             </div>
             <div class="form-floating mb-3">
@@ -24,7 +24,7 @@
                     value="<%= locals.userLogged.apellido  %> " placeholder="name@example.com">
                 <label for="floatingInput">Apellido</label>
                 <% if(locals.errors && errors.apellido){ %>
-                <small> <%= errors.apellido.msg %> </small>
+                <small class="error"> <%= errors.apellido.msg %> </small>
                 <% } %>
             </div>
             <div class="form-floating mb-3">
@@ -32,7 +32,7 @@
                     placeholder="name@example.com">
                 <label for="floatingInput">Direccion de E-mail</label>
                 <% if(locals.errors && errors.email){ %>
-                <small> <%= errors.email.msg %> </small>
+                <small class="error"> <%= errors.email.msg %> </small>
                 <% } %>
             </div>
             <!-- <div class="form-floating mb-3">
@@ -40,22 +40,12 @@
                     placeholder="name@example.com">
                 <label for="floatingInput">Tipo de usuario</label>
                 <% if(locals.errors && errors.role){ %>
-                    <small> <%= errors.role.msg %> </small>
+                    <small class="error"> <%= errors.role.msg %> </small>
                     <% } %>
             </div> -->
-            <div class="form-floating">
-                <input type="password" name="password" class="form-control" id="password" placeholder="Password">
-                <label for="password">Cambiar contraseña</label>
-                <% if(locals.errors && errors.password){ %>
-                <small> <%= errors.password.msg %> </small>
-                <% } %>
-            </div>
-            <div class="form-floating">
-                <input type="password" name="password2" class="form-control" id="password2" placeholder="Password">
-                <label for="floatingPassword">Repetir contraseña</label>
-                <% if(locals.errors && errors.password2){ %>
-                <small> <%= errors.password2.msg %> </small>
-                <% } %>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %>" placeholder="name@example.com">
+                <label for="marca">Nombre de la marca</label>
             </div>
             <div class="mb-3">
                 <label for="avatar" class="form-label">Cambiar foto de perfil:</label>
