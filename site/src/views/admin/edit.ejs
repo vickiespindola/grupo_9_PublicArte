@@ -17,7 +17,7 @@
 
         <h1>Edición del producto</h1>
 
-        <form class="form" action="/admin/edit/<%= products.id %>?_method=PUT" method="POST">
+        <form class="form" action="/admin/edit/<%= products.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="titulo" name="titulo" value="<%= products.name %>" placeholder="name@example.com">
@@ -45,7 +45,7 @@
 
             <div class="mb-3">
                 <label for="imagen" class="form-label">Seleccione la imagen del producto</label>
-                <input class="form-control" type="file" id="imagen" name="imagen" value="<%= images.file %>" multiple>
+                <input class="form-control" type="file" id="imagen" name="imagen" multiple>
             </div>
 
             <div class="input-group mb-3">
