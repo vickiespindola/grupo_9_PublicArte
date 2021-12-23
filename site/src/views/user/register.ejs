@@ -16,7 +16,7 @@
                 <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre..."
                     value=<%= locals.old && old.nombre ? old.nombre : null %>>
                 <% if(locals.errors && errors.nombre){ %>
-                <small> <%= errors.nombre.msg %> </small>
+                <small > <%= errors.nombre.msg %> </small>
                 <% } %>
             </div>
             <div>
@@ -24,7 +24,7 @@
                 <input type="text" name="apellido" id="apellido" placeholder="Ingrese apellido..."
                     value=<%= locals.old && old.apellido ? old.apellido : null %>>
                 <% if(locals.errors && errors.apellido){ %>
-                <small> <%= errors.apellido.msg %> </small>
+                <small > <%= errors.apellido.msg %> </small>
                 <% } %>
             </div>
             <div>
@@ -32,22 +32,25 @@
                 <input type="email" name="email" id="email" placeholder="Ingrese e-mail"
                     value=<%= locals.old && old.email ? old.email : null %>>
                 <% if(locals.errors && errors.email){ %>
-                <small> <%= errors.email.msg %> </small>
+                <small > <%= errors.email.msg %> </small>
                 <% } %>
+                <small id="smallemail"></small>
             </div>
             <div>
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Ingrese contraseña...">
                 <% if(locals.errors && errors.password){ %>
-                <small> <%= errors.password.msg %> </small>
+                <small > <%= errors.password.msg %> </small>
                 <% } %>
+                <small id= "smallpass"></small>
             </div>
             <div>
                 <label for="password2">Contraseña</label>
                 <input type="password" name="password2" id="password2" placeholder="Ingrese contraseña...">
                 <% if(locals.errors && errors.password2){ %>
-                <small> <%= errors.password2.msg %> </small>
+                <small > <%= errors.password2.msg %> </small>
                 <% } %>
+                <small id= "smallpass2"></small>
             </div>
             <div>
                 <label for="avatar">Seleccionar una imagen</label>
@@ -70,7 +73,7 @@
                 <small> <%= errors.role.msg %> </small>
                 <% } %>
             </div> -->
-            <button type="submit">Crear cuenta</button>
+            <button type="submit" id="crear">Crear cuenta</button>
         </form>
 
         <section>
@@ -86,5 +89,7 @@
     <%- include('../partial/footer') %>
 
 </body>
-
+<script src="/javascript/register.js"></script>
 </html>
+
+

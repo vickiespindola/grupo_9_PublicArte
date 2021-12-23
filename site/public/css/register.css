@@ -138,3 +138,7 @@
         max-width: 20%;
     }
 }
+
+.disable{
+    background-color: yellow;
+}
