@@ -158,7 +158,7 @@ module.exports = {
       } = req.body;
 
       if (errors.isEmpty()) {
-         
+
          db.Users.update({
                name: nombre.trim(),
                last_name: apellido.trim(),
@@ -215,25 +215,22 @@ module.exports = {
             newPassword
          } = req.body
 
-         if (newPassword) {
-            const newPass = bcryptjs.hashSync(newPassword.trim(), 10)
+         console.log("La nueva contraseña es " + newPassword)
+         const newPass = bcryptjs.hashSync(newPassword.trim(), 10)
+         console.log("Y encriptada se ve " + newPass)
 
-            db.Users.update({
-                  password: newPass
-               }, {
-                  where: {
-                     id: +req.session.userLogged.id
-                  }
-               })
-               .then(() => {
-                  req.session.destroy();
-                  return res.redirect('/users/login')
-               })
-               .catch(error => console.log(error))
-         }
-         else{
-            console.log("No se pudo cambiar la contraseña")
-         }
+         db.Users.update({
+               password: newPass
+            }, {
+               where: {
+                  id: +req.session.userLogged.id
+               }
+            })
+            .then(() => {
+               req.session.destroy();
+               return res.redirect('/users/login')
+            })
+            .catch(error => console.log(error))
 
       } else {
          res.render('user/change-password', {
@@ -246,10 +243,16 @@ module.exports = {
 
    /* deleteProfile: function (req, res) {
       db.Users.destroy({
-         where: {
-            id: +req.params.id
-         }
-      })
+            where: {
+               id: +req.params.id
+            },
+            include: [{
+               all: true
+            }]
+         })
+         .then(() => {
+            return res.redirect("/users/login")
+         })
    }, */
 
    logout: function (req, res) {
