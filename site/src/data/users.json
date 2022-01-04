@@ -3,10 +3,19 @@
     "id": 1,
     "nombre": "Eliana",
     "apellido": "Tolosa",
-    "email": "tolosa.eliana.m@gmail.com",
+    "email": "tolosaeliana@gmail.com",
     "role": "admin",
-    "password": "$2a$10$b8Uvuk8ydtwGJfGHxTgwluXqGfahTrPJoYy2IJtV8Tl9AomtxCJLm",
+    "password": "$2a$10$iOrh2q6fV2LAsaplRDtjxOdTnAILfItS58GfeKEoa4o153M5aV/Dy",
     "avatar": "1635549877848_img_.jpg",
     "marca": "Patito"
+  },
+  {
+    "id": 2,
+    "nombre": "Ruth",
+    "apellido": "Cabrera",
+    "email": "ruthcabrerafranco043@gmail.com",
+    "role": "admin",
+    "password": "$2a$10$iOrh2q6fV2LAsaplRDtjxOdTnAILfItS58GfeKEoa4o153M5aV/Dy",
+    "avatar": "default-image.png"
   }
 ]

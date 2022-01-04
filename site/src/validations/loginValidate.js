@@ -30,6 +30,7 @@ module.exports = [
                     return Promise.reject('email y/o contraseña incorrectas')
                 }
             })
+            .catch(error => console.log(error))
     })
 
 ]
