@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- -->
+<!-- -->
 <!-- Head -->
 
 <%- include('../partial/head.ejs') %>
@@ -17,46 +17,61 @@
 
         <h1>Edición del producto</h1>
 
-        <form class="form" action="/admin/edit/<%= products.id %>?_method=PUT" method="POST">
+        <form class="form" action="/admin/edit/<%= products.id %>?_method=PUT" method="POST"
+            enctype="multipart/form-data">
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="titulo" name="titulo" value="<%= products.name %>" placeholder="name@example.com">
-                <label for="nombre-producto">Nombre del producto</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" value="<%= products.name %>"
+                    placeholder="name@example.com">
+                <label for="titulo">Nombre del producto</label>
+                <% if(locals.errors && errors.titulo){ %>
+                <small class="error"> <%= errors.titulo.msg %> </small>
+                <% } %>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %> " placeholder="name@example.com" readonly>
+                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %> "
+                    placeholder="name@example.com" readonly>
                 <label for="marca">Nombre de la marca</label>
             </div>
 
             <div class="form-floating">
                 <select class="form-select" id="categoria" name="categoria" aria-label="Floating label select example">
                     <% categories.forEach(category => { %>
-                        <option <%= products.categoriesId == category.id && 'selected' %>  value="<%= category.id %>"><%= category.name %> </option>
+                    <option <%= products.categoriesId == category.id && 'selected' %> value="<%= category.id %>">
+                        <%= category.name %> </option>
                     <% }) %>
                 </select>
                 <label for="categoria">Categoria del producto</label>
             </div>
 
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="descripcion" name="descripcion"> <%= products.description %>"</textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="descripcion"
+                    name="descripcion"> <%= products.description %>"</textarea>
                 <label for="descripcion">Descripción del producto</label>
+                <% if(locals.errors && errors.descripcion){ %>
+                <small class="error"> <%= errors.descripcion.msg %> </small>
+                <% } %>
             </div>
 
             <div class="mb-3">
                 <label for="imagen" class="form-label">Seleccione la imagen del producto</label>
-                <input class="form-control" type="file" id="imagen" name="imagen" value="<%= images.file %>" multiple>
+                <input class="form-control" type="file" id="imagen" name="imagen" multiple>
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">$</span>
-                <input type="number" class="form-control" placeholder="Precio del producto" id="precio" name="precio" value="<%=products.price%>">
+                <input type="number" class="form-control" placeholder="Precio del producto" id="precio" name="precio"
+                    value="<%=products.price%>">
                 <span class="input-group-text">.00</span>
+                <% if(locals.errors && errors.precio){ %>
+                <small class="error"> <%= errors.precio.msg %> </small>
+                <% } %>
             </div>
 
             <div class="boton">
-                <button  type="submit" class="btn btn-primary">Enviar datos</button>
-                <button  type="reset" class="btn btn-secondary">Borrar datos</button>
+                <button type="submit" class="btn btn-primary">Enviar datos</button>
+                <button type="reset" class="btn btn-secondary">Borrar datos</button>
             </div>
 
         </form>

@@ -13,6 +13,8 @@ const {
   userProfile,
   editProfile,
   updateProfile,
+  password,
+  updatePassword,
   /* deleteProfile, */
   logout
 } = require('../controllers/usersController')
@@ -21,6 +23,7 @@ const {
 const registerValidate = require('../validations/registerValidate')
 const loginValidate = require('../validations/loginValidate')
 const profileValidate = require('../validations/profileValidate')
+const passwordValidate = require('../validations/passwordValidate')
 const usersMulter = require('../middlewares/usersMulter')
 const guestUser = require('../middlewares/guestUser')
 const authUser = require('../middlewares/authUser')
@@ -42,6 +45,10 @@ router.get('/profile', authUser, userProfile)
 //EDIT PROFILE
 router.get('/profile/edit/:id', authUser, editProfile)
 router.put('/profile/edit/:id', usersMulter.single('avatar'), profileValidate, authUser, updateProfile)
+
+//CHANGE USER'S PASSWORD
+router.get('/profile/change-password', authUser, passwordValidate, password)
+router.put('/profile/change-password', authUser, passwordValidate, updatePassword)
 
 //DELETE PROFILE
 /* router.delete('/profile/delete/:id', authUser, deleteProfile) */

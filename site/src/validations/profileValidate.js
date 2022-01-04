@@ -3,6 +3,7 @@ const {
     body
 } = require('express-validator')
 const db = require('../database/models');
+const bcryptjs = require('bcryptjs');
 
 module.exports = [
     check('nombre')
@@ -17,13 +18,5 @@ module.exports = [
 
     /* check('role')
     .notEmpty().withMessage('*Por favor elija un perfil de usuario.'), */
-    body('password2').custom((value, {
-        req
-    }) => {
-        if (value !== req.body.password) {
-            return false;
-        } else {
-            return true;
-        }
-    }).withMessage('*Las contraseñas no coinciden.')
+
 ]
