@@ -84,6 +84,9 @@
 .formulario main form .user span div label{
     margin: 5px;
 }
+.disable{
+    background-color: yellow;
+}
 
 @media (min-width: 426px) {
     .formulario main form{
@@ -139,6 +142,3 @@
     }
 }
 
-.disable{
-    background-color: yellow;
-}
