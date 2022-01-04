@@ -8,7 +8,7 @@ let users= usuarios.map(user =>{
     email: user.email,
     password: user.password,
     avatar: user.avatar,
-    brand: "Patito",
+    brand: user.marca,
     rolesId: 1,
     createdAt: new Date,
     updatedAt: new Date,
