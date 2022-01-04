@@ -17,6 +17,7 @@
                 <% if(locals.errors && errors.email){ %>
                 <small class="error"> <%= errors.email.msg %> </small>
                 <% } %>
+                <small id="smallemail"></small>
             </div>
             <div>
                 <label for="password">Contraseña</label>
@@ -24,12 +25,13 @@
                 <% if(locals.errors && errors.password){ %>
                 <small class="error"> <%= errors.password.msg %> </small>
                 <% } %>
+                <small id= "smallpass"></small>
             </div>
             <div>
                 <label for="recordar">Recordarme</label>
                 <input type="checkbox" name="recordar" id="recordar" value="1">
             </div>
-            <button type="submit">Iniciar Sesión</button>
+            <button type="submit" id="sesion">Iniciar Sesión</button>
         </form>
         <section>
             <h4>Ó iniciar sesión con:</h4>
@@ -45,4 +47,5 @@
 
 </body>
 
+<script src="/javascript/login.js"></script>
 </html>
