@@ -18,6 +18,7 @@
                 <% if(locals.errors && errors.nombre){ %>
                 <small class="error"> <%= errors.nombre.msg %> </small>
                 <% } %>
+                <small id="nombresmall"></small>
             </div>
             <div>
                 <label for="apellido">Apellido</label>
@@ -26,6 +27,7 @@
                 <% if(locals.errors && errors.apellido){ %>
                 <small class="error"> <%= errors.apellido.msg %> </small>
                 <% } %>
+                <small id="apellidosmall"></small>
             </div>
             <div>
                 <label for="email">E-mail</label>
@@ -36,18 +38,24 @@
                 <% } %>
                 <small id="smallemail"></small>
             </div>
-            <div>
+
+
+
+            <div class="password">
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Ingrese contraseña...">
+                <span id="mostrar">Mostrar</span>
                 <% if(locals.errors && errors.password){ %>
                 <small class="error"> <%= errors.password.msg %> </small>
                 <% } %>
                 <small id= "smallpass"></small>
             </div>
-            <div>
+            <div class="password">
                 <label for="password2">Contraseña</label>
                 <input type="password" name="password2" id="password2" placeholder="Ingrese contraseña...">
+                <span id="mostrar2">Mostrar</span>
                 <% if(locals.errors && errors.password2){ %>
+                    
                 <small class="error"> <%= errors.password2.msg %> </small>
                 <% } %>
                 <small id= "smallpass2"></small>

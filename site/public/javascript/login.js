@@ -4,7 +4,7 @@ const password = document.querySelector("#password")
 const smallpass = document.querySelector("#smallpass")
 const insesion = document.querySelector("#sesion")
 const formulario = document.querySelector("form")
-
+const mostrar = document.querySelector("mostrar")
 console.log(password);
 
 insesion.disabled = true
@@ -63,6 +63,15 @@ email.addEventListener("input", (e) => {
         validate(validacion)
     })
 
+    mostrar.addEventListener("click", (e) => {
+  
+        if(password.getAttribute("type")=="password"){
+           password.setAttribute("type","text")
+        }else{
+           password.setAttribute("type","password")
+        }
+   
+   })
 
     formulario.addEventListener("submit", (e) => {
         e.preventDefault()
