@@ -22,7 +22,7 @@
             <div class="password">
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Ingrese su contraseña...">
-                <span id="mostrar">Mostrar</span>
+               <div id="mostrar">Mostrar</div>
                 <% if(locals.errors && errors.password){ %>
                 <small class="error"> <%= errors.password.msg %> </small>
                 <% } %>
