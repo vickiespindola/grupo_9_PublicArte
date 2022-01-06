@@ -84,6 +84,7 @@ module.exports = {
          email
       } = req.body
 
+
       if (errors.isEmpty()) {
 
          db.Users.findOne({
@@ -126,8 +127,23 @@ module.exports = {
 
       db.Users.findByPk(req.session.userLogged.id)
          .then(user => {
+            let rol = ''
+            switch (req.session.userLogged.role) {
+               case 1:
+                  rol = 'Admin'
+                 break;
+               case 2:
+                  rol = 'Vendedor'
+                 break;
+               case 3:
+                  rol = 'Cliente'
+                 break;
+               default:
+                  rol = null
+                 break;
+             }
             return res.render('user/userProfile', {
-               user: req.session.userLogged
+               user: req.session.userLogged, rol
             })
          })
    },
@@ -180,7 +196,7 @@ module.exports = {
                         email: user.email,
                         role: user.rolesId,
                         avatar: user.avatar,
-                        brand: usuario.brand
+                        brand: user.brand
                      }
                      res.locals.userLogged = req.session.userLogged
 

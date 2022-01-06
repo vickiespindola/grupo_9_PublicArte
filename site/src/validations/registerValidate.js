@@ -41,6 +41,7 @@ module.exports = [
                     return Promise.reject('Este email ya está registrado')
                 }
             })
+            .catch(error => console.log(error))
     }),
     body('password2').custom((value, {
         req

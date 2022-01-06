@@ -1,4 +1,4 @@
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,33 +6,32 @@ header{
     margin-bottom: 15px;
 }
 
-header .logo{
-    width: 40%;
-    margin: 20px;
+header a.imagen {
+    width: 50%;
+    margin: 20px auto;
 }
-header nav{
-    width: 90%;
+
+header a .logo {
+    width: 100%;
+}
+
+header nav {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-header nav ul li a{
-    color: black;
+header nav div {
+    margin: 0px 5px;
 }
 
-header nav ul{
-    font-family: var(--inter);
-    font-weight: 600;
-    font-size: 14px;
-    display: none;
-}
-
-header nav i{
+header nav i {
     font-size: 25px;
     color: var(--gris);
 }
-header nav .login{
+
+header nav .login {
     border: none;
     border-radius: 5px;
     background-color: var(--marron-claro);
@@ -40,11 +39,13 @@ header nav .login{
     padding: 10px 15px;
     margin: 0 10px;
 }
-header nav .login:hover{
-    background-color: var(--marron-oscuro) ;
+
+header nav .login:hover {
+    background-color: var(--marron-oscuro);
     color: white;
 }
-header nav .register{
+
+header nav .register {
     border: none;
     border-radius: 5px;
     background-color: var(--marron-oscuro);
@@ -52,101 +53,262 @@ header nav .register{
     padding: 10px 15px;
     margin: 0 10px;
 }
-header nav .register:hover{
-    background-color: var(--marron-claro) ;
+
+header nav .register:hover {
+    background-color: var(--marron-claro);
     color: var(--marron-oscuro);
 }
-header nav .header-button{
+
+header nav .header-button {
     display: none;
 }
 
-header nav input{
+header nav input {
     border: none;
     padding: 5px;
     font-size: 14px;
 }
 
-header nav .nav-bar{
+header nav .nav-bar form {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav .nav-bar input {
+    width: 80%;
+}
+
+header nav .nav-bar button {
+    width: 20%;
+}
+
+header nav .nav-bar {
+    width: 50%;
     border-color: none;
     border-bottom: 2px solid black;
 }
 
-header nav .profile{
-    display: none;
-}
-
-header nav form{
+header nav form {
     display: flex;
     flex-direction: row;
 }
-header nav form button{
+
+header nav form button {
     background-color: white;
     border: none;
 }
 
+.header-profile {
+    display: none;
+}
+
+.header-profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+/*menu hamburgesa*/
+header nav .ham {
+    z-index: 100;
+    top: 1rem;
+    left: 1rem;
+    top: 50px;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+header nav .ham span i {
+    color: black;
+}
+
+header nav .xIcon {
+    display: none;
+}
+
+header nav .menu {
+    position: absolute;
+    z-index: 90;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 45%;
+    color: var(--gris);
+    background-color: var(--naranja);
+    transform: translateY(-110%);
+    transition: transform 0.5s;
+    padding: 0;
+    padding-top: 4rem;
+}
+
+header nav .ham i {
+    color: black;
+}
+
+header nav .menu li {
+    margin: 3px auto;
+    text-align: center;
+    width: 70%;
+}
+
+header nav .showMenu {
+    transform: translateY(0);
+    transition: transform 0.2s;
+    margin-top: 0;
+}
+
+header nav .menuLink {
+    display: block;
+    background-color: white;
+    padding: 10px 5px;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    margin: 0;
+}
+
+header nav .menuLink:hover {
+    background-color: var(--gris);
+    color: white;
+}
+
 @media (min-width: 426px) {
-    header{
+    header {
         display: flex;
         flex-direction: row;
         margin: 0 10px;
     }
-    header .logo{
-        width: 15%;
-        margin: 20px 10px 20px ;
+
+    header nav{
+        justify-content: space-between;
     }
-    header nav ul{
+
+    header a.imagen {
+        width: 20%;
+        margin: 20px 10px;
+    }
+
+    header nav .nav-bar {
+        border: none;
+        width: 5%;
+        margin: 0;
+    }
+
+    header nav .nav-bar input {
+        display: none;
+    }
+
+    header nav .nav-bar form {
         display: flex;
+        justify-content: right;
+        width: 30%;
+    }
+
+    header nav .nav-bar button {
+        width: 100%;
+    }
+
+    header nav i {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .header-profile {
+        display: block;
+    }
+
+    header nav .ham {
+        display: none;
+    }
+
+    header nav .menu {
+        color: black;
+        display: contents;
         flex-direction: row;
         justify-content: space-around;
-        width: 70%;
-        padding: 0 20px;
     }
-    header nav ul li{
-        padding: 0 5px;
+
+    header nav .menuLink {
+        font-family: var(--inter);
+        font-weight: 600;
+        font-size: 14px;
+        padding: 0;
     }
-    header nav .burger-menu{
-        display: none;
+
+    header nav .menu li {
+        width: 15%;
+        margin: auto 3px;
+
     }
-    header nav .nav-bar{
-        border: none;
-    }
-    header nav .nav-bar input{
-        display: none;
-    }
-    header nav i{
-        font-size: 30px;
-    }
-    header nav .profile{
-        display: block;
+
+    header nav .menu li .menuLink:hover{
+        background: none;
+        color: var(--naranja);
     }
 }
 
-@media (min-width: 769px){
-    header .logo{
-        margin-left: 40px;
-        width: 10%;
+@media (min-width: 769px) {
+    header a.imagen {
+        width: 15%;
     }
 
-    header nav ul{
-        width: 40%;
-        margin-top: 10px;
+    header nav {
+        justify-content: space-around;
     }
-    header nav .nav-bar input{
-        display: inline-flex;
-        width:  90%;
+
+    header nav .menu {
+        width: 50%;
+        justify-content: space-around;
     }
-    header nav .nav-bar{
-        border-bottom: 1px solid black;
-        width: 25%;
-    }
-    header nav .nav-bar i{
+
+    header nav .menu li{
+        margin: auto 5px;
         width: 10%;
     }
-    header nav .user-icon{
-        display: none;
+    header nav .menu li .menuLink{
+        width: 100%;
+        justify-content: center;
     }
-    header nav .header-button{
-        display: flex;
+
+    header nav .nav-bar input {
+        display: inline-flex;
+        width: 70%;
+    }
+
+    header nav .nav-bar {
+        border-bottom: 1px solid black;
+        width: 15%;
     }
     
+    header nav .nav-bar form{
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    header nav .nav-bar button{
+        width: 40%;
+    }
+
+    header nav .nav-bar i {
+        width: 30%;
+    }
+
+    header nav .profile {
+        display: none;
+    }
+
+    header nav .header-button {
+        display: flex;
+    }
+
+    .header-profile img {
+        width: 45px;
+        height: 45px;
+    }
 }

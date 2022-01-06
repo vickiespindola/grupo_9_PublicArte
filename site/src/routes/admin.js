@@ -13,21 +13,22 @@ const {
 const productsMulter = require('../middlewares/productsMulter');
 const productValidate = require('../validations/productValidate');
 const authUser = require('../middlewares/authUser');
+const adminUser = require('../middlewares/adminUser');
 
 //SHOW ALL PRODUCTS
-router.get('/', authUser, list);
+router.get('/', adminUser, authUser, list);
 
 // CREATE ONE PRODUCT
 /* para mostrar la vista con el formulario */
-router.get('/create', authUser, create)
+router.get('/create', adminUser, authUser, create)
 /* crea el formulario */
-router.post('/create', productsMulter.array('imagen'), authUser, productValidate, store)
+router.post('/create', productsMulter.array('imagen'), adminUser, authUser, productValidate, store)
 
 //EDIT ONE PRODUCT
-router.get('/edit/:id', authUser, edit)
-router.put('/edit/:id', productsMulter.array('imagen'), authUser, productValidate, update)
+router.get('/edit/:id', authUser, adminUser, edit)
+router.put('/edit/:id', productsMulter.array('imagen'), authUser, adminUser, productValidate, update)
 
 //DELETE ONE PRODUCT
-router.delete('/delete/:id', authUser, destroy)
+router.delete('/delete/:id', authUser, adminUser, destroy)
 
 module.exports = router;
