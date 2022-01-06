@@ -49,6 +49,10 @@ const controller = {
       })
       .catch(error => console.log(error))
 
+  },
+  
+  aboutUs: (req,res)=> {
+    res.render('aboutUs')
   }
 }
 module.exports = controller;
