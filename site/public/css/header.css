@@ -138,13 +138,13 @@ header nav .menu {
     right: 0;
     bottom: 0px;
     width: 100%;
-    height: 45%;
+    height: 100%;
     color: var(--gris);
     background-color: var(--naranja);
     transform: translateY(-110%);
     transition: transform 0.5s;
     padding: 0;
-    padding-top: 4rem;
+    padding-top: 10rem;
 }
 
 header nav .ham i {
@@ -152,7 +152,7 @@ header nav .ham i {
 }
 
 header nav .menu li {
-    margin: 3px auto;
+    margin: 10px auto;
     text-align: center;
     width: 70%;
 }

@@ -131,19 +131,20 @@ module.exports = {
             switch (req.session.userLogged.role) {
                case 1:
                   rol = 'Admin'
-                 break;
+                  break;
                case 2:
                   rol = 'Vendedor'
-                 break;
+                  break;
                case 3:
                   rol = 'Cliente'
-                 break;
+                  break;
                default:
                   rol = null
-                 break;
-             }
+                  break;
+            }
             return res.render('user/userProfile', {
-               user: req.session.userLogged, rol
+               user: req.session.userLogged,
+               rol
             })
          })
    },

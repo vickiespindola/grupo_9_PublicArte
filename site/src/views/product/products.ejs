@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('../partial/head') %>
+
+<body class="home">
+    <!-- Header -->
+    <%- include('../partial/header') %>
+
+    <!-- Main -->
+    <div class="container products-wrapper search">
+        <div class="row">
+           
+            <% products.forEach(products=> { %>
+            <div class="col-12 col-md-6 col-lg-3">
+                <section class="product-box">
+                    <a href="/products/detail/<%= products.id %> ">
+                        <figure>
+                            <img src="/img/products/<%= products.images[0].file %>" alt="imagen de producto">
+                        </figure>
+                        <article>
+                            <h2>$<%= products.price %> </h2>
+                            <p>
+                                <%= products.name %>
+                            </p>
+                        </article>
+                    </a>
+                </section>
+            </div>
+            <% }) %>
+       </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('../partial/footer') %>
+</body>
+
+</html>

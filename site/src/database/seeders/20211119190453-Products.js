@@ -13,7 +13,7 @@ let products = productos.map((producto,index) => {
     description: producto.descripcion,
     price: producto.precio,
     categoriesId: random(1,6),
-    usersId: 1,
+    usersId: random(1,6),
     createdAt: new Date,
     updatedAt: new Date,
   }
