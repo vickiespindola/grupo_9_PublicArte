@@ -4,7 +4,7 @@
     "nombre": "Eliana",
     "apellido": "Tolosa",
     "email": "tolosaeliana@gmail.com",
-    "role": "admin",
+    "role": 1,
     "password": "$2a$10$iOrh2q6fV2LAsaplRDtjxOdTnAILfItS58GfeKEoa4o153M5aV/Dy",
     "avatar": "1635549877848_img_.jpg",
     "marca": "Patito"
@@ -14,9 +14,50 @@
     "nombre": "Ruth",
     "apellido": "Cabrera",
     "email": "ruthcabrerafranco043@gmail.com",
-    "role": "admin",
+    "role": 1,
+    "password": "$2a$10$iOrh2q6fV2LAsaplRDtjxOdTnAILfItS58GfeKEoa4o153M5aV/Dy",
+    "avatar": "1641263687157_img_.jpg",
+    "marca": "Cabrera"
+  },
+  {
+    "id": 3,
+    "nombre": "Victoria",
+    "apellido": "Espindola",
+    "email": "ruviespindola@gmail.com",
+    "role": 1,
     "password": "$2a$10$iOrh2q6fV2LAsaplRDtjxOdTnAILfItS58GfeKEoa4o153M5aV/Dy",
     "avatar": "default-image.png",
-    "marca": "Cabrera"
+    "marca": "Bauti"
+  },
+  {
+    "id": 4,
+    "nombre": "Agustin",
+    "apellido": "Ponce",
+    "email": "agusponce@gmail.com",
+    "role": 2,
+    "password": "$2a$10$iOrh2q6fV2LAsaplRDtjxOdTnAILfItS58GfeKEoa4o153M5aV/Dy",
+    "avatar": "default-image.png",
+    "marca": "Pirulo"
+  },
+  {
+    "id": 5,
+    "nombre": "Karina",
+    "apellido": "Miño",
+    "email": "kari1998@gmail.com",
+    "role": 2,
+    "password": "$2a$10$iOrh2q6fV2LAsaplRDtjxOdTnAILfItS58GfeKEoa4o153M5aV/Dy",
+    "avatar": "default-image.png",
+    "marca": "KariArts"
+  },
+  {
+    "id": 6,
+    "nombre": "Mariano",
+    "apellido": "Funes",
+    "email": "makfunes@gmail.com",
+    "role": 2,
+    "password": "$2a$10$iOrh2q6fV2LAsaplRDtjxOdTnAILfItS58GfeKEoa4o153M5aV/Dy",
+    "avatar": "default-image.png",
+    "marca": "Cosme Fulanito"
   }
+  
 ]

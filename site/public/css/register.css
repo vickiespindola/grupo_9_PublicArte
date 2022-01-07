@@ -118,6 +118,20 @@
     opacity: 70%;
 }
 
+.login main form div.recordar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.login main form div.recordar label{
+    width: 40%;
+    font-size: 18px;
+}
+.login main form div.recordar input{
+    width: 10%;
+    margin: auto 5px;
+}
 
 @media (min-width: 426px) {
     .formulario main form {

@@ -15,21 +15,40 @@ const controller = {
     //listar
     list: (req, res, next) => {
 
-        db.Products.findAll({
-                include: [{
-                    all: true
-                }],
-                order: [
-                    ['id', 'ASC']
-                ]
-            })
-            .then(products => {
-                res.render('admin/admin', {
-                    products
+        if (req.session.userLogged.role == 1) {
+            db.Products.findAll({
+                    include: [{
+                        all: true
+                    }],
+                    order: [
+                        ['id', 'ASC']
+                    ]
                 })
-            })
-            .catch((error) => res.send(error))
-
+                .then(products => {
+                    res.render('admin/admin', {
+                        products
+                    })
+                })
+                .catch((error) => res.send(error))
+        } else {
+            db.Products.findAll({
+                    include: [{
+                        all: true
+                    }],
+                    order: [
+                        ['id', 'ASC']
+                    ],
+                    where: [{
+                        usersId: +req.session.userLogged.id
+                    }]
+                })
+                .then(products => {
+                    res.render('admin/admin', {
+                        products
+                    })
+                })
+                .catch((error) => res.send(error))
+        }
     },
     //crear
     create: (req, res, next) => {
@@ -167,7 +186,6 @@ const controller = {
                             }
                             return item
                         })
-
                         db.Images.destroy({
                                 where: {
                                     productsId: +req.params.id

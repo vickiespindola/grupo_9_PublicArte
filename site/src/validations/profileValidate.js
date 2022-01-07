@@ -18,5 +18,4 @@ module.exports = [
 
     /* check('role')
     .notEmpty().withMessage('*Por favor elija un perfil de usuario.'), */
-
 ]
