@@ -15,7 +15,7 @@
             <li><a class="menuLink" href="/">Home</a></li>
             <li><a class="menuLink" href="/products">Productos</a></li>
             <li><a class="menuLink" href="/">Nosotros</a></li>
-            <% if(locals.userLogged){ %>
+            <% if(locals.userLogged && locals.userLogged.role != 3){ %>
             <li><a class="menuLink" href="/admin">Administrar</a></li>
             <% } %>
         </ul>
@@ -32,7 +32,7 @@
         <div class="header-profile">
             <a href="/users/profile">
                 <img src="/img/users/<%= locals.userLogged.avatar %>" alt="">
-                Hi <%= locals.userLogged.nombre %>
+                Hola, <%= locals.userLogged.nombre %>
             </a>
         </div>
         <% } else { %>

@@ -1,5 +1,5 @@
 function clientUser(req, res, next) {
-    if (!req.session.userLogged.role == 3){
+    if (req.session.userLogged.role != 3){
         return res.redirect('/')
     }
     next()

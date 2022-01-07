@@ -186,7 +186,6 @@ const controller = {
                             }
                             return item
                         })
-
                         db.Images.destroy({
                                 where: {
                                     productsId: +req.params.id
