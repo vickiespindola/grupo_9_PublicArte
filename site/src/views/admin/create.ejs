@@ -22,6 +22,7 @@
                 <% if(locals.errors && errors.titulo){ %>
                 <small class="error"> <%= errors.titulo.msg %> </small>
                 <% } %>
+                <small id="titulosmall"></small>
             </div>
 
             <div class="form-floating mb-3">
@@ -41,6 +42,7 @@
                 <% if(locals.errors && errors.categoria){ %>
                 <small class="error"> <%= errors.categoria.msg %> </small>
                 <% } %>
+                <small id="categoriasmall"></small>
             </div>
 
             <div class="form-floating">
@@ -50,11 +52,13 @@
                 <% if(locals.errors && errors.descripcion){ %>
                 <small class="error"> <%= errors.descripcion.msg %> </small>
                 <% } %>
+                <small id="descripcionsmall"></small>
             </div>
 
             <div class="mb-3">
                 <label for="imagen" class="form-label">Seleccione la imagen del producto</label>
                 <input class="form-control" type="file" id="imagen" name="imagen" multiple>
+                <small id="imagensmall"></small>
             </div>
 
             <div class="input-group mb-3">
@@ -65,10 +69,11 @@
                 <% if(locals.errors && errors.precio){ %>
                 <small class="error"> <%= errors.precio.msg %> </small>
                 <% } %>
+                <small id="preciosmall"></small>
             </div>
 
             <div class="boton">
-                <button type="submit" class="btn btn-primary">Enviar datos</button>
+                <button type="submit" class="btn btn-primary" id="enviar">Enviar datos</button>
                 <button type="reset" class="btn btn-secondary">Borrar datos</button>
             </div>
 
@@ -84,5 +89,6 @@
     </script>
 
 </body>
+<script src="/javascript/productCreate.js"></script>
 
 </html>

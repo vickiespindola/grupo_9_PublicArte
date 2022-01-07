@@ -40,7 +40,9 @@ module.exports = [
                 if (usuario) {
                     return Promise.reject('Este email ya está registrado')
                 }
+
             })
+            .catch(error => console.log(error))
     }),
     body('password2').custom((value, {
         req
@@ -50,5 +52,7 @@ module.exports = [
         } else {
             return true;
         }
+
     }).withMessage('*Las contraseñas no coinciden.')
+
 ]

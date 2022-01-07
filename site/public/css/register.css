@@ -1,6 +1,4 @@
-
-
-.formulario main{
+.formulario main {
     background-image: url(/img/bg-image.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,31 +6,31 @@
     background-attachment: inherit;
 }
 
-.formulario main h2{
+.formulario main h2 {
     color: black;
     text-align: center;
     font-family: var(--poppins);
     padding: 20px 0;
 }
 
-.formulario main form div{
+.formulario main form div {
     margin: 20px 10%;
 }
 
-.formulario main form div label{
+.formulario main form div label {
     color: black;
     font-size: 18px;
     font-family: var(--poppins);
 }
 
-.formulario main form div input{
+.formulario main form div input {
     width: 100%;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
 }
 
-.formulario main form button{
+.formulario main form button {
     width: 80%;
     padding: 10px;
     margin: 0 10%;
@@ -42,22 +40,26 @@
     background-color: var(--gris);
     font-family: var(--poppins);
 }
-.formulario main section{
+
+.formulario main section {
     text-align: center;
 }
-.formulario main section h4{
+
+.formulario main section h4 {
     padding: 20px 0px;
 }
-.formulario main section div{
+
+.formulario main section div {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.login main section div{
+
+.login main section div {
     padding: 40px 0;
 }
 
-.formulario main section div button{
+.formulario main section div button {
     background-color: white;
     border: none;
     border-radius: 5px;
@@ -66,79 +68,123 @@
     font-size: 20px;
     font-family: var(--poppins);
 }
-.formulario main form .user span div{
+
+.formulario main form .user span div {
     display: flex;
     flex-direction: row;
     margin: 10px;
 }
-.formulario main form .user label{
+
+.formulario main form .user label {
     color: black;
 }
-.formulario main form .user span div{
+
+.formulario main form .user span div {
     margin: 20px auto;
 }
-.formulario main form .user span div input{
+
+.formulario main form .user span div input {
     width: 30%;
     margin: auto 5px;
 }
-.formulario main form .user span div label{
+
+.formulario main form .user span div label {
     margin: 5px;
 }
-.disable{
-    background-color: yellow;
+
+
+/* arreglar boton enviar  */
+.formulario main form button.disable {
+    opacity: 50%;
 }
 
+.formulario main form button.enviar {
+    opacity: 100%;
+}
+
+
+.password {
+    position: relative;
+}
+
+.password span {
+    position: absolute;
+    right: 5px;
+    top: 62px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 2px 10px;
+    background-color: orange;
+    opacity: 70%;
+}
+
+
 @media (min-width: 426px) {
-    .formulario main form{
+    .formulario main form {
         width: 80%;
         margin: 0 10%;
     }
-    .formulario main form div label{
+
+    .formulario main form div label {
         width: 100%;
         font-size: 20px;
     }
-    .formulario main form div input{
+
+    .formulario main form div input {
         font-size: 20px;
     }
-    .formulario main button{
+
+    .formulario main button {
         width: 30%;
         font-size: 20px;
     }
-    .formulario main section h4{
+
+    .formulario main section h4 {
         font-size: 20px;
     }
-    .formulario main form .user span{
+
+    .formulario main form .user span {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         margin: 20px 0;
     }
-    .formulario main form .user span div{
+
+    .formulario main form .user span div {
         margin: 0;
         width: 100%;
     }
-    .formulario main form .user span div label{
+
+    .formulario main form .user span div label {
         width: 50%;
     }
+  /*   .password span {
+        top: 42px;} */
 }
 
-@media (min-width: 769px){
-    .formulario main form div{
+@media (min-width: 769px) {
+    .formulario main form div {
         justify-content: center;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
         max-width: 50%;
     }
-    .formulario main form div label{
+
+    .formulario main form div label {
         margin: 10px 0;
     }
-    .formulario main form button{
+
+    .formulario main form button {
         max-width: 50%;
         margin: 20px 25%;
     }
-    .formulario main section div button{
-        max-width: 20%;
-    }
-}
 
+    .formulario main section div button {
+        max-width: 20%;
+
+
+  /*  arreglar vista celular boton mostrar */
+        /* .password span {
+        top: 35px;} */
+}}

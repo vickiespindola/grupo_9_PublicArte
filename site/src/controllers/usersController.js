@@ -180,7 +180,7 @@ module.exports = {
                         email: user.email,
                         role: user.rolesId,
                         avatar: user.avatar,
-                        brand: usuario.brand
+                        brand: user.brand
                      }
                      res.locals.userLogged = req.session.userLogged
 
