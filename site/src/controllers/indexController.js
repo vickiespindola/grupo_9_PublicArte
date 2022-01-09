@@ -53,6 +53,10 @@ const controller = {
   
   aboutUs: (req,res)=> {
     res.render('aboutUs')
+  }, 
+
+  questions: (req,res)=> {
+    res.render('questions')
   }
 }
 module.exports = controller;
