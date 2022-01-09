@@ -55,7 +55,7 @@
                 <input type="password" name="password2" id="password2" placeholder="Ingrese contraseña...">
                 <span id="mostrar2">Mostrar</span>
                 <% if(locals.errors && errors.password2){ %>
-                    
+
                 <small class="error"> <%= errors.password2.msg %> </small>
                 <% } %>
                 <small id="smallpass2"></small>
@@ -99,9 +99,9 @@
 
     <!-- Footer -->
     <%- include('../partial/footer') %>
+    <script src="/javascript/register.js"></script>
+    <script src="/javascript/userType.js"></script>
 
 </body>
-<script src="/javascript/register.js"></script>
-<script src="/javascript/userType.js"></script>
 
 </html>
