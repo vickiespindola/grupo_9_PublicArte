@@ -35,18 +35,36 @@
                 <small class="error"> <%= errors.email.msg %> </small>
                 <% } %>
             </div>
-            <!-- <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="role" id="role" value="<%= locals.userLogged.role %>"
-                    placeholder="name@example.com">
-                <label for="floatingInput">Tipo de usuario</label>
+
+            <% if(locals.userLogged.role!=1){ %> 
+            <div class="user">
+                <label for="role">Perfil del usuario</label>
+                <span>
+                    <div class="rol">
+                        <input type="radio" name="role" value="3" id="client" onclick=userClient() <% if(locals.userLogged.role==3){%> checked <% } %>  >
+                        <label for="comprador">Cliente</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="role" value="2" id="producer" onclick=userProducer() <% if(locals.userLogged.role==2){%> checked <% } %>>
+                        <label for="vendedor">Productor</label>
+                    </div>
+                </span>
                 <% if(locals.errors && errors.role){ %>
-                    <small class="error"> <%= errors.role.msg %> </small>
-                    <% } %>
-            </div> -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %>" placeholder="name@example.com">
+                <small class="error"> <%= errors.role.msg %> </small>
+                <% } %>
+            </div>
+            <div style='display: none;' id="brand" class="form-floating mb-3">
+                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %>"
+                    placeholder="name@example.com">
                 <label for="marca">Nombre de la marca</label>
             </div>
+            <% } else{%>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %>"
+                    placeholder="name@example.com">
+                <label for="marca">Nombre de la marca</label>
+            </div>
+            <% } %> 
             <div class="mb-3">
                 <label for="avatar" class="form-label">Cambiar foto de perfil:</label>
                 <input class="form-control" type="file" id="avatar" name="avatar" accept=".jpg,.png,.jpeg">
@@ -59,6 +77,7 @@
 
     <!-- Footer -->
     <%- include('../partial/footer') %>
+    <script src="/javascript/userType.js"></script>
 </body>
 
 </html>
