@@ -36,11 +36,13 @@
                             placeholder="name@example.com" readonly>
                         <label for="floatingInput">Tipo de usuario</label>
                     </div>
+                    <% if(locals.userLogged.role != 3){ %> 
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %>"
                             placeholder="name@example.com" readonly>
                         <label for="marca">Nombre de la marca</label>
                     </div>
+                    <% } %> 
                 </form>
                 <div class="botones">
                         <div class="boton">

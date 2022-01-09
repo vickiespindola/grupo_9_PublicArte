@@ -176,42 +176,58 @@ const controller = {
                         id: +req.params.id
                     }
                 })
-                .then((product) => {
-                    const imagesArray = req.files
-                    if (imagesArray.length != 0 && imagesArray != undefined) {
-                        const images = req.files.map(image => {
-                            let item = {
-                                file: image.filename,
-                                productsId: +req.params.id
-                            }
-                            return item
+                .then(() => {
+                    db.Products.findByPk(+req.params.id, {
+                            include: [{
+                                all: true
+                            }],
                         })
-                        db.Images.destroy({
-                                where: {
-                                    productsId: +req.params.id
-                                }
-                            })
-                            .then(() => {
-                                db.Images.bulkCreate(images, {
-                                        validate: true
+                        .then(product => {
+                            if (product.images.length !== 0) {
+                                product.images.forEach(item => {
+                                    if (fs.existsSync(path.join(__dirname, '../../public/img/products', item.file))) {
+                                        fs.unlinkSync(path.join(__dirname, '../../public/img/products', item.file))
+                                    }
+                                })
+                            }
+
+                            const imagesArray = req.files
+                            if (imagesArray.length != 0 && imagesArray != undefined) {
+                                const images = req.files.map(image => {
+                                    let item = {
+                                        file: image.filename,
+                                        productsId: +req.params.id
+                                    }
+                                    return item
+                                })
+
+                                db.Images.destroy({
+                                        where: {
+                                            productsId: +req.params.id
+                                        }
                                     })
                                     .then(() => {
-                                        return res.redirect('/admin');
+                                        db.Images.bulkCreate(images, {
+                                                validate: true
+                                            })
+                                            .then(() => {
+                                                return res.redirect('/admin');
+                                            })
+                                            .catch(error => console.log(error))
                                     })
-                                    .catch(error => console.log(error))
-                            })
-                            .catch(error => {
-                                res.send(error)
-                            })
-                    } else {
-                        console.log("No se agregaron nuevas imagenes")
-                    }
-                })
-                .then(() => {
-                    return res.redirect('/admin');
+                                    .catch(error => {
+                                        res.send(error)
+                                    })
+                            } else {
+                                console.log("No se agregaron nuevas imagenes")
+                            }
+                        })
+                        .then(() => {
+                            return res.redirect('/admin');
+                        })
+                        .catch(error => console.log(error))
                 })
                 .catch(error => console.log(error))
-
         } else {
             const products = db.Products.findByPk(+req.params.id, {
                 include: [{
@@ -242,11 +258,13 @@ const controller = {
                 }],
             })
             .then(product => {
-                product.images.forEach(item => {
-                    if (fs.existsSync(path.join(__dirname, '../../public/img/products', item.file))) {
-                        fs.unlinkSync(path.join(__dirname, '../../public/img/products', item.file))
-                    }
-                });
+                if (product.images.length !== 0) {
+                    product.images.forEach(item => {
+                        if (fs.existsSync(path.join(__dirname, '../../public/img/products', item.file))) {
+                            fs.unlinkSync(path.join(__dirname, '../../public/img/products', item.file))
+                        }
+                    })
+                }
                 db.Images.destroy({
                         where: {
                             productsId: +req.params.id
