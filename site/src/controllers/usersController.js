@@ -26,9 +26,7 @@ module.exports = {
          nombre,
          apellido,
          email,
-         password,
-         role, 
-         brand
+         password
       } = req.body
 
       if (errors.isEmpty()) {
@@ -39,8 +37,8 @@ module.exports = {
                email: email.trim(),
                password: bcryptjs.hashSync(password.trim(), 10),
                avatar: req.file ? req.file.filename : 'default-image.png',
-               brand: brand != null? brand: null,
-               rolesId: role == '2'? 2 : 3
+               brand: null,
+               rolesId: 3
             })
             .then(usuario => {
                req.session.userLogged = {
@@ -165,17 +163,16 @@ module.exports = {
          nombre,
          apellido,
          email,
-         marca,
-         role
+         marca
       } = req.body;
 
       if (errors.isEmpty()) {
+
          db.Users.update({
                name: nombre.trim(),
                last_name: apellido.trim(),
                email: email.trim(),
                avatar: req.file ? req.file.filename : req.session.userLogged.avatar,
-               rolesId: role,
                brand: marca
             }, {
                where: {

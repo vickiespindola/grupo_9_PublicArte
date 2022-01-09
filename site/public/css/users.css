@@ -86,12 +86,6 @@
     margin: 20px 0;
 }
 
-.edit form div.user span{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
 @media (min-width: 426px) {
     .users main .profile {
         margin: 20px auto;
@@ -166,9 +160,5 @@
 
     .edit main .boton button {
         width: 80%;
-    }
-
-    .edit form div.user span{
-        justify-content: space-evenly;
     }
 }

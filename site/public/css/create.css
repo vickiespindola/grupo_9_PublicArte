@@ -1,80 +1,41 @@
-.create main {
+.create main{
     background-color: rgb(246, 238, 230);
     margin: 0;
 }
 
-.create main h1 {
+.create main h1{
     width: 90%;
     margin: 0 auto;
     text-align: center;
     padding: 15px 0;
 }
-
-.create .form {
+.create .form{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
-.create form .form-floating,
-.admin .mb-3 {
+.create form .form-floating, .admin .mb-3{
     width: 90%;
     margin: 10px;
 }
 
-.create main .boton {
+.create main .boton{
     text-align: center;
     padding: 15px 0;
 }
 
-.create main .boton button {
+.create main .boton button{
     padding: 5px;
 }
 
-.create main button.btn-primary {
+.create main button.btn-primary{
     background-color: var(--naranja);
     border: 1px solid var(--naranja);
 }
 
-.create main form div .selectImg img {
-    max-width: 100px;
-    max-height: 150px;
-    min-width: 100px;
-    min-height: 150px;
-}
-
-.create main form div .row {
-    justify-content: center;
-}
-
-@media (min-width: 426px) {
-
-    .create form .form-floating,
-    .admin .mb-3 {
+@media (min-width: 426px){
+    .create form .form-floating, .admin .mb-3{
         width: 50%;
-    }
-
-    .create main form div .selectImg img {
-        max-width: 150px;
-        max-height: 200px;
-        min-width: 150px;
-        min-height: 200px;
-    }
-}
-
-@media (min-width: 769px) {
-
-    .create main form div .img-product .container {
-        width: 50%;
-    }
-
-    .create main form div .img-product .container .row .col {
-        width: 20%;
-    }
-
-    .create main form div .img-product .container .row {
-        display: flex;
-        flex-wrap: wrap;
     }
 }
