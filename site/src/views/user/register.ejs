@@ -51,7 +51,7 @@
                 <small id="smallpass"></small>
             </div>
             <div class="password">
-                <label for="password2">Contraseña</label>
+                <label for="password2">Confirmar contraseña</label>
                 <input type="password" name="password2" id="password2" placeholder="Ingrese contraseña...">
                 <span id="mostrar2">Mostrar</span>
                 <% if(locals.errors && errors.password2){ %>
@@ -60,27 +60,27 @@
                 <% } %>
                 <small id="smallpass2"></small>
             </div>
-            <!-- <div class="user">
+            <div class="user">
                 <label for="role">Perfil del usuario</label>
                 <span>
                     <div class="rol">
-                        <input type="radio" name="usuario" value="comprador">
-                        <label for="comprador">Comprador</label>
+                        <input type="radio" name="role" value="3" id="client" onclick=userClient()>
+                        <label for="comprador">Cliente</label>
                     </div>
                     <div>
-                        <input type="radio" name="usuario" value="vendedor">
-                        <label for="vendedor">Vendedor</label>
+                        <input type="radio" name="role" value="2" id="producer" onclick=userProducer()>
+                        <label for="vendedor">Productor</label>
                     </div>
                 </span>
                 <% if(locals.errors && errors.role){ %>
                 <small class="error"> <%= errors.role.msg %> </small>
                 <% } %>
-            </div> -->
-            <!-- <div>
+            </div>
+            <div style='display: none;' id="brand">
                 <label for="marca">Agregue un nombre para su marca (opcional)</label>
                 <input type="text" name="marca" id="marca" placeholder="Ingrese nombre de marca...">
-            </div> -->
-            <div class="marca">
+            </div>
+            <div>
                 <label for="avatar">Seleccionar una imagen</label>
                 <input type="file" name="avatar" id="avatar" accept=".jpg,.png,.jpeg"
                     value=<%= locals.old && old.avatar ? old.avatar : null %>>
@@ -102,5 +102,6 @@
 
 </body>
 <script src="/javascript/register.js"></script>
+<script src="/javascript/userType.js"></script>
 
 </html>
