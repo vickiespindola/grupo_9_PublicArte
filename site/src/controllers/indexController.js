@@ -57,6 +57,9 @@ const controller = {
 
   questions: (req,res)=> {
     res.render('questions')
+  },
+  conditions: (req,res)=> {
+    res.render('conditions')
   }
 }
 module.exports = controller;
