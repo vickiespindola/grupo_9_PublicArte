@@ -54,7 +54,8 @@
             <div class="password">
                 <label for="password2">Confirmar contraseña</label>
                 <input type="password" name="password2" id="password2" placeholder="Ingrese contraseña...">
-                <div class="ver" id="mostrar2"> <img src="https://img.icons8.com/ios-filled/50/000000/visible--v2.png" />
+                <div class="ver" id="mostrar2"> <img
+                        src="https://img.icons8.com/ios-filled/50/000000/visible--v2.png" />
                 </div>
                 <% if(locals.errors && errors.password2){ %>
 
@@ -82,10 +83,23 @@
                 <label for="marca">Agregue un nombre para su marca (opcional)</label>
                 <input type="text" name="marca" id="marca" placeholder="Ingrese nombre de marca...">
             </div>
-            <div>
-                <label for="avatar">Seleccionar una imagen</label>
-                <input type="file" name="avatar" id="avatar" accept=".jpg,.png,.jpeg"
-                    value=<%= locals.old && old.avatar ? old.avatar : null %>>
+            <div class="container">
+                <div class="row">
+
+                    <label class="selectImg" for="product-img">
+                        <div class="imgHover">
+                            <p class="text-center">Foto de perfil:</p>
+                        </div>
+                        <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
+                            src="/img/users/default-image.png" alt="">
+                    </label>
+                    <div class="form-admin__box inactivo">
+                        <input class="d-none" id="product-img" type="file" name="avatar"
+                            placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
+                        <small id="imagensmall"></small>
+                    </div>
+
+                </div>
             </div>
             <button type="submit" id="crear">Crear cuenta</button>
         </form>
@@ -103,7 +117,9 @@
     <%- include('../partial/footer') %>
     <script src="/javascript/validaciones/register.js"></script>
     <script src="/javascript/userType.js"></script>
+    <script src="/javascript/images.js"></script>
 
 </body>
 <a href="https://icons8.com/icon/N3ft0cEVp9ui/visible">Visible icon by Icons8</a>
+
 </html>
