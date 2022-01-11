@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const {
    validationResult
 } = require('express-validator');
@@ -24,20 +26,12 @@ module.exports = {
          nombre,
          apellido,
          email,
-         password
+         password,
+         role, 
+         brand
       } = req.body
 
       if (errors.isEmpty()) {
-
-         /* if (req.fileValidationError) {
-            let image = {
-               param: 'avatar',
-               msg: req.fileValidationError,
-            }
-            errors.errors.push(image)
-         } */
-
-         /* let img = req.files[0].filename; */
 
          db.Users.create({
                name: nombre.trim(),
@@ -45,8 +39,8 @@ module.exports = {
                email: email.trim(),
                password: bcryptjs.hashSync(password.trim(), 10),
                avatar: req.file ? req.file.filename : 'default-image.png',
-               brand: null,
-               rolesId: 3
+               brand: brand != null? brand: null,
+               rolesId: role == '2'? 2 : 3
             })
             .then(usuario => {
                req.session.userLogged = {
@@ -83,6 +77,7 @@ module.exports = {
       const {
          email
       } = req.body
+
 
       if (errors.isEmpty()) {
 
@@ -126,8 +121,24 @@ module.exports = {
 
       db.Users.findByPk(req.session.userLogged.id)
          .then(user => {
+            let rol = ''
+            switch (req.session.userLogged.role) {
+               case 1:
+                  rol = 'Admin'
+                  break;
+               case 2:
+                  rol = 'Vendedor'
+                  break;
+               case 3:
+                  rol = 'Cliente'
+                  break;
+               default:
+                  rol = null
+                  break;
+            }
             return res.render('user/userProfile', {
-               user: req.session.userLogged
+               user: req.session.userLogged,
+               rol
             })
          })
    },
@@ -154,16 +165,17 @@ module.exports = {
          nombre,
          apellido,
          email,
-         marca
+         marca,
+         role
       } = req.body;
 
       if (errors.isEmpty()) {
-
          db.Users.update({
                name: nombre.trim(),
                last_name: apellido.trim(),
                email: email.trim(),
                avatar: req.file ? req.file.filename : req.session.userLogged.avatar,
+               rolesId: role,
                brand: marca
             }, {
                where: {
@@ -171,24 +183,15 @@ module.exports = {
                }
             })
             .then(() => {
-               db.Users.findByPk(+req.session.userLogged.id)
-                  .then(user => {
-                     req.session.userLogged = {
-                        id: user.id,
-                        nombre: user.name,
-                        apellido: user.last_name,
-                        email: user.email,
-                        role: user.rolesId,
-                        avatar: user.avatar,
-                        brand: user.brand
-                     }
-                     res.locals.userLogged = req.session.userLogged
-
-                     return res.redirect('/users/profile')
+               db.Users.findAll()
+                  .then(() => {
+                     req.session.destroy();
+                     return res.redirect('/users/login')
                   })
                   .catch(error => console.log(error))
             })
             .catch(error => console.log(error))
+
 
       } else {
          res.render('user/editProfile', {

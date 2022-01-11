@@ -49,6 +49,17 @@ const controller = {
       })
       .catch(error => console.log(error))
 
+  },
+  
+  aboutUs: (req,res)=> {
+    res.render('aboutUs')
+  }, 
+
+  questions: (req,res)=> {
+    res.render('questions')
+  },
+  conditions: (req,res)=> {
+    res.render('conditions')
   }
 }
 module.exports = controller;

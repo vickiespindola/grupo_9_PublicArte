@@ -1,15 +1,22 @@
 <header>
-    <img class="logo" src="/img/publicarte3.png" alt="logo-publicarte">
+    <a href="/" class="imagen">
+        <img class="logo" src="/img/publicarte3.png" alt="logo-publicarte">
+    </a>
     <nav>
-        <div class="burger-menu">
-            <i class="fas fa-bars menu"></i>
-        </div>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Artesanos</a></li>
-            <li><a href="/">Productos</a></li>
-            <% if(locals.userLogged){ %>
-            <li><a href="/admin">Administrador</a></li>
+        <button class="ham">
+            <span class="menuIcon material-icons">
+                <i class="fas fa-bars"></i>
+            </span>
+            <span class="xIcon material-icons">
+                <i class="fas fa-times"></i>
+            </span>
+        </button>
+        <ul class="menu">
+            <li><a class="menuLink" href="/">Home</a></li>
+            <li><a class="menuLink" href="/products">Productos</a></li>
+            <li><a class="menuLink" href="/aboutUs">Nosotros</a></li>
+            <% if(locals.userLogged && locals.userLogged.role != 3){ %>
+            <li><a class="menuLink" href="/admin">Administrar</a></li>
             <% } %>
         </ul>
         <div class="nav-bar">
@@ -25,10 +32,13 @@
         <div class="header-profile">
             <a href="/users/profile">
                 <img src="/img/users/<%= locals.userLogged.avatar %>" alt="">
-                Hi <%= locals.userLogged.nombre %>
+                Hola, <%= locals.userLogged.nombre %>
             </a>
         </div>
         <% } else { %>
+        <div class="profile">
+            <a href="/users/login"><i class="far fa-user"></i></a>
+        </div>
         <div class="header-button">
             <a href="/users/login"><button class="login">Ingresa</button></a>
             <a href="/users/register"><button class="register">Registrate</button></a>

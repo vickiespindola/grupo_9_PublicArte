@@ -21,7 +21,6 @@
                 </a>
             </div>
         </div>
-
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -53,7 +52,7 @@
                                     <button class="btn btn-success">Editar</button>
                                 </div>
                             </a>
-                            <form action="/admin/delete/<%= element.id %>?_method=DELETE" method="POST">
+                            <form action="/admin/delete/<%= element.id %>?_method=DELETE" method="POST" id="eliminar-producto">
                                 <div>
                                     <button type="submit" class="btn btn-danger">Eliminar</button>
                                 </div>
@@ -71,6 +70,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src='/javascript/sweetAlert.js'></script>
 </body>
 
 </html>

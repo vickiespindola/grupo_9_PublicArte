@@ -30,6 +30,20 @@ const controller = {
         })
       })
 
+  },
+  products: (req, res) => {
+
+    db.Products.findAll({
+        include: [{
+          all: true
+        }]
+      })
+      .then(products => {
+        return res.render('product/products', {
+          products
+        })
+      })
+
   }
 }
 module.exports = controller;

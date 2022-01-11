@@ -13,10 +13,10 @@
             <aside>
                 <img class="img-product" src="/img/products/<%- products.images[0].file %>" alt="">
                 <div>
-                    <img class="img1" src="/img/products/<%- products.images[0].file %>" alt="">
-                    <img class="img2" src="/img/products/<%- products.images[0].file %>" alt="">
-                    <img class="img3" src="/img/products/<%- products.images[0].file %>" alt="">
-                    <img class="img4" src="/img/products/<%- products.images[0].file %>" alt="">
+                    <% products.images.forEach(photo => { %>
+                    <img width="100%" src="/img/products/<%= photo.file %> " alt=""
+                        onclick="document.getElementsByClassName('img-product').setAttribute('src','/img/products/<%= photo.file %>')">
+                    <% }) %>
                 </div>
             </aside>
             <article class="detail">
@@ -29,7 +29,9 @@
                 <div class="price">
                     <p>$<%- products.price %></p>
                     <span><i class="fas fa-minus"></i>1<i class="fas fa-plus"></i></span>
+                    <a href="/users/reg"></a>
                     <button class="add-cart">
+                        <a href="/users/login"></a>
                         <i class="fas fa-cart-plus"></i> + Añadir al carrito
                     </button>
                 </div>

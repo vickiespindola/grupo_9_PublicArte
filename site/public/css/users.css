@@ -1,20 +1,9 @@
-.header-profile {
-    display: none;
-}
-
-.header-profile img {
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-    object-fit: cover;
-}
-
 .users main .profile {
     margin: 30px auto;
 
 }
 
-.users main .profile div {
+.users main .profile .imagen, .users main .profile form div, .users main .profile H4{
     margin: 20px auto;
     text-align: center;
 }
@@ -35,11 +24,18 @@
     width: 90%;
 }
 
-.users main .boton {
+
+.users main .info .botones {
     display: flex;
-    justify-content: space-between;
-    width: 90%;
+    flex-direction: column;
+    width: 100%;
     margin: 20px 0;
+    text-align: center;
+}
+
+.users main .info .botones .boton {
+    width: 90%;
+    margin: 10px auto;
 }
 
 .users main .boton a {
@@ -54,6 +50,7 @@
     padding: 15px 0px;
     border-radius: 5px;
 }
+
 .users main .boton button {
     background-color: var(--naranja);
     color: white;
@@ -62,40 +59,37 @@
     border-radius: 5px;
 }
 
-.users main .botones{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
+.users main .boton button:hover{
+    color: var(--naranja);
+    background-color: wheat
+    ;
 }
 
-.users main .botones form{
-    width: 100%;
-}
-
-.users main .botones form button{
-    width: 100%;
-}
-
-.edit main{
+.edit main {
     text-align: center
 }
 
-.edit h3{
+.edit h3 {
     text-align: center
 }
 
-.edit form{
+.edit form {
     width: 90%;
     margin: 0 auto;
 }
 
-.edit main .boton button{
+.edit main .boton button {
     width: 100%;
 }
 
-.edit form div{
+.edit form div {
     margin: 20px 0;
+}
+
+.edit form div.user span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 @media (min-width: 426px) {
@@ -106,30 +100,23 @@
         justify-content: space-around;
     }
 
-    .header-profile {
-        display: block;
-    }
-
-    .users main .botones form button{
+    .users main .botones form button {
         width: 90%;
     }
 
-    .edit form{
+    .edit form {
         width: 60%;
         margin: 0 auto;
     }
 
-    .edit main .boton button{
+    .edit main .boton button {
         width: 50%;
     }
 
 }
 
 @media (min-width: 769px) {
-    .header-profile img {
-        width: 45px;
-        height: 45px;
-    }
+
 
     .users main .profile {
         margin: 50px auto;
@@ -143,15 +130,15 @@
         margin: 15px 5%;
     }
 
-    .users main .profile .imagen{
+    .users main .profile .imagen {
         width: 20%;
     }
 
-    .users main .profile .info{
+    .users main .profile .info {
         width: 50%;
     }
 
-    .users main .profile .info div img{
+    .users main .profile .info div img {
         height: 250px;
         width: 250px;
     }
@@ -160,17 +147,28 @@
         width: 80%;
     }
 
-    .users main .info .boton button {
-        width: 100%;
+    .users main .info .botones{
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .users main .info .botones .boton{
+        width: 32%;
         margin: 0;
     }
 
-    .users main .botones{
-        width: 100%;
-        justify-content: space-around;
+    .users main .info .botones .boton button{
+        font-size: 14px;
     }
 
-    .edit main .boton button{
-        width: 30%;
+    .edit main .boton button {
+        width: 80%;
+    }
+
+    .edit form div.user span{
+        justify-content: space-evenly;
     }
 }

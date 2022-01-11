@@ -57,12 +57,75 @@
                 <% } %>
                 <small id="descripcionsmall"></small>
             </div>
+            
+            <!--Vista previa de imagenes-->
+            
+            <section class="img-product">
 
-            <div class="mb-3">
-                <label for="imagen" class="form-label">Seleccione la imagen del producto</label>
-                <input class="form-control" type="file" id="imagen" name="imagen" multiple>
-                <small id="imagenesmall"></small>
-            </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <label class="selectImg" for="imagen">
+                                <div class="imgHover">
+                                    <p class="text-center">Imagen 1:</p>
+                                </div>
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
+                                    src="/img/products/<%= products.images[0].file ? products.images[0].file : 'default-image.png'%>" alt="">
+                            </label>
+                            <div class="form-admin__box inactivo">
+                                <input class="d-none" id="imagen" type="file" name="imagen"
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
+                                <small id="imagensmall"></small>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="col">
+                            <label class="selectImg" for="imagen2">
+                                <div class="imgHover">
+                                    <p class="text-center">Imagen 2:</p>
+                                </div>
+                                <img id="img-preview2" class="img-fluid img-thumbnail imagen-height rounded"
+                                    src="/img/products/<%= products.images[1] ? products.images[1].file : 'default-image.png'%>" alt="">
+                            </label>
+                            <div class="form-admin__box inactivo">
+                                <input class="d-none" id="imagen2" type="file" name="imagen2"
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
+                                <small id="imagensmall"></small>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="col">
+                            <label class="selectImg" for="imagen3">
+                                <div class="imgHover">
+                                    <p class="text-center">Imagen 3:</p>
+                                </div>
+                                <img id="img-preview3" class="img-fluid img-thumbnail imagen-height rounded"
+                                    src="/img/products/<%= products.images[2] ? products.images[2].file : 'default-image.png'%>" alt="">
+                            </label>
+                            <div class="form-admin__box inactivo">
+                                <input class="d-none" id="imagen3" type="file" name="imagen3"
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
+                                <small id="imagensmall"></small>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="col">
+                            <label class="selectImg" for="imagen4">
+                                <div class="imgHover">
+                                    <p class="text-center">Imagen 4:</p>
+                                </div>
+                                <img id="img-preview4" class="img-fluid img-thumbnail imagen-height rounded"
+                                    src="/img/products/<%= products.images[3] ? products.images[3].file : 'default-image.png'%>" alt="">
+                            </label>
+                            <div class="form-admin__box inactivo">
+                                <input class="d-none" id="imagen4" type="file" name="imagen4"
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
+                                <small id="imagensmall"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">$</span>
@@ -90,7 +153,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
-<script src="/javascript/validaciones/editproduct.js"></script>
+    <script src="/javascript/validaciones/editproduct.js"></script>
+    <script src="/javascript/images.js"></script>
 </body>
 
 </html>
