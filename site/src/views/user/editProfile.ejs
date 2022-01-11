@@ -39,16 +39,18 @@
                 <small id="emailsmall"></small>
             </div>
 
-            <% if(locals.userLogged.role!=1){ %> 
+            <% if(locals.userLogged.role!=1){ %>
             <div class="user">
                 <label for="role">Perfil del usuario</label>
                 <span>
                     <div class="rol">
-                        <input type="radio" name="role" value="3" id="client" onclick=userClient() <% if(locals.userLogged.role==3){%> checked <% } %>  >
+                        <input type="radio" name="role" value="3" id="client" onclick=userClient()
+                            <% if(locals.userLogged.role==3){%> checked <% } %>>
                         <label for="comprador">Cliente</label>
                     </div>
                     <div>
-                        <input type="radio" name="role" value="2" id="producer" onclick=userProducer() <% if(locals.userLogged.role==2){%> checked <% } %>>
+                        <input type="radio" name="role" value="2" id="producer" onclick=userProducer()
+                            <% if(locals.userLogged.role==2){%> checked <% } %>>
                         <label for="vendedor">Productor</label>
                     </div>
                 </span>
@@ -68,15 +70,29 @@
                 <label for="marca">Nombre de la marca</label>
                 <small id="marcasmall"></small>
             </div>
-            <% } %> 
-            <div class="mb-3">
-                <label for="avatar" class="form-label">Cambiar foto de perfil:</label>
-                <input class="form-control" type="file" id="avatar" name="avatar" accept=".jpg,.png,.jpeg">
-                <small id="avatarsmall"></small>
+            <% } %>
+            <div class="container">
+                <div class="row">
+                    
+                        <label class="selectImg" for="product-img">
+                            <div class="imgHover">
+                                <p class="text-center">Foto de perfil:</p>
+                            </div>
+                            <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
+                                src="/img/users/<%= locals.userLogged.avatar ? locals.userLogged.avatar : 'default-image.png'%>"
+                                alt="" width="300">
+                        </label>
+                        <div class="form-admin__box inactivo">
+                            <input class="d-none" id="product-img" type="file" name="avatar"
+                                placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
+                            <small id="imagensmall"></small>
+                        </div>
+                    
+                </div>
             </div>
             <div class="boton">
                 <button type="submit" id="guardar">Guardar cambios</button>
-                
+
             </div>
         </form>
     </main>
@@ -84,7 +100,8 @@
     <!-- Footer -->
     <%- include('../partial/footer') %>
     <script src="/javascript/userType.js"></script>
+    <script src="/javascript/images.js"></script>
+    <script src="/javascript/validaciones/editprofile.js"></script>
 </body>
-<script src="/javascript/validaciones/editprofile.js"></script>
 
 </html>
