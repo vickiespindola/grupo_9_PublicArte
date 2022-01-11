@@ -7,6 +7,7 @@ const formulario = document.querySelector("#form")
 const mostrar = document.getElementById("mostrar")
 console.log(mostrar);
 console.log(password);
+console.log(insesion);
 
 insesion.disabled = true
 insesion.classList.add("disable")
@@ -15,6 +16,7 @@ function validate(obj) {
     let validatearray = Object.values(validacion)
     if (!validatearray.includes(false)) {
         insesion.disabled = false
+        insesion.classList.remove("disable")
     } else {
         insesion.disabled = true
     }
@@ -27,17 +29,34 @@ const validacion = {
 
 }
 
+
+function mostrarcontraseña() {
+
+    let pass = document.getElementById("password")
+    if (pass.type == "password") {
+        pass.type = "text"
+    } else {
+        pass.type = "password"
+    }
+
+}
+mostrar.onclick = () => {
+    mostrarcontraseña()
+}
+
+
 email.addEventListener("input", (e) => {
     const validateEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+$/
     if (validateEmail.test(e.target.value)) {
         validacion.email = true
         smallemail.innerText = ""
+        email.style.border = "3px solid green"
         console.log("Email válido");
 
     } else {
 
         smallemail.innerText = "El email debe ser del siguiente formato ejemplo@gmail.com "
-
+        email.style.border = "3px solid red"
 
         console.log("Email inválido")
     }
@@ -52,30 +71,18 @@ email.addEventListener("input", (e) => {
         if (validatePass.test(e.target.value)) {
             validacion.password = true
             smallpass.innerText = ""
+            password.style.border = "3px solid green"
             console.log("Contraseña válida");
 
         } else {
 
             smallpass.innerText = "La contraseña debe contener una mayúscula, una misnúscula, un número y entre 8 y 15 caracteres"
 
-
+            password.style.border = "3px solid red"
             console.log("Contraseña inválida");
         }
         validate(validacion)
     })
-
-   
-        function mostrarcontraseña() {
-
-            let pass = document.getElementById("password")
-            if (pass.type == "password") {
-                pass.type = "text"
-            } else {
-                pass.type = "password"
-            }
-
-        }
-         mostrar.onclick= () => {mostrarcontraseña()}
 
 
 

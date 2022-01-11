@@ -107,15 +107,14 @@
     position: relative;
 }
 
-.password span {
+
+.ver {
     position: absolute;
-    right: 5px;
-    top: 62px;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 2px 10px;
-    background-color: orange;
-    opacity: 70%;
+    right: 0px;
+    top: 50px;
+    padding: 0px 5px;
+    background-color: #ef7437;
+    ;
 }
 
 .login main form div.recordar{
@@ -172,8 +171,7 @@
     .formulario main form .user span div label {
         width: 50%;
     }
-  /*   .password span {
-        top: 42px;} */
+
 }
 
 @media (min-width: 769px) {
@@ -198,7 +196,8 @@
         max-width: 20%;
 
 
-  /*  arreglar vista celular boton mostrar */
+        /*  arreglar vista celular boton mostrar */
         /* .password span {
         top: 35px;} */
-}}
+    }
+}
