@@ -44,21 +44,23 @@
             <div class="password">
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Ingrese contraseña...">
-                <span id="mostrar">Mostrar</span>
+                <div class="ver" id="mostrar"> <img src="https://img.icons8.com/ios-filled/50/000000/visible--v2.png" />
+                </div>
                 <% if(locals.errors && errors.password){ %>
                 <small class="error"> <%= errors.password.msg %> </small>
                 <% } %>
-                <small id= "smallpass"></small>
+                <small id="smallpass"></small>
             </div>
             <div class="password">
                 <label for="password2">Contraseña</label>
                 <input type="password" name="password2" id="password2" placeholder="Ingrese contraseña...">
-                <span id="mostrar2">Mostrar</span>
+                <div class="ver" id="mostrar2"> <img src="https://img.icons8.com/ios-filled/50/000000/visible--v2.png" />
+                </div>
                 <% if(locals.errors && errors.password2){ %>
-                    
+
                 <small class="error"> <%= errors.password2.msg %> </small>
                 <% } %>
-                <small id= "smallpass2"></small>
+                <small id="smallpass2"></small>
             </div>
             <div>
                 <label for="avatar">Seleccionar una imagen</label>
@@ -97,7 +99,7 @@
     <%- include('../partial/footer') %>
 
 </body>
-<script src="/javascript/register.js"></script>
+<script src="/javascript/validaciones/register.js"></script>
+<a href="https://icons8.com/icon/N3ft0cEVp9ui/visible">Visible icon by Icons8</a>
+
 </html>
-
-
