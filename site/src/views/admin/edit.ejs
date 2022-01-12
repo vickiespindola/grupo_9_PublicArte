@@ -31,8 +31,8 @@
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %> "
-                    placeholder="name@example.com" readonly>
+                <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %>" placeholder="name@example.com"
+                    readonly>
                 <label for="marca">Nombre de la marca</label>
                 <small id="marcasmall"></small>
             </div>
@@ -57,9 +57,9 @@
                 <% } %>
                 <small id="descripcionsmall"></small>
             </div>
-            
+
             <!--Vista previa de imagenes-->
-            
+
             <section class="img-product">
 
                 <div class="container">
@@ -70,12 +70,13 @@
                                     <p class="text-center">Imagen 1:</p>
                                 </div>
                                 <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
-                                    src="/img/products/<%= products.images[0].file ? products.images[0].file : 'default-image.png'%>" alt="">
+                                    src="/img/products/<%= products.images[0].file ? products.images[0].file : 'default-image.png'%>"
+                                    alt="">
                             </label>
                             <div class="form-admin__box inactivo">
                                 <input class="d-none" id="product-img" type="file" name="imagen"
-                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
-                                <small id="imagensmall"></small>
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
+                                <small id="imagen1small"></small>
                             </div>
                         </div>
                         <!-- 2 -->
@@ -85,12 +86,13 @@
                                     <p class="text-center">Imagen 2:</p>
                                 </div>
                                 <img id="img-preview2" class="img-fluid img-thumbnail imagen-height rounded"
-                                    src="/img/products/<%= products.images[1] ? products.images[1].file : 'default-image.png'%>" alt="">
+                                    src="/img/products/<%= products.images[1] ? products.images[1].file : 'default-image.png'%>"
+                                    alt="">
                             </label>
                             <div class="form-admin__box inactivo">
-                                <input class="d-none" id="product-sub-img-1" type="file" name="imagen2"
-                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
-                                <small id="imagensmall"></small>
+                                <input class="d-none" id="product-sub-img-1" type="file" name="imagen"
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
+                                <small id="imagen2small"></small>
                             </div>
                         </div>
                         <!-- 3 -->
@@ -100,13 +102,14 @@
                                     <p class="text-center">Imagen 3:</p>
                                 </div>
                                 <img id="img-preview3" class="img-fluid img-thumbnail imagen-height rounded"
-                                    src="/img/products/<%= products.images[2] ? products.images[2].file : 'default-image.png'%>" alt="">
+                                    src="/img/products/<%= products.images[2] ? products.images[2].file : 'default-image.png'%>"
+                                    alt="">
                             </label>
                             <div class="form-admin__box inactivo">
-                                <input class="d-none" id="product-sub-img-2" type="file" name="imagen3"
-                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
-                                <small id="imagensmall"></small>
+                                <input class="d-none" id="product-sub-img-2" type="file" name="imagen"
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
                             </div>
+                            <small id="imagen3small"></small>
                         </div>
                         <!-- 4 -->
                         <div class="col">
@@ -115,13 +118,14 @@
                                     <p class="text-center">Imagen 4:</p>
                                 </div>
                                 <img id="img-preview4" class="img-fluid img-thumbnail imagen-height rounded"
-                                    src="/img/products/<%= products.images[3] ? products.images[3].file : 'default-image.png'%>" alt="">
+                                    src="/img/products/<%= products.images[3] ? products.images[3].file : 'default-image.png'%>"
+                                    alt="">
                             </label>
                             <div class="form-admin__box inactivo">
-                                <input class="d-none" id="product-sub-img-3" type="file" name="imagen4"
-                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
-                                <small id="imagensmall"></small>
+                                <input class="d-none" id="product-sub-img-3" type="file" name="imagen"
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
                             </div>
+                            <small id="imagen4small"></small>
                         </div>
                     </div>
                 </div>

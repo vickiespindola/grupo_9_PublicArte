@@ -110,11 +110,9 @@
 
 .ver {
     position: absolute;
-    right: 0px;
-    top: 50px;
+    right: -30px;
+    top: 5px;
     padding: 0px 5px;
-    background-color: #ef7437;
-    ;
 }
 
 .login main form div.recordar{
@@ -171,7 +169,10 @@
     .formulario main form .user span div label {
         width: 50%;
     }
-
+    .ver {
+        right: -50px;
+        top: 10px;
+    }
 }
 
 @media (min-width: 769px) {
@@ -194,10 +195,10 @@
 
     .formulario main section div button {
         max-width: 20%;
+    }
 
-
-        /*  arreglar vista celular boton mostrar */
-        /* .password span {
-        top: 35px;} */
+    .ver {
+        right: 5px;
+        top: 50px;
     }
 }
