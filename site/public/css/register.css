@@ -107,15 +107,12 @@
     position: relative;
 }
 
-.password span {
+
+.ver {
     position: absolute;
-    right: 5px;
-    top: 62px;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 2px 10px;
-    background-color: orange;
-    opacity: 70%;
+    right: -30px;
+    top: 5px;
+    padding: 0px 5px;
 }
 
 .login main form div.recordar{
@@ -172,8 +169,10 @@
     .formulario main form .user span div label {
         width: 50%;
     }
-  /*   .password span {
-        top: 42px;} */
+    .ver {
+        right: -50px;
+        top: 10px;
+    }
 }
 
 @media (min-width: 769px) {
@@ -196,9 +195,10 @@
 
     .formulario main section div button {
         max-width: 20%;
+    }
 
-
-  /*  arreglar vista celular boton mostrar */
-        /* .password span {
-        top: 35px;} */
-}}
+    .ver {
+        right: 5px;
+        top: 50px;
+    }
+}

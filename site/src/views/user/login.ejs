@@ -22,12 +22,16 @@
             <div class="password">
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Ingrese su contraseña...">
-               <div id="mostrar">Mostrar</div>
+                <div class="ver" id="mostrar"> <img src="https://img.icons8.com/ios-filled/50/000000/visible--v2.png" />
+                </div>
                 <% if(locals.errors && errors.password){ %>
                 <small class="error"> <%= errors.password.msg %> </small>
                 <% } %>
-                <small id= "smallpass"></small>
+                <small id="smallpass"></small>
             </div>
+            
+            <!--  Centrar el checkbox y el recordarme -->
+
             <div class="recordar">
                 <label for="recordar">Recordarme</label>
                 <input type="checkbox" name="recordar" id="recordar" value="1">
@@ -48,7 +52,7 @@
 
     <!-- Footer -->
     <%- include('../partial/footer') %>
-    <script src="/javascript/login.js"></script>
+    <script src="/javascript/validaciones/login.js"></script>
 
 </body>
 </html>

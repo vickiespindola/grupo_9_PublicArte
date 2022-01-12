@@ -9,7 +9,7 @@
 
     <main>
         <h3>Editar usuario:</h3>
-        <form action="/users/profile/edit/<%=locals.userLogged.id%>?_method=PUT" method="POST"
+        <form class="form" action="/users/profile/edit/<%=locals.userLogged.id%>?_method=PUT" method="POST"
             enctype="multipart/form-data">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" name="nombre" id="nombre"
@@ -18,6 +18,7 @@
                 <% if(locals.errors && errors.nombre){ %>
                 <small class="error"> <%= errors.nombre.msg %> </small>
                 <% } %>
+                <small id="nombresmall"></small>
             </div>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" name="apellido" id="apellido"
@@ -26,6 +27,7 @@
                 <% if(locals.errors && errors.apellido){ %>
                 <small class="error"> <%= errors.apellido.msg %> </small>
                 <% } %>
+                <small id="apellidosmall"></small>
             </div>
             <div class="form-floating mb-3">
                 <input type="email" class="form-control" name="email" id="email" value="<%= locals.userLogged.email %>"
@@ -34,18 +36,21 @@
                 <% if(locals.errors && errors.email){ %>
                 <small class="error"> <%= errors.email.msg %> </small>
                 <% } %>
+                <small id="emailsmall"></small>
             </div>
 
-            <% if(locals.userLogged.role!=1){ %> 
+            <% if(locals.userLogged.role!=1){ %>
             <div class="user">
                 <label for="role">Perfil del usuario</label>
                 <span>
                     <div class="rol">
-                        <input type="radio" name="role" value="3" id="client" onclick=userClient() <% if(locals.userLogged.role==3){%> checked <% } %>  >
+                        <input type="radio" name="role" value="3" id="client" onclick=userClient()
+                            <% if(locals.userLogged.role==3){%> checked <% } %>>
                         <label for="comprador">Cliente</label>
                     </div>
                     <div>
-                        <input type="radio" name="role" value="2" id="producer" onclick=userProducer() <% if(locals.userLogged.role==2){%> checked <% } %>>
+                        <input type="radio" name="role" value="2" id="producer" onclick=userProducer()
+                            <% if(locals.userLogged.role==2){%> checked <% } %>>
                         <label for="vendedor">Productor</label>
                     </div>
                 </span>
@@ -63,14 +68,31 @@
                 <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %>"
                     placeholder="name@example.com">
                 <label for="marca">Nombre de la marca</label>
+                <small id="marcasmall"></small>
             </div>
-            <% } %> 
-            <div class="mb-3">
-                <label for="avatar" class="form-label">Cambiar foto de perfil:</label>
-                <input class="form-control" type="file" id="avatar" name="avatar" accept=".jpg,.png,.jpeg">
+            <% } %>
+            <div class="container">
+                <div class="row">
+                    
+                        <label class="selectImg" for="product-img">
+                            <div class="imgHover">
+                                <p class="text-center">Foto de perfil:</p>
+                            </div>
+                            <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
+                                src="/img/users/<%= locals.userLogged.avatar ? locals.userLogged.avatar : 'default-image.png'%>"
+                                alt="" width="300">
+                        </label>
+                        <div class="form-admin__box inactivo">
+                            <input class="d-none" id="product-img" type="file" name="avatar"
+                                placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
+                            <small id="avatarsmall"></small>
+                        </div>
+                    
+                </div>
             </div>
             <div class="boton">
-                <button type="submit">Guardar cambios</button>
+                <button type="submit" id="guardar">Guardar cambios</button>
+
             </div>
         </form>
     </main>
@@ -78,6 +100,8 @@
     <!-- Footer -->
     <%- include('../partial/footer') %>
     <script src="/javascript/userType.js"></script>
+    <script src="/javascript/images.js"></script>
+    <script src="/javascript/validaciones/editprofile.js"></script>
 </body>
 
 </html>

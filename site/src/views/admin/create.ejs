@@ -29,6 +29,7 @@
                 <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.userLogged.brand %>"
                     placeholder="name@example.com" readonly>
                 <label for="marca">Nombre de la marca</label>
+                <small id="marcasmall"></small>
             </div>
 
             <div class="form-floating">
@@ -70,8 +71,8 @@
                             </label>
                             <div class="form-admin__box inactivo">
                                 <input class="d-none" id="product-img" type="file" name="imagen"
-                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
-                                <small id="imagensmall"></small>
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
+                                <small id="imagen1small"></small>
                             </div>
                         </div>
                         <!-- 2 -->
@@ -85,8 +86,8 @@
                             </label>
                             <div class="form-admin__box inactivo">
                                 <input class="d-none" id="product-sub-img-1" type="file" name="imagen"
-                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
-                                <small id="imagensmall"></small>
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
+                                <small id="imagen2small"></small>
                             </div>
                         </div>
                         <!-- 3 -->
@@ -100,8 +101,8 @@
                             </label>
                             <div class="form-admin__box inactivo">
                                 <input class="d-none" id="product-sub-img-2" type="file" name="imagen"
-                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
-                                <small id="imagensmall"></small>
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
+                                <small id="imagen3small"></small>
                             </div>
                         </div>
                         <!-- 4 -->
@@ -115,8 +116,8 @@
                             </label>
                             <div class="form-admin__box inactivo">
                                 <input class="d-none" id="product-sub-img-3" type="file" name="imagen"
-                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg" multiple>
-                                <small id="imagensmall"></small>
+                                    placeholder="Imagen del Producto" accept=".jpg,.png,.jpeg">
+                                <small id="imagen4small"></small>
                             </div>
                         </div>
                     </div>
@@ -149,7 +150,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
-    <script src="/javascript/productCreate.js"></script>
+    <script src="/javascript/validaciones/productCreate.js"></script>
     <script src="/javascript/images.js"></script>
 </body>
+
 </html>
