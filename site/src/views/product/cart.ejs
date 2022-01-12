@@ -14,27 +14,30 @@
         </div>
         <section>
             <% let total = 0 %> 
-            <% products.map(element => { %>
+            <% for(let i=0; i<2 ; i++) { %>
+                <% if(products){ %> 
             <article class="container">
                 <div class="items">
-                    <img class="product-img" src="/img/products/<%= element.images[0].file %>" alt="<%= element.titulo %>">
+                    <img class="product-img" src="/img/products/<%= products[i].images[0].file %>" alt="<%= products.titulo %>">
 
                     <div class="item1">
                         <a href="">
-                            <h4 class="tittle-img"><%= element.name %></h4>
+                            <h4 class="tittle-img"><%= products[i].name %></h4>
                         </a>
-                        <p class="product-description"><%= element.description %></p>
+                        <p class="product-description"><%= products[i].description %></p>
                     </div>
 
                     <div class="item2">
                         <span class="quantity"><i class="fas fa-minus"></i>1<i class="fas fa-plus"></i></span>
-                        <span class="price">$<%= element.price %></span>
+                        <span class="price">$<%= products[i].price %></span>
                         <i class="fas fa-trash-alt"></i>
                     </div>
                 </div>
             </article>
-            <% total += element.price %> 
-            <% }) %>
+            
+            <% } %> 
+            <% total += products[i].price %> 
+            <% } %>
 
             <article class="total-product">
                 <a href=""><strong>Calcular Envío<i class="fas fa-arrow-right"></i></strong></a>
