@@ -1,0 +1,29 @@
+/* MOBILE-ABOUT US */
+ main.aboutUs section.father article{
+    width: 100%;
+}
+ main.aboutUs section.father article.photo img{
+    width: 100%;
+}
+
+ main.aboutUs section.father article.son{
+    width: 90%;
+    margin: 10px;
+    padding-left: 40px;
+
+}
+
+main.aboutUs section.father article.son h2.aboutUs-title{
+    font-family: var(--rosarivo); 
+    font-size: 40px;
+    color: var(--marron-oscuro);
+    text-align: center;
+    border-bottom: var(--marron-claro) 4px solid;
+}
+
+main.aboutUs section.father article.son p.read{
+    font-family: var(--rosarivo); 
+    font-size: 30px;
+    color: var(--gris);
+    text-align: center;
+}
