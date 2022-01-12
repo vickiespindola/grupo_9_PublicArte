@@ -15,9 +15,6 @@ const mostrar2 = document.getElementById("mostrar2")
 
 /* console.log(crear); */
 
-crear.disabled = true
-crear.classList.add("disable")
-
 function validate(obj) {
     let validatearray = Object.values(validacion)
     if (!validatearray.includes(false)) {
@@ -67,105 +64,102 @@ function verpass() {
         pass2.type = "password"
     }
 }
-    mostrar2.onclick = () => {
-        verpass()
+mostrar2.onclick = () => {
+    verpass()
+}
+
+
+
+
+nombre.addEventListener("input", (e) => {
+    if (e.target.value == "") {
+        nombresmall.innerText = "Este campo no puede estár vacío";
+        nombre.style.border = "3px solid red";
+        console.log("Este campo esta vacio");
+        validacion.nombre = false;
+    } else {
+        validacion.nombre = true;
+        nombresmall.innerText = " ";
+        nombre.style.border = "3px solid green";
+        console.log(e.target.value);
     }
+    validate(validacion)
+})
 
-
-
-
-    nombre.addEventListener("input", (e) => {
-        if (e.target.value == "") {
-            nombresmall.innerText = "Este campo no puede estár vacío"
-            nombre.style.border = "3px solid red"
-            console.log("Este campo esta vacio");
-        } else {
-            validacion.nombre = true
-            nombresmall.innerText = " "
-            nombre.style.border = "3px solid green"
-            console.log(e.target.value);
-        }
-        validate(validacion)
-    })
-    apellido.addEventListener("input", (e) => {
-        if (e.target.value == "") {
-            apellidosmall.innerText = "Este campo no puede estár vacío"
-            apellido.style.border = "3px solid red"
-            console.log("Este campo esta vacio");
-        } else {
-            validacion.apellido = true
-            apellidosmall.innerText = " "
-            apellido.style.border = "3px solid green"
-            console.log(e.target.value);
-        }
-        validate(validacion)
-    })
-
-    email.addEventListener("input", (e) => {
-        const validateEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+$/
-
-        if (validateEmail.test(e.target.value)) {
-            validacion.email = true
-            smallemail.innerText = ""
-            email.style.border = "3px solid green"
-            console.log("Email válido");
-
-        } else {
-
-            smallemail.innerText = "El email debe ser del siguiente formato ejemplo@gmail.com "
-            email.style.border = "3px solid red"
-
-            console.log("Email inválido");
-        }
-        validate(validacion)
-    })
-
-    password.addEventListener("input", (e) => {
-        const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
-
+apellido.addEventListener("input", (e) => {
+    if (e.target.value == "") {
+        apellidosmall.innerText = "Este campo no puede estár vacío";
+        apellido.style.border = "3px solid red";
+        console.log("Este campo esta vacio");
+        validacion.apellido = false;
+    } else {
+        validacion.apellido = true;
+        apellidosmall.innerText = " ";
+        apellido.style.border = "3px solid green";
         console.log(e.target.value);
+    }
+    validate(validacion)
+})
 
-        if (validatePass.test(e.target.value)) {
-            validacion.password = true
-            smallpass.innerText = ""
-            password.style.border = "3px solid green"
-            console.log("Contraseña válida");
+email.addEventListener("input", (e) => {
+    const validateEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+$/
 
-        } else {
+    if (validateEmail.test(e.target.value)) {
+        validacion.email = true;
+        smallemail.innerText = "";
+        email.style.border = "3px solid green";
+        console.log("Email válido");
 
-            smallpass.innerText = "La contraseña debe contener una mayúscula, una misnúscula, un número y entre 8 y 15 caracteres"
-            password.style.border = "3px solid red"
+    } else {
+        validacion.email = false;
+        smallemail.innerText = "El email debe ser del siguiente formato ejemplo@gmail.com ";
+        email.style.border = "3px solid red";
+        console.log("Email inválido");
+    }
+    validate(validacion)
+})
 
-            console.log("Contraseña inválida");
-        }
-        validate(validacion)
-    })
+password.addEventListener("input", (e) => {
+    const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
 
-    password2.addEventListener("input", (e) => {
-        const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
+    console.log(e.target.value);
 
-        console.log(e.target.value);
+    if (validatePass.test(e.target.value)) {
+        validacion.password = true;
+        smallpass.innerText = "";
+        password.style.border = "3px solid green";
+        console.log("Contraseña válida");
 
-        if (validatePass.test(e.target.value)) {
-            validacion.password2 = true
-            smallpass2.innerText = ""
-            password2.style.border = "3px solid green"
-            console.log("Contraseña válida");
+    } else {
+        validacion.password = true;
+        smallpass.innerText = "La contraseña debe contener una mayúscula, una misnúscula, un número y entre 8 y 15 caracteres";
+        password.style.border = "3px solid red";
+        console.log("Contraseña inválida");
+    }
+    validate(validacion)
+})
 
-        } else {
+password2.addEventListener("input", (e) => {
+    const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
 
-            smallpass2.innerText = "La contraseña debe contener una mayúscula, una misnúscula, un número y entre 8 y 15 caracteres"
-            password2.style.border = "3px solid red"
+    console.log(e.target.value);
 
-            console.log("Contraseña inválida");
-        }
-        validate(validacion)
-    })
+    if (validatePass.test(e.target.value)) {
+        validacion.password2 = true;
+        smallpass2.innerText = "";
+        password2.style.border = "3px solid green";
+        console.log("Contraseña válida");
+
+    } else {
+        validacion.password2 = false;
+        smallpass2.innerText = "La contraseña debe contener una mayúscula, una misnúscula, un número y entre 8 y 15 caracteres";
+        password2.style.border = "3px solid red";
+        console.log("Contraseña inválida");
+    }
+    validate(validacion)
+})
 
 
-
-
-
-    formulario.addEventListener("submit", (e) => {
-        e.preventDefault()
-    })
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault()
+})

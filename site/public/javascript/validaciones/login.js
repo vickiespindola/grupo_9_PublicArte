@@ -48,48 +48,42 @@ mostrar.onclick = () => {
 email.addEventListener("input", (e) => {
     const validateEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+$/
     if (validateEmail.test(e.target.value)) {
-        validacion.email = true
-        smallemail.innerText = ""
-        email.style.border = "3px solid green"
+        validacion.email = true;
+        smallemail.innerText = "";
+        email.style.border = "3px solid green";
         console.log("Email válido");
 
     } else {
-
-        smallemail.innerText = "El email debe ser del siguiente formato ejemplo@gmail.com "
-        email.style.border = "3px solid red"
-
+        validacion.email = false;
+        smallemail.innerText = "El email debe ser del siguiente formato ejemplo@gmail.com ";
+        email.style.border = "3px solid red";
         console.log("Email inválido")
     }
     validate(validacion);
 
+})
 
-    password.addEventListener("input", (e) => {
-        const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
+password.addEventListener("input", (e) => {
+    const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
 
-        console.log(e.target.value);
+    console.log(e.target.value);
 
-        if (validatePass.test(e.target.value)) {
-            validacion.password = true
-            smallpass.innerText = ""
-            password.style.border = "3px solid green"
-            console.log("Contraseña válida");
+    if (validatePass.test(e.target.value)) {
+        validacion.password = true;
+        smallpass.innerText = "";
+        password.style.border = "3px solid green";
+        console.log("Contraseña válida");
 
-        } else {
-
-            smallpass.innerText = "La contraseña debe contener una mayúscula, una misnúscula, un número y entre 8 y 15 caracteres"
-
-            password.style.border = "3px solid red"
-            console.log("Contraseña inválida");
-        }
-        validate(validacion)
-    })
-
-
+    } else {
+        validacion.password = true;
+        smallpass.innerText = "La contraseña debe contener una mayúscula, una misnúscula, un número y entre 8 y 15 caracteres";
+        password.style.border = "3px solid red";
+        console.log("Contraseña inválida");
+    }
+    validate(validacion)
+})
 
 
-
-
-    formulario.addEventListener("submit", (e) => {
-        e.preventDefault()
-    })
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault()
 })
